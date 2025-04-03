@@ -15,7 +15,7 @@ const translations = {
         viewProjectsBtn: "Bekijk Projecten",
         sendEmailBtn: "Stuur een E-mail",
         projectDetailsLink: "Meer details",
-        viewGitHubBtn: "Bekijk op GitHub",
+        viewGitHubBtn: "Showcase pagina",
         // Voeg hier eventueel knoppen toe voor live demo's etc.
         // viewDemoBtn: "Bekijk Live Demo",
 
@@ -47,7 +47,7 @@ const translations = {
         projectOverviewTitle: "Project Overzicht",
         projectRoleTitle: "Mijn Rol & Bijdrage",
         projectTechTitle: "Gebruikte Technologieën",
-        projectFeaturesTitle: "Kernfunctionaliteiten & Uitdagingen",
+        projectFeaturesTitle: "Uitdagingen",
         projectLearningTitle: "Leerresultaten",
 
         // --- EcoJourney.html Specifiek ---
@@ -62,26 +62,19 @@ const translations = {
                                         <li>Presenteren van een duidelijke duurzaamheidsscore en alternatieven.</li>`,
         projectLearningEcoJourney: "Dit project heeft mijn vaardigheden in API-integratie en gamification versterkt.",
 
-        // --- AmericanDream.html Specifiek ---
-        projectTitleAmericanDream: "Project: American Dream (Unreal Engine)",
-        projectDescAmericanDream: "\"American Dream\" is een immersieve Virtual Reality (VR) game ontwikkeld in Unreal Engine. Het project verkent [bijv. een specifiek thema, verhaal, of gameplay-concept gerelateerd aan de 'American Dream']. Spelers worden ondergedompeld in een interactieve wereld waar ze [bijv. keuzes moeten maken, puzzels oplossen, een verhaal ervaren].",
-        projectRoleAmericanDream: "[Beschrijf hier specifiek wat JIJ hebt gedaan. Bijvoorbeeld: Als onderdeel van het ontwikkelteam heb ik mij gericht op gameplay programmering met Blueprints/C++, het ontwerpen en implementeren van VR-interacties, level design en -opbouw, integratie van 3D assets en animaties, optimalisatie voor VR-performance. Ik was verantwoordelijk voor de implementatie van het core movement system, de interactie met specifieke objecten, het opzetten van de game logic voor een bepaald level.]",
-        projectTechListAmericanDream: `<li><span class="font-semibold">Game Engine:</span> Unreal Engine 4/5</li>
-                                       <li><span class="font-semibold">Programming:</span> Blueprints, C++ (indien gebruikt)</li>
-                                       <li><span class="font-semibold">Platform:</span> VR (bijv. Oculus Rift/Quest, HTC Vive)</li>
-                                       <li><span class="font-semibold">Software:</span> Unreal Engine Editor, [Bijv. Blender, Maya voor asset creatie/aanpassing], Git/Perforce</li>
-                                       <li><span class="font-semibold">Concepten:</span> VR Interaction Design, Level Design, Game Optimization</li>`,
-        projectFeaturesListAmericanDream: `<li>Immersieve VR-ervaring met [bijv. hand tracking, room-scale movement].</li>
-                                           <li>Interactieve omgevingen en objecten.</li>
-                                           <li>[Bijv. Verhalende elementen, Puzzelmechanics, Combat system].</li>
-                                           <li><span class="font-semibold">Uitdaging:</span> [Bijv. Het behalen van een stabiele hoge framerate in VR om motion sickness te voorkomen.]</li>
-                                           <li><span class="font-semibold">Oplossing:</span> [Bijv. Agressieve optimalisatietechnieken zoals level streaming, LOD's (Level of Detail) en culling.]</li>`,
-        projectLearningAmericanDream: "Dit project was een diepe duik in de wereld van game development met Unreal Engine en VR. Ik heb praktische ervaring opgedaan met [bijv. Blueprints scripting, VR development workflows, performance profiling en optimalisatie]. Het was fascinerend om te werken aan het creëren van een echt immersieve ervaring.",
+// --- AmericanDream.html Specifiek ---
+        projectTitleAmericanDream: "American Dream (Unreal Engine)",
+        projectDescAmericanDream: "American Dream is een VR horror game ontwikkeld in Unreal Engine. Het vertelt het verhaal over de \"horror\" achter een 9-tot-5 baan vol deadlines en druk, waarin je letterlijk uit de dagelijkse routine breekt, maar vervolgens wordt achtervolgd door je baas terwijl je herinneringen van je familie verzamelt,zodat je kan ontsnappen.",
+        projectRoleAmericanDream: "Door hardwarelimieten kon ik niet aan de blueprints werken in de game. Daarom heb ik mij gericht op UX, voice acting, textures, animaties, gebruikte assets, het verhaal en de gameplayloop.",
+        projectTechListAmericanDream: `<li><span class="font-semibold">Game Engine:</span> Unreal Engine 5</li>
+                               <li><span class="font-semibold">Platform:</span> VR</li>
+                               <li><span class="font-semibold">Software:</span> Unreal Engine Editor, Blender</li>`,
+        projectLearningAmericanDream: "Dit project was een diepe duik in VR-game development met Unreal Engine. Ik heb geleerd hoe ik een meeslepende en samenhangende ervaring kan creëren, ondanks technische beperkingen, door me te richten op andere onderdelen zoals de gebruikerservaring en het verhaal.",
 
         // --- OpenHiring.html Specifiek ---
-        projectTitleOpenHiring: "Project: Open Hiring Platform",
+        projectTitleOpenHiring: "Open Hiring Platform",
         projectDescOpenHiring: "Dit project, in samenwerking voor IO Digital, betrof de ontwikkeling van een innovatief sollicitatieplatform gebaseerd op het 'Open Hiring' principe. Het doel was om drempels in het sollicitatieproces weg te nemen door kandidaten aan te nemen op volgorde van aanmelding, in plaats van op basis van CV's of sollicitatiegesprekken, met een sterke focus op het verbinden van lokaal talent met lokale bedrijven.",
-        projectRoleOpenHiring: "In dit project was ik verantwoordelijk als WCAG-/toegankelijkheidsexpert. Ik voerde uitgebreide toegankelijkheidstesten uit bij mijn mede-studenten en heb talrijke pagina's aangepast van niet-toegankelijk naar WCAG AA, en in sommige gevallen zelfs naar WCAG AAA. Daarnaast ontwikkelde ik een feature die het mogelijk maakt om lokale bedrijven in de buurt van de gebruikerslocatie weer te geven in de app. Hiermee heb ik bijgedragen aan een inclusievere en gebruiksvriendelijkere ervaring voor alle gebruikers.",
+        projectRoleOpenHiring: "In dit project was ik verantwoordelijk als WCAG-/toegankelijkheidsexpert. Ik voerde uitgebreide toegankelijkheidstesten uit bij mijn mede-studenten en heb talrijke pagina's aangepast van niet-toegankelijk naar WCAG AA, en in sommige gevallen zelfs naar WCAG AAA. Daarnaast ontwikkelde ik een feature die het mogelijk maakt om lokale bedrijven in de buurt van de gebruikerslocatie weer te geven in de app.",
         projectTechListOpenHiring: `<li><span class="font-semibold">Backend:</span> PHP, Laravel Framework</li>
                                     <li><span class="font-semibold">Frontend:</span> HTML, CSS met Tailwind CSS, JavaScript</li>`,
         projectFeaturesListOpenHiring: `<li>Registratie en profielbeheer voor werkzoekenden en werkgevers.</li>
@@ -90,7 +83,7 @@ const translations = {
         projectLearningOpenHiring: "Door dit project heb ik diepgaande ervaring opgedaan met het Laravel framework, met aandacht voor toegankelijkheid (WCAG). De samenwerking met IO Digital gaf mij niet alleen inzicht in klantvereisten en projectmanagement, maar leerde mij ook hoe een bedrijf projecten aanpakt, waarbij het verschil in professionaliteit tussen mijn schoolprojecten en dit project duidelijk naar voren kwam. IO Digital heeft alle nodige documentatie geleverd en mij veel waardevolle tips uit de praktijk meegegeven.",
 
         // --- TypeRacer.html Specifiek ---
-        projectTitleTypeRacer: "Project: Type Racer",
+        projectTitleTypeRacer: "Type Racer",
         projectDescTypeRacer: "Type Racer is een webgebaseerd spel dat spelers uitdaagt om hun typesnelheid en nauwkeurigheid te testen en verbeteren. Dit is een klein projectje dat ik in mijn vrije tijd heb gemaakt, geïnspireerd door het Donald Duck typespel waar ik als kind leerde typen.",
         projectRoleTypeRacer: "In dit project heb ik het spel van begin tot eind ontwikkeld als een persoonlijk project. Ik ontwierp de gebruikersinterface en implementeerde de core game logic met vanilla JavaScript, waaronder het volgen van gebruikersinvoer, het berekenen van woorden per minuut (WPM) en nauwkeurigheid, en het geven van visuele feedback aan de speler. Daarnaast was dit project een waardevolle oefening in het toepassen van mijn passie voor webdevelopment in mijn vrije tijd.",
         projectTechListTypeRacer: `<li><span class="font-semibold">Frontend:</span> HTML, CSS, JavaScript</li>
@@ -102,23 +95,15 @@ const translations = {
                                        <li>Locaal opgeslagen leaderboard.</li>`,
         projectLearningTypeRacer: "Dit project was een uitstekende oefening in frontend JavaScript-ontwikkeling, met name in DOM-manipulatie en event handling. Ik heb geleerd hoe je een interactieve gebruikerservaring kunt bouwen met pure webtechnologieën en hoe je game-achtige logica, zoals scoreberekening en timing, implementeert in de browser.",
 
-        // --- Excalibur.html Specifiek ---
-        projectTitleExcalibur: "Project: Excalibur JS Ritme Spel",
-        projectDescExcalibur: "Excalibur is een browser-based ritmespel, ontwikkeld met JavaScript. Geïnspireerd door [bijv. populaire ritmespellen zoals Guitar Hero of Osu!], daagt het spelers uit om op het juiste moment toetsen in te drukken op de maat van de muziek. Het spel heeft een [bijv. middeleeuws/fantasy] thema, gecentreerd rond de legende van Excalibur.",
-        projectRoleExcalibur: "[Beschrijf hier specifiek wat JIJ hebt gedaan. Bijvoorbeeld: Als enige ontwikkelaar van dit project was ik verantwoordelijk voor alle aspecten: het conceptualiseren van de gameplay, het programmeren van de game loop en ritme-mechanics met JavaScript, het synchroniseren van de visuals met de audio, het implementeren van een score-systeem, en het creëren van de eenvoudige graphics en UI-elementen.]",
-        projectTechListExcalibur: `<li><span class="font-semibold">Core:</span> HTML5, CSS3, Vanilla JavaScript</li>
-                                   <li><span class="font-semibold">Graphics:</span> [Bijv. HTML5 Canvas API, CSS Animations, of eenvoudige DOM elementen]</li>
-                                   <li><span class="font-semibold">Audio:</span> Web Audio API (voor precieze timing en playback)</li>
-                                   <li><span class="font-semibold">Concepten:</span> Game Loop, Collision Detection (voor notenhits), Audio Synchronization, State Management</li>
-                                   <li><span class="font-semibold">Tools:</span> VS Code, Git, Browser DevTools</li>`,
+// --- Excalibur.html Specifiek ---
+        projectTitleExcalibur: "Shiba Rythm Birthday Fiesta",
+        projectDescExcalibur: "Shiba Rythm Birthday Fiesta is een browser-based ritmespel, ontwikkeld met JavaScript. Geïnspireerd door eenvoudige ritmespellen, daagt het spelers uit om op het juiste moment toetsen in te drukken op de maat van de muziek. Het spel draait om de verjaardag van een Shiba en heeft een speels, luchtig thema.",
+        projectRoleExcalibur: "Dit was mijn eerste spel dat ik heb gemaakt in Excalibur JavaScript. Ik heb het spel van begin tot eind ontwikkeld.",
+        projectTechListExcalibur: `<li><span class="font-semibold">Core:</span> HTML, CSS, JavaScript, Excalibur.js</li>`,
         projectFeaturesListExcalibur: `<li>Visuele weergave van naderende noten op verschillende 'lanes'.</li>
-                                       <li>Detectie van toetsaanslagen op het juiste moment ('timing windows').</li>
-                                       <li>Feedback aan de speler (bijv. 'Perfect', 'Good', 'Miss').</li>
-                                       <li>Scoreberekening en combo-systeem.</li>
-                                       <li>Synchronisatie van gameplay-elementen met achtergrondmuziek.</li>
-                                       <li><span class="font-semibold">Uitdaging:</span> [Bijv. Het nauwkeurig synchroniseren van de visuele noten met de audio beat, wat cruciaal is voor een ritmespel.]</li>
-                                       <li><span class="font-semibold">Oplossing:</span> [Bijv. Gebruik van de Web Audio API voor precieze timing en het baseren van de noten-animatie op de audio context tijd.]</li>`,
-        projectLearningExcalibur: "Excalibur was een leerzaam project waarbij ik mijn JavaScript-vaardigheden heb verdiept, met name op het gebied van animatie, timing-kritische operaties en het werken met de Web Audio API. Het ontwikkelen van een game, zelfs een relatief eenvoudige, gaf inzicht in concepten als game state management en de game loop.",
+                               <li>Detectie van toetsaanslagen op het juiste moment.</li>`,
+        projectLearningExcalibur: "Shiba Rythm Birthday Fiesta was een leerzaam project waarbij ik mijn JavaScript-vaardigheden heb verdiept, met name op het gebied van animatie. Het ontwikkelen van dit eerste spel gaf mij inzicht in game state management en de game loop, en was een waardevolle eerste stap."
+
     },
     en: {
         // --- Algemeen & Navigatie ---
@@ -133,8 +118,8 @@ const translations = {
         viewProjectsBtn: "View Projects",
         sendEmailBtn: "Send an Email",
         projectDetailsLink: "More details",
-        viewGitHubBtn: "View on GitHub",
-        // viewDemoBtn: "View Live Demo",
+        viewGitHubBtn: "Showcase page", // Behoud deze voor algemeen gebruik
+        // viewDemoBtn: "View Live Demo", // uncomment if needed
 
         // --- index.html ---
         indexWelcome: "Welcome to my Portfolio",
@@ -152,103 +137,80 @@ const translations = {
 
         // --- projects.html ---
         projectsTitle: "My Projects",
-        // Beschrijvingen voor projectkaarten (optioneel)
-        projectCardDescOpenHiring: "An accessible application platform focused on local connections.",
+        // Descriptions for project cards (matching NL now)
+        projectCardDescOpenHiring: "An application platform without barriers, focusing on local connections.",
         projectCardDescEcoJourney: "A mobile web app to scan products and discover their sustainability.",
         projectCardDescAmericanDream: "A VR game developed in Unreal Engine.",
-        projectCardDescTypeRacer: "An in-browser Type Racer game.",
-        projectCardDescExcalibur: "An Excalibur JavaScript rhythm game.",
+        projectCardDescTypeRacer: "An in-browser Type Racer.",
+        projectCardDescExcalibur: "An Excalibur JavaScript Rhythm game.",
 
-        // --- Project Detail Paginas (Algemene Secties) ---
+        // --- Project Detail Pages (General Sections) ---
         projectOverviewTitle: "Project Overview",
         projectRoleTitle: "My Role & Contribution",
         projectTechTitle: "Technologies Used",
         projectFeaturesTitle: "Core Features & Challenges",
         projectLearningTitle: "Learning Outcomes",
 
-        // --- EcoJourney.html Specifiek ---
-        projectTitleEcoJourney: "Project: EcoJourney",
+        // --- EcoJourney.html Specific ---
+        projectTitleEcoJourney: "EcoJourney", // Title kept consistent
         projectDescEcoJourney: "EcoJourney is a mobile web application designed to help consumers make more sustainable choices while shopping. By simply scanning a product's barcode, users get instant insights into its sustainability score and environmental impact.",
-        projectRoleEcoJourney: "[Describe your specific contributions here. Example: In this project, I was responsible for designing and implementing the frontend, setting up the backend logic, integrating an external API for product data, and implementing the scanning functionality. I collaborated closely with team members to ensure the application was both functional and user-friendly, paying special attention to mobile loading times and accessibility (WCAG).]",
-        projectTechListEcoJourney: `<li><span class="font-semibold">Frontend:</span> JavaScript, HTML5, CSS3 (possibly a framework like React/Vue?)</li>
-                                    <li><span class="font-semibold">Backend:</span> [e.g., Node.js, PHP/Laravel, Python/Django]</li>
-                                    <li><span class="font-semibold">Database:</span> [e.g., MySQL, PostgreSQL, MongoDB]</li>
-                                    <li><span class="font-semibold">APIs:</span> [e.g., Open Food Facts API, Barcode Scanning Library]</li>
-                                    <li><span class="font-semibold">Tools:</span> Git, VS Code, [Other relevant tools]</li>`,
+        projectRoleEcoJourney: "At the start of the project, I began with extensive user research. This led me to discover the OpenFoodFacts API, among other things, which played a crucial role throughout the project. Additionally, I worked on the loading animation visible between successful scanning and displaying the page. Furthermore, I implemented functionalities such as accounts, friends, and gamification, where users receive points for each unique product scanned.",
+        projectTechListEcoJourney: `<li><span class="font-semibold">Frontend:</span> JavaScript, HTML, CSS</li>
+                                    <li><span class="font-semibold">Database:</span> SQLite</li>
+                                    <li><span class="font-semibold">APIs:</span> Open Food Facts API</li>`, // Structure preserved
         projectFeaturesListEcoJourney: `<li>Barcode scanning via the smartphone's camera.</li>
-                                        <li>Fetching product information and sustainability data via an API.</li>
-                                        <li>Presenting a clear sustainability score and alternatives.</li>
-                                        <li><span class="font-semibold">Challenge:</span> [e.g., Accurately mapping barcodes to the correct product data and sustainability information.]</li>
-                                        <li><span class="font-semibold">Solution:</span> [e.g., Implementation of fallback mechanisms and data validation.]</li>`,
-        projectLearningEcoJourney: "This project strengthened my skills in [e.g., mobile web development, API integration, frontend design]. I also learned a lot about [e.g., the importance of accurate data in consumer apps, the challenges surrounding sustainability metrics].",
+                                        <li>Looking up product information and sustainability data via an API.</li>
+                                        <li>Presenting a clear sustainability score and alternatives.</li>`, // Structure preserved
+        projectLearningEcoJourney: "This project strengthened my skills in API integration and gamification.",
 
-        // --- AmericanDream.html Specifiek ---
-        projectTitleAmericanDream: "Project: American Dream (Unreal Engine)",
-        projectDescAmericanDream: "\"American Dream\" is an immersive Virtual Reality (VR) game developed in Unreal Engine. The project explores [e.g., a specific theme, story, or gameplay concept related to the 'American Dream']. Players are immersed in an interactive world where they [e.g., make choices, solve puzzles, experience a narrative].",
-        projectRoleAmericanDream: "[Describe your specific contributions here. Example: As part of the development team, I focused on gameplay programming using Blueprints/C++, designing and implementing VR interactions, level design and setup, integrating 3D assets and animations, and optimizing for VR performance. I was responsible for implementing the core movement system, interaction with specific objects, and setting up the game logic for a particular level.]",
-        projectTechListAmericanDream: `<li><span class="font-semibold">Game Engine:</span> Unreal Engine 4/5</li>
-                                       <li><span class="font-semibold">Programming:</span> Blueprints, C++ (if used)</li>
-                                       <li><span class="font-semibold">Platform:</span> VR (e.g., Oculus Rift/Quest, HTC Vive)</li>
-                                       <li><span class="font-semibold">Software:</span> Unreal Engine Editor, [e.g., Blender, Maya for asset creation/modification], Git/Perforce</li>
-                                       <li><span class="font-semibold">Concepts:</span> VR Interaction Design, Level Design, Game Optimization</li>`,
+        // --- AmericanDream.html Specific ---
+        projectTitleAmericanDream: "American Dream (Unreal Engine)",
+        projectDescAmericanDream: "American Dream is a VR horror game developed in Unreal Engine. It tells the story of the \"horror\" behind a 9-to-5 job filled with deadlines and pressure, where you literally break out of the daily routine, but are then chased by your boss while collecting memories of your family to escape.",
+        projectRoleAmericanDream: "Due to hardware limitations, I couldn't work on the blueprints in the game. Therefore, I focused on UX, voice acting, textures, animations, used assets, the story, and the gameplay loop.",
+        projectTechListAmericanDream: `<li><span class="font-semibold">Game Engine:</span> Unreal Engine 5</li>
+                                       <li><span class="font-semibold">Platform:</span> VR</li>
+                                       <li><span class="font-semibold">Software:</span> Unreal Engine Editor, Blender</li>`, // Structure preserved
+        // Features list wasn't in the Dutch HTML/JS for this one, keeping the previous EN placeholder structure if needed later.
         projectFeaturesListAmericanDream: `<li>Immersive VR experience with [e.g., hand tracking, room-scale movement].</li>
                                            <li>Interactive environments and objects.</li>
-                                           <li>[e.g., Narrative elements, Puzzle mechanics, Combat system].</li>
-                                           <li><span class="font-semibold">Challenge:</span> [e.g., Achieving a stable high framerate in VR to prevent motion sickness.]</li>
-                                           <li><span class="font-semibold">Solution:</span> [e.g., Aggressive optimization techniques like level streaming, LODs (Level of Detail), and culling.]</li>`,
-        projectLearningAmericanDream: "This project was a deep dive into the world of game development with Unreal Engine and VR. I gained practical experience with [e.g., Blueprints scripting, VR development workflows, performance profiling, and optimization]. It was fascinating to work on creating a truly immersive experience.",
+                                           <li>[e.g., Narrative elements, Puzzle mechanics, Horror elements].</li>
+                                           <li><span class="font-semibold">Challenge:</span> [e.g., Working around hardware limitations affecting direct Blueprint work.]</li>
+                                           <li><span class="font-semibold">Solution:</span> [e.g., Focusing contributions on aspects not requiring direct engine interaction like UX, assets, narrative.]</li>`,
+        projectLearningAmericanDream: "This project was a deep dive into VR game development with Unreal Engine. I learned how to create an immersive and cohesive experience, despite technical constraints, by focusing on other components such as user experience and story.",
 
-        // --- OpenHiring.html Specifiek ---
-        projectTitleOpenHiring: "Project: Open Hiring Platform",
-        projectDescOpenHiring: "This project, in collaboration with or for IO Digital, involved developing an innovative application platform based on the 'Open Hiring' principle. The goal was to remove barriers in the application process by hiring candidates in order of application, rather than based on resumes or interviews, with a strong focus on connecting local talent with local companies.",
-        projectRoleOpenHiring: "[Describe your specific contributions here. Example: As a full-stack developer on this project, I was responsible for designing the database structure, developing the backend logic with Laravel to manage job listings and applications, building the frontend user interface with React/Blade, and implementing map functionality for local matching. I specifically worked on the waiting list functionality, the employer dashboard, integration with an external map API, and ensured compliance with WCAG guidelines for accessibility.]",
+        // --- OpenHiring.html Specific ---
+        projectTitleOpenHiring: "Open Hiring Platform",
+        projectDescOpenHiring: "This project, in collaboration with IO Digital, involved the development of an innovative application platform based on the 'Open Hiring' principle. The goal was to remove barriers in the application process by hiring candidates in order of application, rather than based on resumes or interviews, with a strong focus on connecting local talent with local companies.",
+        projectRoleOpenHiring: "In this project, I was responsible as the WCAG/accessibility expert. I conducted extensive accessibility tests with my fellow students and adapted numerous pages from non-accessible to WCAG AA, and in some cases, even to WCAG AAA. Additionally, I developed a feature that allows displaying local companies near the user's location in the app. With this, I contributed to a more inclusive and user-friendly experience for all users.",
         projectTechListOpenHiring: `<li><span class="font-semibold">Backend:</span> PHP, Laravel Framework</li>
-                                    <li><span class="font-semibold">Frontend:</span> HTML5, CSS3 (Tailwind CSS?), JavaScript (React/Vue/Blade?)</li>
-                                    <li><span class="font-semibold">Database:</span> MySQL / PostgreSQL</li>
-                                    <li><span class="font-semibold">APIs:</span> [e.g., Google Maps API, Mapbox API] (if used)</li>
-                                    <li><span class="font-semibold">Principles:</span> RESTful APIs, MVC Architecture, WCAG</li>
-                                    <li><span class="font-semibold">Tools:</span> Git, Composer, npm/yarn, VS Code, Docker (if used)</li>`,
+                                    <li><span class="font-semibold">Frontend:</span> HTML, CSS with Tailwind CSS, JavaScript</li>`, // Structure preserved
         projectFeaturesListOpenHiring: `<li>Registration and profile management for job seekers and employers.</li>
                                         <li>Posting and managing job listings with location data.</li>
-                                        <li>Application system based on 'first come, first served' (Open Hiring principle).</li>
-                                        <li>Map integration for visualizing local jobs/candidates.</li>
-                                        <li><span class="font-semibold">Challenge:</span> [e.g., Ensuring fairness and transparency in the waiting list system, effective location-based matching.]</li>
-                                        <li><span class="font-semibold">Solution:</span> [e.g., Clear logging of applications, use of geocoding and radius search.]</li>`,
-        projectLearningOpenHiring: "Through this project, I gained in-depth experience with the Laravel framework and building complex web applications. I learned how to set up a full-stack application from database to UI, focusing on scalability and accessibility (WCAG). The collaboration with IO Digital provided insights into [e.g., client requirements, project management].",
+                                        <li>Application system based on 'first come, first served' (Open Hiring principle).</li>`, // Structure preserved
+        projectLearningOpenHiring: "Through this project, I gained in-depth experience with the Laravel framework, focusing on accessibility (WCAG). The collaboration with IO Digital not only gave me insight into client requirements and project management but also taught me how a company approaches projects, clearly highlighting the difference in professionalism between my school projects and this one. IO Digital provided all necessary documentation and gave me many valuable practical tips.",
 
-        // --- TypeRacer.html Specifiek ---
-        projectTitleTypeRacer: "Project: Type Racer",
-        projectDescTypeRacer: "Type Racer is a web-based game that challenges players to test and improve their typing speed and accuracy. Users are presented with a text passage they must type as quickly and accurately as possible, either within a time limit or until the text is completed.",
-        projectRoleTypeRacer: "[Describe your specific contributions here. Example: I developed this project from start to finish as a personal project/school assignment. My responsibilities included designing the user interface, implementing the core game logic with vanilla JavaScript, including tracking user input, calculating words per minute (WPM) and accuracy, and providing visual feedback to the player.]",
-        projectTechListTypeRacer: `<li><span class="font-semibold">Frontend:</span> HTML5, CSS3, Vanilla JavaScript</li>
-                                   <li><span class="font-semibold">Concepts:</span> DOM Manipulation, Event Listeners, Timing Events (setTimeout/setInterval)</li>
-                                   <li><span class="font-semibold">Tools:</span> VS Code, Git, Web Browser DevTools</li>`,
+        // --- TypeRacer.html Specific ---
+        projectTitleTypeRacer: "Type Racer",
+        projectDescTypeRacer: "Type Racer is a web-based game that challenges players to test and improve their typing speed and accuracy. This is a small project I created in my spare time, inspired by the Donald Duck typing game where I learned to type as a child.",
+        projectRoleTypeRacer: "In this project, I developed the game from start to finish as a personal project. I designed the user interface and implemented the core game logic with vanilla JavaScript, including tracking user input, calculating words per minute (WPM) and accuracy, and providing visual feedback to the player. Additionally, this project was a valuable exercise in applying my passion for web development in my free time.",
+        projectTechListTypeRacer: `<li><span class="font-semibold">Frontend:</span> HTML, CSS, JavaScript</li>
+                                   <li><span class="font-semibold">Concepts:</span> DOM Manipulation, Event Listeners, Timing Events</li>`, // Structure preserved
         projectFeaturesListTypeRacer: `<li>Display of a text snippet to be typed.</li>
                                        <li>Real-time tracking of typed characters and comparison with the source text.</li>
                                        <li>Visual indication of correct and incorrect keystrokes.</li>
                                        <li>Calculation and display of WPM and accuracy upon completion.</li>
-                                       <li>Timer functionality.</li>
-                                       <li><span class="font-semibold">Challenge:</span> [e.g., Accurately measuring WPM, considering user errors and corrections.]</li>
-                                       <li><span class="font-semibold">Solution:</span> [e.g., Implementation of a specific WPM calculation formula normalized for errors, and dynamic score updates.]</li>`,
+                                       <li>Locally stored leaderboard.</li>`, // Structure preserved
         projectLearningTypeRacer: "This project was an excellent exercise in frontend JavaScript development, particularly in DOM manipulation and event handling. I learned how to build an interactive user experience using pure web technologies and how to implement game-like logic, such as score calculation and timing, in the browser.",
 
-        // --- Excalibur.html Specifiek ---
-        projectTitleExcalibur: "Project: Excalibur JS Rhythm Game",
-        projectDescExcalibur: "Excalibur is a browser-based rhythm game developed with JavaScript. Inspired by [e.g., popular rhythm games like Guitar Hero or Osu!], it challenges players to press keys at the right moment in time with the music. The game features a [e.g., medieval/fantasy] theme centered around the legend of Excalibur.",
-        projectRoleExcalibur: "[Describe your specific contributions here. Example: As the sole developer of this project, I was responsible for all aspects: conceptualizing the gameplay, programming the game loop and rhythm mechanics with JavaScript, synchronizing visuals with audio, implementing a scoring system, and creating the simple graphics and UI elements.]",
-        projectTechListExcalibur: `<li><span class="font-semibold">Core:</span> HTML5, CSS3, Vanilla JavaScript</li>
-                                   <li><span class="font-semibold">Graphics:</span> [e.g., HTML5 Canvas API, CSS Animations, or simple DOM elements]</li>
-                                   <li><span class="font-semibold">Audio:</span> Web Audio API (for precise timing and playback)</li>
-                                   <li><span class="font-semibold">Concepts:</span> Game Loop, Collision Detection (for note hits), Audio Synchronization, State Management</li>
-                                   <li><span class="font-semibold">Tools:</span> VS Code, Git, Browser DevTools</li>`,
+        // --- Excalibur.html Specific ---
+        // Adjusted title to match NL, added description, role, tech, features, learning.
+        projectTitleExcalibur: "Shiba Rythm Birthday Fiesta", // Title changed based on NL
+        projectDescExcalibur: "Shiba Rythm Birthday Fiesta is a browser-based rhythm game, developed with JavaScript. Inspired by simple rhythm games, it challenges players to press keys at the right moment to the beat of the music. The game revolves around a Shiba's birthday and has a playful, lighthearted theme.",
+        projectRoleExcalibur: "This was my first game that I created in Excalibur JavaScript. I developed the game from start to finish.",
+        projectTechListExcalibur: `<li><span class="font-semibold">Core:</span> HTML, CSS, JavaScript, Excalibur.js</li>`, // Structure preserved
         projectFeaturesListExcalibur: `<li>Visual representation of approaching notes on different 'lanes'.</li>
-                                       <li>Detection of key presses at the correct timing ('timing windows').</li>
-                                       <li>Player feedback (e.g., 'Perfect', 'Good', 'Miss').</li>
-                                       <li>Score calculation and combo system.</li>
-                                       <li>Synchronization of gameplay elements with background music.</li>
-                                       <li><span class="font-semibold">Challenge:</span> [e.g., Accurately synchronizing visual notes with the audio beat, crucial for a rhythm game.]</li>
-                                       <li><span class="font-semibold">Solution:</span> [e.g., Using the Web Audio API for precise timing and basing note animation on the audio context time.]</li>`,
-        projectLearningExcalibur: "Excalibur was an instructive project where I deepened my JavaScript skills, particularly in animation, time-critical operations, and working with the Web Audio API. Developing a game, even a relatively simple one, provided insights into concepts like game state management and the game loop.",
+                                       <li>Detection of key presses at the correct moment.</li>`, // Structure preserved
+        projectLearningExcalibur: "Shiba Rythm Birthday Fiesta was an instructive project where I deepened my JavaScript skills, especially in the area of animation. Developing this first game gave me insight into game state management and the game loop, and was a valuable first step."
     }
 };
 

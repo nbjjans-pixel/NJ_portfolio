@@ -10,13 +10,13 @@
 <body class="bg-gray-900 text-white">
 
 <nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="index.html" class="text-lg font-bold" data-translate="navPortfolio">Portfolio</a>
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
         <div>
-            <a href="index.html" class="mx-2 hover:text-gray-300" data-translate="navHome">Home</a>
-            <a href="projects.html" class="mx-2 hover:text-gray-300" data-translate="navProjects">Projecten</a>
-            <a href="index.html#contact" class="mx-2 hover:text-gray-300" data-translate="navContact">Contact</a>
-            <button id="language-toggle" class="mx-2 bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+            <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
+            <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
+            <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
+            <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
                 EN
             </button>
         </div>
@@ -28,8 +28,11 @@
     <div class="max-w-4xl mx-auto">
         <h2 class="text-4xl font-bold text-center mb-12" data-translate="projectTitleOpenHiring">Project: Open Hiring Platform</h2>
 
-        <!-- Optionele afbeelding/video -->
-        <!-- <img src="img/openhiring_platform.jpg" alt="Screenshot Open Hiring" class="rounded-lg shadow-lg mb-8 mx-auto max-w-full h-auto"> -->
+        <!-- Flex Container for Images -->
+        <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <img src="img/IO1.png" alt="Screenshot Open Hiring 1" class="w-full md:w-1/2 rounded-lg shadow-lg h-auto">
+            <img src="img/IO2.png" alt="Screenshot Open Hiring 2" class="w-full md:w-1/2 rounded-lg shadow-lg h-auto">
+        </div>
 
         <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
             <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectOverviewTitle">Project Overzicht</h3>
@@ -47,7 +50,7 @@
                 <li><span class="font-semibold">Backend:</span> PHP, Laravel...</li>
             </ul>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectFeaturesTitle">Kernfunctionaliteiten & Uitdagingen</h3>
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectFeaturesTitle">Uitdagingen</h3>
             <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectFeaturesListOpenHiring">
                 <li>Registratie en profielbeheer...</li>
             </ul>
@@ -57,6 +60,11 @@
                 Door dit project heb ik diepgaande ervaring opgedaan met het Laravel framework...
             </p>
         </div>
+
+        <div class="mt-8 text-center">
+            <a href="https://cmgt.hr.nl/projecten/agency-team-3" target="_blank" rel="noopener noreferrer" class="ml-4 px-6 py-3 bg-gray-700 rounded-full hover:bg-gray-600 transition" data-translate="viewGitHubBtn">Showcase pagina</a>
+        </div>
+
     </div>
 </main>
 

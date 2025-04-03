@@ -10,13 +10,13 @@
 <body class="bg-gray-900 text-white">
 <!-- Navigatiebalk -->
 <nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="index.html" class="text-lg font-bold" data-translate="navPortfolio">Portfolio</a>
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
         <div>
-            <a href="index.html" class="mx-2 hover:text-gray-300" data-translate="navHome">Home</a>
-            <a href="projects.html" class="mx-2 hover:text-gray-300" data-translate="navProjects">Projecten</a>
-            <a href="index.html#contact" class="mx-2 hover:text-gray-300" data-translate="navContact">Contact</a>
-            <button id="language-toggle" class="mx-2 bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+            <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
+            <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
+            <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
+            <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
                 EN
             </button>
         </div>
@@ -28,8 +28,11 @@
     <div class="max-w-4xl mx-auto">
         <h2 class="text-4xl font-bold text-center mb-12" data-translate="projectTitleEcoJourney">Project: EcoJourney</h2>
 
-        <!-- Optionele afbeelding/video -->
-        <!-- <img src="img/ecojourney_screenshot.jpg" alt="Screenshot van EcoJourney" class="rounded-lg shadow-lg mb-8 mx-auto max-w-full h-auto"> -->
+        <!-- Flex Container for First Pair of Images -->
+        <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <img src="img/Eco1.png" alt="Screenshot van EcoJourney 1" class="w-full md:w-1/2 rounded-lg shadow-lg h-auto">
+            <img src="img/Eco2.png" alt="Screenshot van EcoJourney 2" class="w-full md:w-1/2 rounded-lg shadow-lg h-auto">
+        </div>
 
         <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
             <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectOverviewTitle">Project Overzicht</h3>
@@ -59,11 +62,15 @@
                 Dit project heeft mijn vaardigheden in [...] versterkt...
             </p>
 
-            <!-- Optionele knoppen -->
-            <!-- <div class="mt-8 text-center">
-                <a href="#" class="px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition" data-translate="viewDemoBtn">Bekijk Live Demo</a>
-                <a href="#" class="ml-4 px-6 py-3 bg-gray-700 rounded-full hover:bg-gray-600 transition" data-translate="viewGitHubBtn">GitHub Repository</a>
-            </div> -->
+            <!-- Flex Container for Second Pair of Images -->
+            <div class="flex flex-col md:flex-row gap-4 mt-8 mb-4"> <!-- Added gap, adjusted mb -->
+                <img src="img/Eco3.png" alt="Screenshot van EcoJourney 3" class="w-full md:w-1/2 rounded-lg shadow-lg h-auto">
+                <img src="img/Eco4.png" alt="Screenshot van EcoJourney 4" class="w-full md:w-1/2 rounded-lg shadow-lg h-auto">
+            </div>
+
+        </div>
+        <div class="mt-8 text-center">
+            <a href="https://cmgt.hr.nl/projecten/EcoJourney" target="_blank" rel="noopener noreferrer" class="ml-4 px-6 py-3 bg-gray-700 rounded-full hover:bg-gray-600 transition" data-translate="viewGitHubBtn">Showcase pagina</a>
         </div>
     </div>
 </main>

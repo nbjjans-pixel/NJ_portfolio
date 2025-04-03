@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Nathaniël</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- script.js wordt aan het einde geladen -->
 </head>
 <body class="bg-gray-900 text-white">
+
 <nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="index.html" class="text-lg font-bold" data-translate="navPortfolio">Portfolio</a>
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
         <div>
-            <a href="index.html" class="mx-2 hover:text-gray-300" data-translate="navHome">Home</a>
-            <a href="projects.html" class="mx-2 hover:text-gray-300" data-translate="navProjects">Projecten</a>
-            <a href="#contact" class="mx-2 hover:text-gray-300" data-translate="navContact">Contact</a>
-            <button id="language-toggle" class="mx-2 bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+            <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
+            <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
+            <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
+            <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
                 EN
             </button>
         </div>
@@ -26,14 +27,14 @@
 <!-- Hero-sectie -->
 <header class="h-screen flex items-center justify-center" style="background: url('img/3409297.jpg') no-repeat center center/cover;">
     <div class="text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4" data-translate="indexWelcome">Welkom op mijn Portfolio</h1>
-        <p class="text-xl mb-8" data-translate="indexDescription">🎓 CMGT Student | 💻 Laravel, PHP, JavaScript, HTML, CSS, React, RESTful APIs, WCAG | 🎮 C#, Python, Unity</p>
-        <a href="projects.html" class="px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition" data-translate="viewProjectsBtn">Bekijk Projecten</a>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 hero-h1" data-translate="indexWelcome">Welkom op mijn Portfolio</h1>
+        <p class="text-xl mb-8 hero-p" data-translate="indexDescription">🎓 CMGT Student | 💻 Laravel, PHP, JavaScript, HTML, CSS, React, RESTful APIs, WCAG | 🎮 C#, Python, Unity</p>
+        <a href="projects.html" class="px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition hero-a" data-translate="viewProjectsBtn">Bekijk Projecten</a>
     </div>
 </header>
 
 <!-- Over Mij sectie -->
-<section id="about" class="py-20 bg-gray-800">
+<section id="about" class="py-20 bg-gray-800" data-aos="fade-up">
     <div class="container mx-auto px-6">
         <div class="max-w-2xl mx-auto">
             <div class="text-center mb-8">
@@ -69,6 +70,15 @@
     © 2024 Nathaniël. Alle rechten voorbehouden. <!-- Wordt overschreven -->
 </footer>
 
-<script defer src="script.js"></script>
+<!-- ... rest van je pagina inhoud ... -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true, // Animatie gebeurt maar één keer
+        duration: 700 // Duur van de animatie in milliseconden
+    });
+</script>
+<script defer src="script.js"></script> <!-- Jouw eigen script komt hierna of ervoor -->
 </body>
 </html>
