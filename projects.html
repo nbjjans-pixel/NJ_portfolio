@@ -64,7 +64,7 @@
       title: "Open Hiring Project - IO Digital",
       page: "OpenHiring.html",
       descriptionKey: "projectCardDescOpenHiring",
-      image: "img/ohlogo.png", // Example image path
+      image: "img/ohlogo.png",
       tags: ["Laravel", "PHP", "Tailwind", "WCAG"]
     },
     {
@@ -72,7 +72,7 @@
       title: "EcoJourney",
       page: "EcoJourney.html",
       descriptionKey: "projectCardDescEcoJourney",
-      image: "img/EcoJourneyL2.png", // Example image path
+      image: "img/EcoJourneyL2.png",
       tags: ["JavaScript", "HTML", "CSS", "API"]
     },
     {
@@ -80,7 +80,7 @@
       title: "American Dream - Unreal Engine Game",
       page: "AmericanDream.html",
       descriptionKey: "projectCardDescAmericanDream",
-      image: "img/gameplaylamp.gif", // Example image path
+      image: "img/ADlogo.png",
       tags: ["Unreal Engine", "VR", "Blender", "GameDev"]
     },
     {
@@ -88,7 +88,7 @@
       title: "Type Racer",
       page: "TypeRacer.html",
       descriptionKey: "projectCardDescTypeRacer",
-      image: "img/type.png", // Example image path
+      image: "img/toetsb.png", // Example image path
       tags: ["JavaScript", "HTML", "CSS", "DOM"]
     },
     {
@@ -96,7 +96,7 @@
       title: "Excalibur js Ritme spel",
       page: "Excalibur.html",
       descriptionKey: "projectCardDescExcalibur",
-      image: "img/Shib1.png", // Example image path
+      image: "img/ShibParty.png",
       tags: ["JavaScript", "Excalibur.js", "GameDev"]
     }
     // Add more projects if needed
@@ -132,8 +132,9 @@
           ).join('');
         }
 
+        // *** CHANGE IS HERE: object-cover replaced with object-contain ***
         projectCard.innerHTML = `
-                <img class="w-full h-48 object-cover" src="${project.image}" alt="Thumbnail ${project.title}">
+                <img class="w-full h-48 object-contain" src="${project.image}" alt="Thumbnail ${project.title}">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-white">${project.title}</h3>
                     <div class="mb-4"> <!-- Tags container -->
