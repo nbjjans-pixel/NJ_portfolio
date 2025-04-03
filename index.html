@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl"> <!-- Attribuut wordt bijgewerkt door JS -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nathaniël</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- script.js wordt aan het einde geladen -->
+</head>
+<body class="bg-gray-900 text-white">
+<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="index.html" class="text-lg font-bold" data-translate="navPortfolio">Portfolio</a>
+        <div>
+            <a href="index.html" class="mx-2 hover:text-gray-300" data-translate="navHome">Home</a>
+            <a href="projects.html" class="mx-2 hover:text-gray-300" data-translate="navProjects">Projecten</a>
+            <a href="#contact" class="mx-2 hover:text-gray-300" data-translate="navContact">Contact</a>
+            <button id="language-toggle" class="mx-2 bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+                EN
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero-sectie -->
+<header class="h-screen flex items-center justify-center" style="background: url('img/3409297.jpg') no-repeat center center/cover;">
+    <div class="text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4" data-translate="indexWelcome">Welkom op mijn Portfolio</h1>
+        <p class="text-xl mb-8" data-translate="indexDescription">🎓 CMGT Student | 💻 Laravel, PHP, JavaScript, HTML, CSS, React, RESTful APIs, WCAG | 🎮 C#, Python, Unity</p>
+        <a href="projects.html" class="px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition" data-translate="viewProjectsBtn">Bekijk Projecten</a>
+    </div>
+</header>
+
+<!-- Over Mij sectie -->
+<section id="about" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-8">
+                <img src="img/342352.jpg" alt="Mijn foto" class="w-64 h-64 rounded-full mx-auto mb-6 border-4 border-blue-600">
+                <h2 class="text-4xl font-bold text-white mb-4" data-translate="indexAboutMeTitle">Over Mij</h2>
+            </div>
+            <!-- De inhoud hier wordt beheerd via innerHTML in JS -->
+            <div class="space-y-6 text-gray-300 text-lg leading-relaxed" data-translate="indexAboutMeContent">
+                <!-- Initiële NL content wordt overschreven door JS -->
+                Hallo! Ik ben Nathaniël 👋<br><br>
+                Als creatieve CMGT-student en fullstack developer combineer ik mijn passie voor programmeren met game development.<br><br>
+                Ik bouw graag aan vernieuwende webapplicaties met <span class="text-blue-400">💻 PHP, JavaScript,RESTful APIs, HTML en Css en samen met frameworks zoals Laravel, React, React Native</span>, altijd met aandacht voor toegankelijkheid (<span class="font-semibold">WCAG</span>).<br><br>
+                Daarnaast duik ik in de wereld van <span class="text-blue-400">🎮 game development</span> met Unity, C# en Python, waar ik mijn kennis in creativiteit en code samen toepas.<br><br>
+                <p class="bg-gray-700 p-4 rounded-lg">
+                    Momenteel zoek ik een <span class="font-semibold text-blue-400">stageplek van september 2025 t/m februari 2026</span> om mijn expertise te verdiepen in een team dat waarde hecht aan oplossingen vinden, creativiteit en toegankelijkheid.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact sectie -->
+<section id="contact" class="py-20"> <!-- id="contact" blijft voor scrollen -->
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4" data-translate="indexContactTitle">Contact</h2>
+        <p class="mb-8" data-translate="indexContactDescription">Neem gerust contact met mij op voor samenwerkingen of vragen!</p>
+        <a href="mailto:nbjjans22@gmail.com" class="px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition" data-translate="sendEmailBtn">Stuur een E-mail</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
+    © 2024 Nathaniël. Alle rechten voorbehouden. <!-- Wordt overschreven -->
+</footer>
+
+<script defer src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projecten - Nathaniël</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+<!-- Vaste navigatiebalk -->
+<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
+  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <a href="index.html" class="text-lg font-bold" data-translate="navPortfolio">Portfolio</a>
+    <div>
+      <a href="index.html" class="mx-2 hover:text-gray-300" data-translate="navHome">Home</a>
+      <a href="projects.html" class="mx-2 hover:text-gray-300" data-translate="navProjects">Projecten</a>
+      <a href="index.html#contact" class="mx-2 hover:text-gray-300" data-translate="navContact">Contact</a>
+      <button id="language-toggle" class="mx-2 bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+        EN
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Projecten overzicht -->
+<main class="pt-24 pb-12 px-6">
+  <h2 class="text-4xl font-bold text-center mb-12" data-translate="projectsTitle">Mijn Projecten</h2>
+  <div id="projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Project cards worden hier dynamisch geladen -->
+    <!-- De content IN de kaarten (titel, beschrijving, link) wordt door onderstaande script gegenereerd -->
+    <!-- Het taalwisselscript zal de "Meer details" link bijwerken via de MutationObserver -->
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
+  © 2024 Nathaniël. Alle rechten voorbehouden.
+</footer>
+
+<!-- JavaScript voor dynamisch project laden -->
+<script>
+  const projectsData = [
+    {
+      id: "OpenHiring", // Gebruikt voor translation key
+      title: "Open Hiring Project - IO Digital",
+      page: "OpenHiring.html",
+      descriptionKey: "projectCardDescOpenHiring" // Key voor vertaling
+    },
+    {
+      id: "EcoJourney",
+      title: "EcoJourney",
+      page: "EcoJourney.html",
+      descriptionKey: "projectCardDescEcoJourney"
+    },
+    {
+      id: "AmericanDream",
+      title: "American Dream - Unreal Engine Game",
+      page: "AmericanDream.html",
+      descriptionKey: "projectCardDescAmericanDream"
+    },
+    {
+      id: "TypeRacer",
+      title: "Type Racer",
+      page: "TypeRacer.html",
+      descriptionKey: "projectCardDescTypeRacer"
+    },
+    {
+      id: "Excalibur",
+      title: "Excalibur js Ritme spel",
+      page: "Excalibur.html",
+      descriptionKey: "projectCardDescExcalibur"
+    }
+  ];
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const projectsContainer = document.getElementById("projects");
+    const currentLang = document.documentElement.lang || 'nl'; // Krijg huidige taal
+
+    if (projectsContainer) {
+      projectsData.forEach(project => {
+        const projectCard = document.createElement("div");
+        projectCard.className = "p-6 bg-gray-800 rounded-lg shadow hover:shadow-xl transition duration-300";
+
+        // Haal beschrijving op uit de hoofd translations object (indien gedefinieerd)
+        const descriptionText = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][project.descriptionKey])
+                ? translations[currentLang][project.descriptionKey]
+                : "[Beschrijving niet gevonden]"; // Fallback
+
+        projectCard.innerHTML = `
+            <h3 class="text-2xl font-semibold mb-2">${project.title}</h3>
+            <p class="text-gray-400 mb-4">${descriptionText}</p> <!-- Vertaalde beschrijving -->
+            <a href="${project.page}" class="text-blue-400 hover:underline" data-translate="projectDetailsLink">Meer details</a>
+          `;
+        projectsContainer.appendChild(projectCard);
+      });
+      // De hoofd `script.js` zal de `data-translate="projectDetailsLink"` bijwerken na DOMContentLoaded
+      // en via de MutationObserver als de taal later wordt gewisseld.
+    }
+  });
+</script>
+<script defer src="script.js"></script> <!-- Taalwissel script MOET NA het card-generatie script of apart -->
+</body>
+</html>

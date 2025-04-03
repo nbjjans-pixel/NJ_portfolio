@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: EcoJourney</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+<!-- Navigatiebalk -->
+<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="index.html" class="text-lg font-bold" data-translate="navPortfolio">Portfolio</a>
+        <div>
+            <a href="index.html" class="mx-2 hover:text-gray-300" data-translate="navHome">Home</a>
+            <a href="projects.html" class="mx-2 hover:text-gray-300" data-translate="navProjects">Projecten</a>
+            <a href="index.html#contact" class="mx-2 hover:text-gray-300" data-translate="navContact">Contact</a>
+            <button id="language-toggle" class="mx-2 bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+                EN
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Projectinhoud -->
+<main class="pt-24 pb-12 px-6">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" data-translate="projectTitleEcoJourney">Project: EcoJourney</h2>
+
+        <!-- Optionele afbeelding/video -->
+        <!-- <img src="img/ecojourney_screenshot.jpg" alt="Screenshot van EcoJourney" class="rounded-lg shadow-lg mb-8 mx-auto max-w-full h-auto"> -->
+
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectOverviewTitle">Project Overzicht</h3>
+            <p class="text-lg leading-relaxed" data-translate="projectDescEcoJourney">
+                EcoJourney is een mobiele webapplicatie ontworpen om consumenten te helpen duurzamere keuzes te maken tijdens het winkelen...
+            </p>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectRoleTitle">Mijn Rol & Bijdrage</h3>
+            <p class="text-lg leading-relaxed" data-translate="projectRoleEcoJourney">
+                [Beschrijf hier specifiek wat JIJ hebt gedaan...]
+            </p>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectTechTitle">Gebruikte Technologieën</h3>
+            <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectTechListEcoJourney">
+                <!-- Content wordt beheerd door JS -->
+                <li><span class="font-semibold">Frontend:</span> JavaScript...</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectFeaturesTitle">Kernfunctionaliteiten & Uitdagingen</h3>
+            <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectFeaturesListEcoJourney">
+                <!-- Content wordt beheerd door JS -->
+                <li>Barcode scannen...</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectLearningTitle">Leerresultaten</h3>
+            <p class="text-lg leading-relaxed" data-translate="projectLearningEcoJourney">
+                Dit project heeft mijn vaardigheden in [...] versterkt...
+            </p>
+
+            <!-- Optionele knoppen -->
+            <!-- <div class="mt-8 text-center">
+                <a href="#" class="px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition" data-translate="viewDemoBtn">Bekijk Live Demo</a>
+                <a href="#" class="ml-4 px-6 py-3 bg-gray-700 rounded-full hover:bg-gray-600 transition" data-translate="viewGitHubBtn">GitHub Repository</a>
+            </div> -->
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
+    © 2024 Nathaniël. Alle rechten voorbehouden.
+</footer>
+
+<script defer src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: American Dream (Unreal Engine)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+<!-- Navigatiebalk (zelfde als andere pagina's) -->
+<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="index.html" class="text-lg font-bold" data-translate="navPortfolio">Portfolio</a>
+        <div>
+            <a href="index.html" class="mx-2 hover:text-gray-300" data-translate="navHome">Home</a>
+            <a href="projects.html" class="mx-2 hover:text-gray-300" data-translate="navProjects">Projecten</a>
+            <a href="index.html#contact" class="mx-2 hover:text-gray-300" data-translate="navContact">Contact</a>
+            <button id="language-toggle" class="mx-2 bg-blue-600 px-3 py-1 rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+                EN
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Projectinhoud -->
+<main class="pt-24 pb-12 px-6">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" data-translate="projectTitleAmericanDream">Project: American Dream (Unreal Engine)</h2>
+
+        <!-- Optionele afbeelding/video -->
+        <!-- <img src="img/american_dream_game.jpg" alt="Screenshot American Dream" class="rounded-lg shadow-lg mb-8 mx-auto max-w-full h-auto"> -->
+
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectOverviewTitle">Project Overzicht</h3>
+            <p class="text-lg leading-relaxed" data-translate="projectDescAmericanDream">
+                "American Dream" is een immersieve Virtual Reality (VR) game ontwikkeld in Unreal Engine...
+            </p>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectRoleTitle">Mijn Rol & Bijdrage</h3>
+            <p class="text-lg leading-relaxed" data-translate="projectRoleAmericanDream">
+                [Beschrijf hier specifiek wat JIJ hebt gedaan...]
+            </p>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectTechTitle">Gebruikte Technologieën</h3>
+            <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectTechListAmericanDream">
+                <!-- Content wordt beheerd door JS -->
+                <li><span class="font-semibold">Game Engine:</span> Unreal Engine...</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectFeaturesTitle">Kernfunctionaliteiten & Uitdagingen</h3>
+            <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectFeaturesListAmericanDream">
+                <!-- Content wordt beheerd door JS -->
+                <li>Immersieve VR-ervaring...</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectLearningTitle">Leerresultaten</h3>
+            <p class="text-lg leading-relaxed" data-translate="projectLearningAmericanDream">
+                Dit project was een diepe duik in de wereld van game development...
+            </p>
+        </div>
+    </div>
+</main>
+
+<!-- Footer (zelfde als andere pagina's) -->
+<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
+    © 2024 Nathaniël. Alle rechten voorbehouden.
+</footer>
+
+<script defer src="script.js"></script>
+</body>
+</html>
