@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Game Development Ervaring - Nathaniël</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+<!-- Navigatiebalk (zelfde als andere pagina's) -->
+<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
+        <div>
+            <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
+            <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
+            <!-- Optional: Add new nav links if desired, or link from index.html -->
+            <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
+            <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+                EN
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Pagina Inhoud -->
+<main class="pt-24 pb-12 px-6">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" data-translate="pageTitleUnityExp">Unity Game Development Ervaring</h2>
+
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
+            <p class="text-lg leading-relaxed" data-translate="unityExpIntro">
+                Game development ...
+            </p>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="unityExpPathwaysTitle">Afgeronde Unity Leerpaden</h3>
+            <p class="text-lg leading-relaxed mb-2" data-translate="unityExpPathwaysDesc">
+                Ik heb met ...
+            </p>
+            <ul class="list-disc list-inside text-lg space-y-2 pl-4" data-translate="unityExpPathwaysList">
+                <li><span class="font-semibold">Unity Essentials:</span> Fundamenten van de Unity Editor en basisconcepten.</li>
+                <li><span class="font-semibold">Junior Programmer:</span> Kernprincipes van C# scripting voor game logic en interactie.</li>
+                <li><span class="font-semibold">Creative Core:</span> Essentiële creatieve vaardigheden binnen Unity, zoals belichting, materialen en basis animatie.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="unityExpSkillsTitle">Opgebouwde Vaardigheden</h3>
+            <p class="text-lg leading-relaxed" data-translate="unityExpSkillsDesc">
+                Door deze trajecten ...
+            </p>
+
+            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="unityExpCurrentProjectTitle">Huidig Project: Co-op Roguelite</h3>
+            <p class="text-lg leading-relaxed" data-translate="unityExpCurrentProjectDesc">
+                Momenteel werk ik in ....
+            </p>
+
+        </div>
+    </div>
+</main>
+
+
+<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
+    © 2024 Nathaniël. Alle rechten voorbehouden.
+</footer>
+
+<script defer src="script.js"></script>
+</body>
+</html>
