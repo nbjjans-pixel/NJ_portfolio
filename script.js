@@ -32,7 +32,7 @@ const translations = {
         projectsIntro: "Hier is een selectie van projecten waaraan ik heb gewerkt, variërend van webapplicaties tot game development. Klik op een project voor meer details.",
         projectCardDescOpenHiring: "Een sollicitatieplatform zonder drempels, met focus op lokale connecties.",
         projectCardDescEcoJourney: "Een mobiele webapp om producten te scannen en hun duurzaamheid te ontdekken.",
-        projectCardDescAmericanDream: "Een VR-game ontwikkeld in Unreal Engine.",
+        projectCardDescAmericanDream: "Een VR-game ontwikkelt in Unreal Engine.",
         projectCardDescTypeRacer: "Een in browser Type Racer.",
         projectCardDescExcalibur: "Een Excalibur javascript Ritme spel.",
         projectCardDescUnityExp: "Ervaring met Unity game development via leerpaden en een persoonlijk roguelite project.",
