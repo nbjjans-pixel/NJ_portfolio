@@ -56,7 +56,7 @@ const translations = {
         projectLearningEcoJourney: "Dit project heeft mijn vaardigheden in API-integratie en gamification versterkt.",
 
         projectTitleAmericanDream: "American Dream (Unreal Engine)",
-        projectDescAmericanDream: "American Dream is een VR horror game ontwikkeld in Unreal Engine. Het vertelt het verhaal over de \"horror\" achter een 9-tot-5 baan vol deadlines en druk, waarin je letterlijk uit de dagelijkse routine breekt, maar vervolgens wordt achtervolgd door je baas terwijl je herinneringen van je familie verzamelt,zodat je kan ontsnappen.",
+        projectDescAmericanDream: "American Dream is een VR horror game ontwikkelt in Unreal Engine. Het vertelt het verhaal over de \"horror\" achter een 9-tot-5 baan vol deadlines en druk, waarin je letterlijk uit de dagelijkse routine breekt, maar vervolgens wordt achtervolgd door je baas terwijl je herinneringen van je familie verzamelt,zodat je kan ontsnappen.",
         projectRoleAmericanDream: "Door hardwarelimieten kon ik niet aan de blueprints werken in de game. Daarom heb ik mij gericht op UX, voice acting, textures, animaties, gebruikte assets, het verhaal en de gameplayloop.",
         projectTechListAmericanDream: `<li><span class="font-semibold">Game Engine:</span> Unreal Engine 5</li>
                                <li><span class="font-semibold">Platform:</span> VR</li>
