@@ -1,22 +1,18 @@
-// globale variabele blijft bestaan
-let currentLanguage = 'nl'; // Default language
+let currentLanguage = 'nl';
 
-// Vertalingen object
 const translations = {
     nl: {
-        // Navigatie & Algemeen
         navPortfolio: "Portfolio",
         navHome: "Home",
         navProjects: "Projecten",
         navContact: "Contact",
         toggleButton: "EN",
-        footerCopyright: "© 2024 Nathaniël. Alle rechten voorbehouden.",
+        footerCopyright: "2025",
         viewProjectsBtn: "Bekijk Projecten",
         sendEmailBtn: "Stuur een E-mail",
         projectDetailsLink: "Meer details",
-        viewGitHubBtn: "Showcase pagina", // Gebruikt op meerdere project detail pagina's
+        viewGitHubBtn: "Showcase pagina",
 
-        // index.html
         indexWelcome: "Welkom op mijn Portfolio",
         indexDescription: "🎓 CMGT Student | 💻 Laravel, PHP, JavaScript, HTML, CSS, React, RESTful APIs, WCAG | 🎮 C#, Python, Unity",
         indexAboutMeTitle: "Over Mij",
@@ -32,7 +28,6 @@ const translations = {
         indexContactTitle: "Contact",
         indexContactDescription: "Neem gerust contact met mij op voor samenwerkingen of vragen!",
 
-        // projects.html
         projectsTitle: "Mijn Projecten",
         projectsIntro: "Hier is een selectie van projecten waaraan ik heb gewerkt, variërend van webapplicaties tot game development. Klik op een project voor meer details.",
         projectCardDescOpenHiring: "Een sollicitatieplatform zonder drempels, met focus op lokale connecties.",
@@ -40,17 +35,15 @@ const translations = {
         projectCardDescAmericanDream: "Een VR-game ontwikkeld in Unreal Engine.",
         projectCardDescTypeRacer: "Een in browser Type Racer.",
         projectCardDescExcalibur: "Een Excalibur javascript Ritme spel.",
-        projectCardDescUnityExp: "Ervaring met Unity game development via leerpaden en een persoonlijk roguelite project.", // NIEUW
-        projectCardDescDigitalArt: "Verkenning van digitale kunst in Photoshop en de link met 3D-modellering.", // NIEUW
+        projectCardDescUnityExp: "Ervaring met Unity game development via leerpaden en een persoonlijk roguelite project.",
+        projectCardDescDigitalArt: "Verkenning van digitale kunst in Photoshop en de link met 3D-modellering.",
 
-        // Project Detail Pagina's (Algemene Titels)
         projectOverviewTitle: "Project Overzicht",
         projectRoleTitle: "Mijn Rol & Bijdrage",
         projectTechTitle: "Gebruikte Technologieën",
-        projectFeaturesTitle: "Uitdagingen", // Of "Kernfunctionaliteiten & Uitdagingen"
+        projectFeaturesTitle: "Uitdagingen",
         projectLearningTitle: "Leerresultaten",
 
-        // EcoJourney.html Specifiek
         projectTitleEcoJourney: "EcoJourney",
         projectDescEcoJourney: "EcoJourney is een mobiele webapplicatie ontworpen om consumenten te helpen duurzamere keuzes te maken tijdens het winkelen. Door simpelweg de barcode van een product te scannen, krijgen gebruikers direct inzicht in de duurzaamheidsscore en de milieu-impact van het product.",
         projectRoleEcoJourney: "In het begin van het project ben ik gestart met uitgebreid gebruikersonderzoek. Hierdoor ontdekte ik onder andere de OpenFoodFacts API, die gedurende het hele project een cruciale rol heeft gespeeld. Daarnaast heb ik gewerkt aan de laadanimatie die zichtbaar is tussen het succesvol scannen en het tonen van de pagina. Verder implementeerde ik functionaliteiten zoals accounts, vrienden en gamificatie, waarbij gebruikers punten ontvangen voor elk uniek gescand product.",
@@ -62,7 +55,6 @@ const translations = {
                                         <li>Presenteren van een duidelijke duurzaamheidsscore en alternatieven.</li>`,
         projectLearningEcoJourney: "Dit project heeft mijn vaardigheden in API-integratie en gamification versterkt.",
 
-        // AmericanDream.html Specifiek
         projectTitleAmericanDream: "American Dream (Unreal Engine)",
         projectDescAmericanDream: "American Dream is een VR horror game ontwikkeld in Unreal Engine. Het vertelt het verhaal over de \"horror\" achter een 9-tot-5 baan vol deadlines en druk, waarin je letterlijk uit de dagelijkse routine breekt, maar vervolgens wordt achtervolgd door je baas terwijl je herinneringen van je familie verzamelt,zodat je kan ontsnappen.",
         projectRoleAmericanDream: "Door hardwarelimieten kon ik niet aan de blueprints werken in de game. Daarom heb ik mij gericht op UX, voice acting, textures, animaties, gebruikte assets, het verhaal en de gameplayloop.",
@@ -71,7 +63,6 @@ const translations = {
                                <li><span class="font-semibold">Software:</span> Unreal Engine Editor, Blender</li>`,
         projectLearningAmericanDream: "Dit project was een diepe duik in VR-game development met Unreal Engine. Ik heb geleerd hoe ik een meeslepende en samenhangende ervaring kan creëren, ondanks technische beperkingen, door me te richten op andere onderdelen zoals de gebruikerservaring en het verhaal.",
 
-        // OpenHiring.html Specifiek
         projectTitleOpenHiring: "Open Hiring Platform",
         projectDescOpenHiring: "Dit project, in samenwerking voor IO Digital, betrof de ontwikkeling van een innovatief sollicitatieplatform gebaseerd op het 'Open Hiring' principe. Het doel was om drempels in het sollicitatieproces weg te nemen door kandidaten aan te nemen op volgorde van aanmelding, in plaats van op basis van CV's of sollicitatiegesprekken, met een sterke focus op het verbinden van lokaal talent met lokale bedrijven.",
         projectRoleOpenHiring: "In dit project was ik verantwoordelijk als WCAG-/toegankelijkheidsexpert. Ik voerde uitgebreide toegankelijkheidstesten uit bij mijn mede-studenten en heb talrijke pagina's aangepast van niet-toegankelijk naar WCAG AA, en in sommige gevallen zelfs naar WCAG AAA. Daarnaast ontwikkelde ik een feature die het mogelijk maakt om lokale bedrijven in de buurt van de gebruikerslocatie weer te geven in de app.",
@@ -82,7 +73,6 @@ const translations = {
                                         <li>Aanmeldingssysteem op basis van 'first come, first served' (Open Hiring principe).</li>`,
         projectLearningOpenHiring: "Door dit project heb ik diepgaande ervaring opgedaan met het Laravel framework, met aandacht voor toegankelijkheid (WCAG). De samenwerking met IO Digital gaf mij niet alleen inzicht in klantvereisten en projectmanagement, maar leerde mij ook hoe een bedrijf projecten aanpakt, waarbij het verschil in professionaliteit tussen mijn schoolprojecten en dit project duidelijk naar voren kwam. IO Digital heeft alle nodige documentatie geleverd en mij veel waardevolle tips uit de praktijk meegegeven.",
 
-        // TypeRacer.html Specifiek
         projectTitleTypeRacer: "Type Racer",
         projectDescTypeRacer: "Type Racer is een webgebaseerd spel dat spelers uitdaagt om hun typesnelheid en nauwkeurigheid te testen en verbeteren. Dit is een klein projectje dat ik in mijn vrije tijd heb gemaakt, geïnspireerd door het Donald Duck typespel waar ik als kind leerde typen.",
         projectRoleTypeRacer: "In dit project heb ik het spel van begin tot eind ontwikkeld als een persoonlijk project. Ik ontwierp de gebruikersinterface en implementeerde de core game logic met vanilla JavaScript, waaronder het volgen van gebruikersinvoer, het berekenen van woorden per minuut (WPM) en nauwkeurigheid, en het geven van visuele feedback aan de speler. Daarnaast was dit project een waardevolle oefening in het toepassen van mijn passie voor webdevelopment in mijn vrije tijd.",
@@ -95,7 +85,6 @@ const translations = {
                                        <li>Locaal opgeslagen leaderboard.</li>`,
         projectLearningTypeRacer: "Dit project was een uitstekende oefening in frontend JavaScript-ontwikkeling, met name in DOM-manipulatie en event handling. Ik heb geleerd hoe je een interactieve gebruikerservaring kunt bouwen met pure webtechnologieën en hoe je game-achtige logica, zoals scoreberekening en timing, implementeert in de browser.",
 
-        // Excalibur.html Specifiek
         projectTitleExcalibur: "Shiba Rythm Birthday Fiesta",
         projectDescExcalibur: "Shiba Rythm Birthday Fiesta is een browser-based ritmespel, ontwikkeld met JavaScript. Geïnspireerd door eenvoudige ritmespellen, daagt het spelers uit om op het juiste moment toetsen in te drukken op de maat van de muziek. Het spel draait om de verjaardag van een Shiba en heeft een speels, luchtig thema.",
         projectRoleExcalibur: "Dit was mijn eerste spel dat ik heb gemaakt in Excalibur JavaScript. Ik heb het spel van begin tot eind ontwikkeld.",
@@ -104,7 +93,6 @@ const translations = {
                                <li>Detectie van toetsaanslagen op het juiste moment.</li>`,
         projectLearningExcalibur: "Shiba Rythm Birthday Fiesta was een leerzaam project waarbij ik mijn JavaScript-vaardigheden heb verdiept, met name op het gebied van animatie. Het ontwikkelen van dit eerste spel gaf mij inzicht in game state management en de game loop, en was een waardevolle eerste stap.",
 
-        // DigitalArt.html
         pageTitleDigitalArt: "Digitale Kunst & Creativiteit",
         digitalArtIntro: "Naast programmeren en game development, vind ik ook veel plezier in digitaal tekenen met Photoshop. Het is voor mij een manier om creatieve ideeën te verkennen en visuele concepten tot leven te brengen.",
         digitalArtCreativeProcessTitle: "Het Creatieve Proces",
@@ -113,7 +101,6 @@ const translations = {
         digitalArtBlenderLinkDesc: "Mijn ervaring met 2D-tekenen in Photoshop legt een sterke basis voor 3D-modelleren in Blender. Het helpt me bij het maken van concept art voor personages of omgevingen voordat ik ze in 3D bouw. Het begrip van vorm, proportie en anatomie dat ik opdoe met tekenen, vertaalt zich naar maken van visueel aantrekkelijkere 3D-modellen.",
         digitalArtGalleryTitle: "Galerij",
 
-        // UnityExperience.html
         pageTitleUnityExp: "Unity Game Development Ervaring",
         unityExpIntro: "Game development is mijn grote passie, en Unity is mijn huidige engine naar keuze om ervaringen te bouwen. Ik heb me verdiept in de mogelijkheden van Unity via hun officiële leerpaden en pas deze kennis nu toe in mijn eigen projecten.",
         unityExpPathwaysTitle: "Afgeronde Unity Leerpaden",
@@ -127,19 +114,17 @@ const translations = {
         unityExpCurrentProjectDesc: "Momenteel werk ik in mijn vrije tijd aan een persoonlijk project: een co-op roguelite game. Dit is een uitdagend project waarin ik mijn kennis van C# verder ontwikkel. Het is een geweldige manier om te leren en iets neer te zetten waar ik blij mee ben.",
     },
     en: {
-        // Navigation & General
         navPortfolio: "Portfolio",
         navHome: "Home",
         navProjects: "Projects",
         navContact: "Contact",
         toggleButton: "NL",
-        footerCopyright: "© 2024 Nathaniël. All rights reserved.",
+        footerCopyright: "© 2025 Nathaniël. All rights reserved.",
         viewProjectsBtn: "View Projects",
         sendEmailBtn: "Send an Email",
         projectDetailsLink: "More details",
-        viewGitHubBtn: "Showcase page", // Used on multiple project detail pages
+        viewGitHubBtn: "Showcase page",
 
-        // index.html
         indexWelcome: "Welcome to my Portfolio",
         indexDescription: "🎓 CMGT Student | 💻 Laravel, PHP, JavaScript, HTML, CSS, React, RESTful APIs, WCAG | 🎮 C#, Python, Unity",
         indexAboutMeTitle: "About Me",
@@ -155,7 +140,6 @@ const translations = {
         indexContactTitle: "Contact",
         indexContactDescription: "Feel free to contact me for collaborations or questions!",
 
-        // projects.html
         projectsTitle: "My Projects",
         projectsIntro: "Here is a selection of projects I have worked on, ranging from web applications to game development. Click on a project for more details.",
         projectCardDescOpenHiring: "An application platform without barriers, focusing on local connections.",
@@ -163,17 +147,15 @@ const translations = {
         projectCardDescAmericanDream: "A VR game developed in Unreal Engine.",
         projectCardDescTypeRacer: "An in-browser Type Racer.",
         projectCardDescExcalibur: "An Excalibur JavaScript Rhythm game.",
-        projectCardDescUnityExp: "Experience with Unity game development via learning pathways and a personal roguelite project.", // NEW
-        projectCardDescDigitalArt: "Exploring digital art in Photoshop and its connection to 3D modeling.", // NEW
+        projectCardDescUnityExp: "Experience with Unity game development via learning pathways and a personal roguelite project.",
+        projectCardDescDigitalArt: "Exploring digital art in Photoshop and its connection to 3D modeling.",
 
-        // Project Detail Pages (General Titles)
         projectOverviewTitle: "Project Overview",
         projectRoleTitle: "My Role & Contribution",
         projectTechTitle: "Technologies Used",
-        projectFeaturesTitle: "Challenges", // Adjusted for consistency
+        projectFeaturesTitle: "Challenges",
         projectLearningTitle: "Learning Outcomes",
 
-        // EcoJourney.html Specific
         projectTitleEcoJourney: "EcoJourney",
         projectDescEcoJourney: "EcoJourney is a mobile web application designed to help consumers make more sustainable choices while shopping. By simply scanning a product's barcode, users get instant insights into its sustainability score and environmental impact.",
         projectRoleEcoJourney: "At the start of the project, I began with extensive user research. This led me to discover the OpenFoodFacts API, among other things, which played a crucial role throughout the project. Additionally, I worked on the loading animation visible between successful scanning and displaying the page. Furthermore, I implemented functionalities such as accounts, friends, and gamification, where users receive points for each unique product scanned.",
@@ -185,7 +167,6 @@ const translations = {
                                         <li>Presenting a clear sustainability score and alternatives.</li>`,
         projectLearningEcoJourney: "This project strengthened my skills in API integration and gamification.",
 
-        // AmericanDream.html Specific
         projectTitleAmericanDream: "American Dream (Unreal Engine)",
         projectDescAmericanDream: "American Dream is a VR horror game developed in Unreal Engine. It tells the story of the \"horror\" behind a 9-to-5 job filled with deadlines and pressure, where you literally break out of the daily routine, but are then chased by your boss while collecting memories of your family to escape.",
         projectRoleAmericanDream: "Due to hardware limitations, I couldn't work on the blueprints in the game. Therefore, I focused on UX, voice acting, textures, animations, used assets, the story, and the gameplay loop.",
@@ -194,10 +175,9 @@ const translations = {
                                        <li><span class="font-semibold">Software:</span> Unreal Engine Editor, Blender</li>`,
         projectLearningAmericanDream: "This project was a deep dive into VR game development with Unreal Engine. I learned how to create an immersive and cohesive experience, despite technical constraints, by focusing on other components such as user experience and story.",
 
-        // OpenHiring.html Specific
         projectTitleOpenHiring: "Open Hiring Platform",
         projectDescOpenHiring: "This project, in collaboration with IO Digital, involved the development of an innovative application platform based on the 'Open Hiring' principle. The goal was to remove barriers in the application process by hiring candidates in order of application, rather than based on resumes or interviews, with a strong focus on connecting local talent with local companies.",
-        projectRoleOpenHiring: "In this project, I was responsible as the WCAG/accessibility expert. I conducted extensive accessibility tests with my fellow students and adapted numerous pages from non-accessible to WCAG AA, and in some cases, even to WCAG AAA. Additionally, I developed a feature that allows displaying local companies near the user's location in the app.", // Slightly simplified EN text
+        projectRoleOpenHiring: "In this project, I was responsible as the WCAG/accessibility expert. I conducted extensive accessibility tests with my fellow students and adapted numerous pages from non-accessible to WCAG AA, and in some cases, even to WCAG AAA. Additionally, I developed a feature that allows displaying local companies near the user's location in the app.",
         projectTechListOpenHiring: `<li><span class="font-semibold">Backend:</span> PHP, Laravel Framework</li>
                                     <li><span class="font-semibold">Frontend:</span> HTML, CSS with Tailwind CSS, JavaScript</li>`,
         projectFeaturesListOpenHiring: `<li>Registration and profile management for job seekers and employers.</li>
@@ -205,7 +185,6 @@ const translations = {
                                         <li>Application system based on 'first come, first served' (Open Hiring principle).</li>`,
         projectLearningOpenHiring: "Through this project, I gained in-depth experience with the Laravel framework, focusing on accessibility (WCAG). The collaboration with IO Digital not only gave me insight into client requirements and project management but also taught me how a company approaches projects, clearly highlighting the difference in professionalism between my school projects and this one. IO Digital provided all necessary documentation and gave me many valuable practical tips.",
 
-        // TypeRacer.html Specific
         projectTitleTypeRacer: "Type Racer",
         projectDescTypeRacer: "Type Racer is a web-based game that challenges players to test and improve their typing speed and accuracy. This is a small project I created in my spare time, inspired by the Donald Duck typing game where I learned to type as a child.",
         projectRoleTypeRacer: "In this project, I developed the game from start to finish as a personal project. I designed the user interface and implemented the core game logic with vanilla JavaScript, including tracking user input, calculating words per minute (WPM) and accuracy, and providing visual feedback to the player. Additionally, this project was a valuable exercise in applying my passion for web development in my free time.",
@@ -218,7 +197,6 @@ const translations = {
                                        <li>Locally stored leaderboard.</li>`,
         projectLearningTypeRacer: "This project was an excellent exercise in frontend JavaScript development, particularly in DOM manipulation and event handling. I learned how to build an interactive user experience using pure web technologies and how to implement game-like logic, such as score calculation and timing, in the browser.",
 
-        // Excalibur.html Specific
         projectTitleExcalibur: "Shiba Rythm Birthday Fiesta",
         projectDescExcalibur: "Shiba Rythm Birthday Fiesta is a browser-based rhythm game, developed with JavaScript. Inspired by simple rhythm games, it challenges players to press keys at the right moment to the beat of the music. The game revolves around a Shiba's birthday and has a playful, lighthearted theme.",
         projectRoleExcalibur: "This was my first game that I created in Excalibur JavaScript. I developed the game from start to finish.",
@@ -227,7 +205,6 @@ const translations = {
                                        <li>Detection of key presses at the correct moment.</li>`,
         projectLearningExcalibur: "Shiba Rythm Birthday Fiesta was an instructive project where I deepened my JavaScript skills, especially in the area of animation. Developing this first game gave me insight into game state management and the game loop, and was a valuable first step.",
 
-        // DigitalArt.html - UPDATED
         pageTitleDigitalArt: "Digital Art & Creativity",
         digitalArtIntro: "Besides programming and game development, I also find great joy in digital drawing using Photoshop. For me, it's a way to explore creative ideas and bring visual concepts to life.",
         digitalArtCreativeProcessTitle: "The Creative Process",
@@ -236,7 +213,6 @@ const translations = {
         digitalArtBlenderLinkDesc: "My experience with 2D drawing in Photoshop provides a strong foundation for 3D modeling in Blender. It helps me create concept art for characters or environments before building them in 3D. The understanding of form, proportion, and anatomy gained from drawing translates into creating more visually appealing 3D models.",
         digitalArtGalleryTitle: "Gallery",
 
-        // UnityExperience.html - UPDATED
         pageTitleUnityExp: "Unity Game Development Experience",
         unityExpIntro: "Game development is my great passion, and Unity is my current engine of choice for building experiences. I have delved into Unity's capabilities through their official learning pathways and am now applying this knowledge in my own projects.",
         unityExpPathwaysTitle: "Completed Unity Learning Pathways",
@@ -251,10 +227,7 @@ const translations = {
     }
 };
 
-// Hulpfunctie voor veilig instellen van innerHTML
 function setElementHTML(element, htmlContent) {
-    // Simple check for common list/formatting tags, adjust as needed
-    // Added 'a' tag for the links in indexAboutMeContent
     const allowedTags = ['span', 'p', 'br', 'b', 'i', 'strong', 'em', 'ul', 'li', 'a'];
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = htmlContent;
@@ -262,25 +235,18 @@ function setElementHTML(element, htmlContent) {
     tempDiv.querySelectorAll('*').forEach(el => {
         const tagName = el.tagName.toLowerCase();
         if (!allowedTags.includes(tagName)) {
-            // Remove potentially unsafe tags like <script>, <img> (unless intended), etc.
             console.warn(`Removing disallowed tag: <${tagName}>`);
-            // Replace disallowed tag with its content, or remove entirely
-            // For simplicity, let's replace with content (safer than removing parent)
             el.replaceWith(...el.childNodes);
-            // If removing entirely is preferred (and risky): el.parentNode.removeChild(el);
         } else {
-            // Clean attributes: remove 'on*' handlers, 'style', 'javascript:' hrefs
             Array.from(el.attributes).forEach(attr => {
                 const attrName = attr.name.toLowerCase();
                 if (attrName.startsWith('on') || attrName === 'style' || (attrName === 'href' && attr.value.toLowerCase().startsWith('javascript:'))) {
                     el.removeAttribute(attr.name);
                 }
-                // Allow 'class', 'href', 'target', 'rel' for links, only 'class' for others
                 const allowedAttrs = (tagName === 'a') ? ['class', 'href', 'target', 'rel'] : ['class'];
                 if (!allowedAttrs.includes(attrName)) {
                     el.removeAttribute(attr.name);
                 }
-                // Ensure target="_blank" has rel="noopener noreferrer" for security
                 if (tagName === 'a' && el.getAttribute('target') === '_blank') {
                     let rel = el.getAttribute('rel') || '';
                     if (!rel.includes('noopener')) rel += ' noopener';
@@ -294,17 +260,13 @@ function setElementHTML(element, htmlContent) {
     element.innerHTML = tempDiv.innerHTML;
 }
 
-
-// Functie om taal te wisselen en pagina bij te werken
 function switchLanguage(lang) {
-    // --- Sla de gekozen taal op ---
     try {
         localStorage.setItem('preferredLanguage', lang);
     } catch (e) {
         console.error("Kon taalvoorkeur niet opslaan in localStorage:", e);
     }
 
-    // Update de globale variabele
     currentLanguage = lang;
     const langTranslations = translations[lang];
 
@@ -313,26 +275,22 @@ function switchLanguage(lang) {
         return;
     }
 
-    // Update alle elementen met data-translate attribuut
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.dataset.translate;
         if (langTranslations[key] !== undefined) {
-            // Lijst van keys waarvan bekend is dat ze HTML bevatten
             const htmlKeys = [
-                'indexAboutMeContent', 'footerCopyright',
+                'indexAboutMeContent',
                 'projectTechListEcoJourney', 'projectFeaturesListEcoJourney',
                 'projectTechListAmericanDream',
                 'projectTechListOpenHiring', 'projectFeaturesListOpenHiring',
                 'projectTechListTypeRacer', 'projectFeaturesListTypeRacer',
                 'projectTechListExcalibur', 'projectFeaturesListExcalibur',
                 'unityExpPathwaysList'
-                // Voeg hier andere keys toe die HTML bevatten (bijv. projectRole, projectDesc als ze opmaak gebruiken)
             ];
 
             if (htmlKeys.includes(key)) {
                 setElementHTML(element, langTranslations[key]);
             } else {
-                // Voor platte tekst, stel textContent in
                 element.textContent = langTranslations[key];
             }
         } else {
@@ -340,37 +298,31 @@ function switchLanguage(lang) {
         }
     });
 
-    // Update knoptekst
     const toggleButton = document.getElementById('language-toggle');
     if (toggleButton) {
         toggleButton.textContent = langTranslations.toggleButton || (lang === 'nl' ? 'EN' : 'NL');
     }
 
-    // Update html lang attribute
     document.documentElement.lang = lang;
 
-    // --- Specifiek voor projects.html ---
-    // Als projectkaarten dynamisch worden geladen, vertaal ze opnieuw
     const projectsContainer = document.getElementById('projects');
-    if (projectsContainer && typeof projectsData !== 'undefined') { // Check of projectsData bestaat (alleen relevant op projects.html)
+    if (projectsContainer && typeof projectsData !== 'undefined') {
         const detailLinkText = langTranslations['projectDetailsLink'] || "More details";
         projectsContainer.querySelectorAll('a[data-translate="projectDetailsLink"]').forEach(link => {
             link.textContent = detailLinkText;
         });
-        // Ook de beschrijvingen bijwerken
         projectsContainer.querySelectorAll('p[data-translate^="projectCardDesc"]').forEach(p => {
             const descKey = p.dataset.translate;
             if (langTranslations[descKey]) {
                 p.textContent = langTranslations[descKey];
             } else {
                 console.warn(`Description key "${descKey}" not found for language "${lang}" during dynamic update.`);
-                p.textContent = '[Description missing]'; // Provide fallback
+                p.textContent = '[Description missing]';
             }
         });
     }
 }
 
-// Event listener voor de taalwisselknop
 document.addEventListener('click', function(event) {
     if (event.target && event.target.id === 'language-toggle') {
         const newLang = currentLanguage === 'nl' ? 'en' : 'nl';
@@ -378,43 +330,33 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Initiële taal instellen bij laden van de pagina
 document.addEventListener('DOMContentLoaded', () => {
-    let initialLang = 'nl'; // Standaard taal
+    let initialLang = 'nl';
 
-    // --- Controleer localStorage voor opgeslagen voorkeur ---
     try {
         const savedLang = localStorage.getItem('preferredLanguage');
-        // Controleer of de opgeslagen taal een geldige optie is
         if (savedLang && translations[savedLang]) {
             initialLang = savedLang;
         }
     } catch (e) {
         console.error("Kon taalvoorkeur niet lezen uit localStorage:", e);
-        // Ga door met de standaardtaal
     }
 
-    // Pas de initiële (opgeslagen of standaard) taal toe
-    currentLanguage = initialLang; // Belangrijk: stel currentLanguage in *voordat* je switchLanguage aanroept
+    currentLanguage = initialLang;
     switchLanguage(currentLanguage);
 
-    // --- Observer voor dynamisch geladen projectkaarten op projects.html ---
-    // Deze observer zorgt ervoor dat kaarten die *na* de initiële DOM load worden toegevoegd
-    // (bijv. door de code in projects.html) ook vertaald worden.
     const projectsContainer = document.getElementById('projects');
     if (projectsContainer) {
         const observer = new MutationObserver((mutationsList) => {
             for(const mutation of mutationsList) {
                 if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
                     mutation.addedNodes.forEach(node => {
-                        // Controleer of de toegevoegde node een element is
                         if (node.nodeType === Node.ELEMENT_NODE) {
-                            // Functie om vertaling toe te passen op een element en zijn kinderen
                             const applyTranslation = (el) => {
                                 const key = el.dataset.translate;
-                                if (key && translations[currentLanguage] && translations[currentLanguage][key]) { // Check if key exists
-                                    const htmlKeys = [ // Houd deze lijst synchroon met de lijst in switchLanguage
-                                        'indexAboutMeContent', 'footerCopyright',
+                                if (key && translations[currentLanguage] && translations[currentLanguage][key]) {
+                                    const htmlKeys = [
+                                        'indexAboutMeContent',
                                         'projectTechListEcoJourney', 'projectFeaturesListEcoJourney',
                                         'projectTechListAmericanDream',
                                         'projectTechListOpenHiring', 'projectFeaturesListOpenHiring',
@@ -427,27 +369,23 @@ document.addEventListener('DOMContentLoaded', () => {
                                     } else {
                                         el.textContent = translations[currentLanguage][key];
                                     }
-                                } else if (key) { // Only warn if key was present but translation is missing
+                                } else if (key) {
                                     console.warn(`Translation key "${key}" not found for language "${currentLanguage}" in observer.`);
-                                    // Optionally provide a fallback text for the element 'el' here
                                     if(el.tagName === 'P' && key.startsWith('projectCardDesc')) {
                                         el.textContent = '[Description loading error]';
                                     }
                                 }
                             };
-                            // Pas toe op de node zelf als het een data-translate attribuut heeft
                             if (node.hasAttribute('data-translate')) {
                                 applyTranslation(node);
                             }
-                            // Pas toe op alle kinderen met een data-translate attribuut
                             node.querySelectorAll('[data-translate]').forEach(applyTranslation);
                         }
                     });
                 }
             }
         });
-        // Start met observeren van directe kinderen van de projectsContainer
-        observer.observe(projectsContainer, { childList: true, subtree: true }); // Changed subtree to true to catch nested elements potentially added later
+        observer.observe(projectsContainer, { childList: true, subtree: true });
     }
 
-}); // Einde DOMContentLoaded
+});

@@ -5,36 +5,33 @@ body {
 nav {
     backdrop-filter: blur(10px);
 }
-/* Animatie Keyframes: Fade in en schuif omhoog */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px); /* Start 30px lager */
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Eindig op de normale positie */
+        transform: translateY(0);
     }
 }
 
-/* Pas de animatie toe op de hero-elementen */
 .hero-h1, .hero-p, .hero-a {
-    opacity: 0; /* Start onzichtbaar */
-    animation-name: fadeInUp;          /* Naam van de keyframe animatie */
-    animation-duration: 0.8s;       /* Duur van de animatie */
-    animation-timing-function: ease-out; /* Start snel, eindig langzamer */
-    animation-fill-mode: forwards;   /* Behoud de eindstaat (zichtbaar) */
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
-/* Voeg vertraging toe voor een gespreid effect */
 .hero-h1 {
-    animation-delay: 0.3s; /* De titel start na 0.3 seconden */
+    animation-delay: 0.3s;
 }
 
 .hero-p {
-    animation-delay: 0.6s; /* De paragraaf start na 0.6 seconden */
+    animation-delay: 0.6s;
 }
 
 .hero-a {
-    animation-delay: 0.9s; /* De knop start na 0.9 seconden */
+    animation-delay: 0.9s;
 }

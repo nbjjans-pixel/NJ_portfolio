@@ -5,13 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projecten - Nathaniël</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- Add AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<!-- Add min-h-screen, flex, and flex-col to the body -->
 <body class="bg-gray-900 text-white min-h-screen flex flex-col">
-<!-- Vaste navigatiebalk -->
 <nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
@@ -26,44 +23,35 @@
   </div>
 </nav>
 
-<!-- Projecten overzicht -->
-<!-- Add flex-grow to the main element -->
 <main class="pt-24 pb-12 px-6 flex-grow">
   <div class="text-center">
     <h2 class="text-4xl font-bold mb-4" data-translate="projectsTitle">Mijn Projecten</h2>
-    <!-- Add Intro Text -->
     <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto" data-translate="projectsIntro">
       Hier is een selectie van projecten waaraan ik heb gewerkt, variërend van webapplicaties tot game development. Klik op een project voor meer details.
     </p>
   </div>
   <div id="projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Project cards worden hier dynamisch geladen -->
   </div>
 </main>
 
-<!-- Footer -->
-<!-- Footer remains as is, flexbox on body will push it down -->
 <footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
   © 2024 Nathaniël. Alle rechten voorbehouden.
 </footer>
 
-<!-- Add AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  // Initialize AOS
   AOS.init({
-    once: true, // Animation happens only once
-    duration: 600, // Animation duration
-    offset: 50, // Trigger animation slightly before element is in view
+    once: true,
+    duration: 600,
+    offset: 50,
   });
 
-  // Updated projectsData with image and tags
   const projectsData = [
     {
       id: "OpenHiring",
       title: "Open Hiring Project - IO Digital",
       page: "OpenHiring.html",
-      descriptionKey: "projectCardDescOpenHiring", // Key exists in translations
+      descriptionKey: "projectCardDescOpenHiring",
       image: "img/ohlogo.png",
       tags: ["Laravel", "PHP", "Tailwind", "WCAG"]
     },
@@ -71,7 +59,7 @@
       id: "EcoJourney",
       title: "EcoJourney",
       page: "EcoJourney.html",
-      descriptionKey: "projectCardDescEcoJourney", // Key exists in translations
+      descriptionKey: "projectCardDescEcoJourney",
       image: "img/EcoJourneyL2.png",
       tags: ["JavaScript", "HTML", "CSS", "API"]
     },
@@ -79,7 +67,7 @@
       id: "AmericanDream",
       title: "American Dream - Unreal Engine Game",
       page: "AmericanDream.html",
-      descriptionKey: "projectCardDescAmericanDream", // Key exists in translations
+      descriptionKey: "projectCardDescAmericanDream",
       image: "img/ADlogo.png",
       tags: ["Unreal Engine", "VR", "Blender", "GameDev"]
     },
@@ -87,31 +75,31 @@
       id: "TypeRacer",
       title: "Type Racer",
       page: "TypeRacer.html",
-      descriptionKey: "projectCardDescTypeRacer", // Key exists in translations
-      image: "img/toetsb.png", // Example image path
+      descriptionKey: "projectCardDescTypeRacer",
+      image: "img/toetsb.png",
       tags: ["JavaScript", "HTML", "CSS", "DOM"]
     },
     {
       id: "UnityExperience",
-      title: "Unity Game Development Ervaring", // Title direct here
+      title: "Unity Game Development Ervaring",
       page: "UnityExperience.html",
-      descriptionKey: "projectCardDescUnityExp", // Key NOW exists in translations
-      image: "img/Unity-logo.png", // VERVANG DIT met een echte thumbnail image!
+      descriptionKey: "projectCardDescUnityExp",
+      image: "img/Unity-logo.png",
       tags: ["Unity", "C#", "GameDev", "Roguelite"]
     },
     {
       id: "DigitalArt",
-      title: "Digitale Kunst & Creativiteit", // Title direct here, not via translation
+      title: "Digitale Kunst & Creativiteit",
       page: "DigitalArt.html",
-      descriptionKey: "projectCardDescDigitalArt", // Key NOW exists in translations
-      image: "img/tekening4.png", // VERVANG DIT met een echte thumbnail image!
+      descriptionKey: "projectCardDescDigitalArt",
+      image: "img/tekening4.png",
       tags: ["Photoshop", "Creativiteit", "Blender", "2D Art"]
     },
     {
       id: "Excalibur",
       title: "Excalibur js Ritme spel",
       page: "Excalibur.html",
-      descriptionKey: "projectCardDescExcalibur", // Key exists in translations
+      descriptionKey: "projectCardDescExcalibur",
       image: "img/ShibParty.png",
       tags: ["JavaScript", "Excalibur.js", "GameDev"]
     },
@@ -119,29 +107,24 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const projectsContainer = document.getElementById("projects");
-    // Determine initial language from global script (which checks localStorage)
-    const currentLang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'nl'; // Use global var
+    const currentLang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'nl';
 
     if (projectsContainer) {
-      projectsContainer.innerHTML = ''; // Clear potential placeholders
+      projectsContainer.innerHTML = '';
 
       projectsData.forEach((project, index) => {
         const projectCard = document.createElement("div");
-        // Added AOS, overflow-hidden, improved hover effect
         projectCard.className = "bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl";
         projectCard.setAttribute('data-aos', 'fade-up');
-        // Optional: Add staggered delay
-        projectCard.setAttribute('data-aos-delay', (index % 3) * 100); // Stagger delay based on column
+        projectCard.setAttribute('data-aos-delay', (index % 3) * 100);
 
-        // Retrieve text based on current language from the global translations object
         const descriptionText = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][project.descriptionKey])
                 ? translations[currentLang][project.descriptionKey]
-                : "[Description Loading...]"; // Fallback
+                : "[Description Loading...]";
         const detailLinkText = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang]['projectDetailsLink'])
                 ? translations[currentLang]['projectDetailsLink']
-                : "More details"; // Fallback
+                : "More details";
 
-        // Create Tags HTML
         let tagsHTML = '';
         if (project.tags && project.tags.length > 0) {
           tagsHTML = project.tags.map(tag =>
@@ -149,12 +132,11 @@
           ).join('');
         }
 
-        // Set innerHTML - Ensure the description paragraph has the correct data-translate attribute
         projectCard.innerHTML = `
                 <img class="w-full h-48 object-contain" src="${project.image}" alt="Thumbnail ${project.title}">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-white">${project.title}</h3>
-                    <div class="mb-4"> <!-- Tags container -->
+                    <div class="mb-4">
                         ${tagsHTML}
                     </div>
                     <p class="text-gray-400 mb-4 text-base" data-translate="${project.descriptionKey}">${descriptionText}</p>
@@ -164,7 +146,6 @@
         projectsContainer.appendChild(projectCard);
       });
 
-      // Refresh AOS after adding elements dynamically
       setTimeout(() => { AOS.refresh(); }, 100);
 
     } else {
@@ -172,7 +153,6 @@
     }
   });
 </script>
-<!-- Ensure script.js runs AFTER the DOMContentLoaded above -->
 <script defer src="script.js"></script>
 </body>
 </html>

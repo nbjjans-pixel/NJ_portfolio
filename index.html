@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl"> <!-- Attribuut wordt bijgewerkt door JS -->
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,6 @@
     </div>
 </nav>
 
-<!-- Hero-sectie -->
 <header class="h-screen flex items-center justify-center" style="background: url('img/3409297.jpg') no-repeat center center/cover;">
     <div class="text-center">
         <h1 class="text-5xl md:text-6xl font-bold mb-4 hero-h1" data-translate="indexWelcome">Welkom op mijn Portfolio</h1>
@@ -33,7 +32,6 @@
     </div>
 </header>
 
-<!-- Over Mij sectie -->
 <section id="about" class="py-20 bg-gray-800" data-aos="fade-up">
     <div class="container mx-auto px-6">
         <div class="max-w-2xl mx-auto">
@@ -41,13 +39,13 @@
                 <img src="img/342352.jpg" alt="Mijn foto" class="w-64 h-64 rounded-full mx-auto mb-6 border-4 border-blue-600">
                 <h2 class="text-4xl font-bold text-white mb-4" data-translate="indexAboutMeTitle">Over Mij</h2>
             </div>
-            <!-- De inhoud hier wordt beheerd via innerHTML in JS -->
             <div class="space-y-6 text-gray-300 text-lg leading-relaxed" data-translate="indexAboutMeContent">
-                <!-- Initiële NL content wordt overschreven door JS -->
                 Hallo! Ik ben Nathaniël 👋<br><br>
                 Als creatieve CMGT-student en fullstack developer combineer ik mijn passie voor programmeren met game development.<br><br>
                 Ik bouw graag aan vernieuwende webapplicaties met <span class="text-blue-400">💻 PHP, JavaScript,RESTful APIs, HTML en Css en samen met frameworks zoals Laravel, React, React Native</span>, altijd met aandacht voor toegankelijkheid (<span class="font-semibold">WCAG</span>).<br><br>
                 Daarnaast duik ik in de wereld van <span class="text-blue-400">🎮 game development</span> met Unity, C# en Python, waar ik mijn kennis in creativiteit en code samen toepas.<br><br>
+                Mijn interesse in visuele creatie strekt zich ook uit tot <a href="DigitalArt.html" class="text-blue-400 hover:underline">digitaal tekenen in Photoshop</a>, wat mijn creativiteit stimuleert en helpt bij 3D-modellering.<br>
+                Lees meer over mijn <a href="UnityExperience.html" class="text-blue-400 hover:underline">ervaring met Unity</a>, inclusief voltooide leerpaden en mijn huidige project.<br><br>
                 <p class="bg-gray-700 p-4 rounded-lg">
                     Momenteel zoek ik een <span class="font-semibold text-blue-400">stageplek van september 2025 t/m februari 2026</span> om mijn expertise te verdiepen in een team dat waarde hecht aan oplossingen vinden, creativiteit en toegankelijkheid.
                 </p>
@@ -56,8 +54,7 @@
     </div>
 </section>
 
-<!-- Contact sectie -->
-<section id="contact" class="py-20"> <!-- id="contact" blijft voor scrollen -->
+<section id="contact" class="py-20">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4" data-translate="indexContactTitle">Contact</h2>
         <p class="mb-8" data-translate="indexContactDescription">Neem gerust contact met mij op voor samenwerkingen of vragen!</p>
@@ -65,20 +62,17 @@
     </div>
 </section>
 
-<!-- Footer -->
 <footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
-    © 2024 Nathaniël. Alle rechten voorbehouden. <!-- Wordt overschreven -->
+    © 2024 Nathaniël. Alle rechten voorbehouden.
 </footer>
-
-<!-- ... rest van je pagina inhoud ... -->
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({
-        once: true, // Animatie gebeurt maar één keer
-        duration: 700 // Duur van de animatie in milliseconden
+        once: true,
+        duration: 700
     });
 </script>
-<script defer src="script.js"></script> <!-- Jouw eigen script komt hierna of ervoor -->
+<script defer src="script.js"></script>
 </body>
 </html>
