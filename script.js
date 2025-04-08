@@ -57,7 +57,7 @@ const translations = {
 
         projectTitleAmericanDream: "American Dream (Unreal Engine)",
         projectDescAmericanDream: "American Dream is een VR horror game ontwikkelt in Unreal Engine. Het vertelt het verhaal over de \"horror\" achter een 9-tot-5 baan vol deadlines en druk, waarin je letterlijk uit de dagelijkse routine breekt, maar vervolgens wordt achtervolgd door je baas terwijl je herinneringen van je familie verzamelt,zodat je kan ontsnappen.",
-        projectRoleAmericanDream: "Door hardwarelimieten kon ik niet aan de blueprints werken in de game. Daarom heb ik mij gericht op UX, voice acting, textures, animaties, gebruikte assets, het verhaal en de gameplayloop.",
+        projectRoleAmericanDream: "Door hardwarelimieten kon ik niet veel aan de blueprints werken in de game. Daarom heb ik mij gericht op UX, voice acting, textures, animaties, gebruikte assets, het verhaal en de gameplayloop.",
         projectTechListAmericanDream: `<li><span class="font-semibold">Game Engine:</span> Unreal Engine 5</li>
                                <li><span class="font-semibold">Platform:</span> VR</li>
                                <li><span class="font-semibold">Software:</span> Unreal Engine Editor, Blender</li>`,
@@ -169,7 +169,7 @@ const translations = {
 
         projectTitleAmericanDream: "American Dream (Unreal Engine)",
         projectDescAmericanDream: "American Dream is a VR horror game developed in Unreal Engine. It tells the story of the \"horror\" behind a 9-to-5 job filled with deadlines and pressure, where you literally break out of the daily routine, but are then chased by your boss while collecting memories of your family to escape.",
-        projectRoleAmericanDream: "Due to hardware limitations, I couldn't work on the blueprints in the game. Therefore, I focused on UX, voice acting, textures, animations, used assets, the story, and the gameplay loop.",
+        projectRoleAmericanDream: "Due to hardware limitations, I couldn't work alot on the blueprints in the game. Therefore, I focused on UX, voice acting, textures, animations, used assets, the story, and the gameplay loop.",
         projectTechListAmericanDream: `<li><span class="font-semibold">Game Engine:</span> Unreal Engine 5</li>
                                        <li><span class="font-semibold">Platform:</span> VR</li>
                                        <li><span class="font-semibold">Software:</span> Unreal Engine Editor, Blender</li>`,
