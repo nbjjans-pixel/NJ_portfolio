@@ -119,7 +119,7 @@ const translations = {
         navProjects: "Projects",
         navContact: "Contact",
         toggleButton: "NL",
-        footerCopyright: "© 2025 Nathaniël. All rights reserved.",
+        footerCopyright: "© 2025",
         viewProjectsBtn: "View Projects",
         sendEmailBtn: "Send an Email",
         projectDetailsLink: "More details",
