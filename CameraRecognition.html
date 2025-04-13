@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Webcam Hand Gesture Recognition</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
+        <div class="flex items-center">
+            <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
+            <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
+            <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
+            <a href="https://github.com/nbjjans-pixel" class="mx-2">
+                <img src="img/github.png" alt="github logo" class="h-6 w-6">
+            </a>
+            <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
+                EN
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-24 pb-12 px-6">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12" data-translate="projectTitleCameraRecognition">Project: Webcam Hand Gesture Recognition</h2>
+
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-8">
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectOverviewTitle">Project Overzicht</h3>
+                <p class="text-lg leading-relaxed" data-translate="cameraRecogIntro">
+                    Dit project verkent het gebruik van webcam-gebaseerde handgebarenherkenning voor interactieve webapplicaties. Het is opgesplitst in twee delen: een trainingstool om een k-Nearest Neighbors (k-NN) model te bouwen op basis van MediaPipe hand landmarks, en een spel dat dit getrainde model gebruikt om "Rock Paper Scissors Spock Lizard Hat Knife" te spelen via de webcam.
+                </p>
+            </div>
+
+            <hr class="border-gray-700">
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="cameraRecogTrainingTitle">Deel 1: Training Applicatie</h3>
+                <img src="img/training_screenshot.png" alt="Screenshot Training Applicatie" class="rounded-lg shadow-md mb-4 mx-auto max-w-md h-auto"> <!-- Placeholder image -->
+                <p class="text-lg leading-relaxed mb-4" data-translate="cameraRecogTrainingDesc">
+                    Deze applicatie stelt gebruikers in staat om een dataset van handgebaren te creëren en een k-NN model te trainen. Via de webcam detecteert MediaPipe HandLandmarker de handposities. De gebruiker kan specifieke gebaren (Rock, Paper, etc.) maken en deze labelen door op de bijbehorende knop te klikken. De verzamelde data (genormaliseerde landmark-coördinaten en labels) kan vervolgens worden gebruikt om het k-NN model te trainen en de nauwkeurigheid ervan te testen. De volledige dataset kan worden opgeslagen als een JSON-bestand (`posedata.json`).
+                </p>
+                <h4 class="text-xl font-semibold mb-2 text-blue-300" data-translate="cameraRecogTechFeatures">Kernfunctionaliteiten & Technologieën:</h4>
+                <ul class="list-disc list-inside text-lg space-y-1 pl-4 mb-4" data-translate="cameraRecogTrainingFeatures">
+                    <li>Real-time hand tracking met MediaPipe HandLandmarker.</li>
+                    <li>Verzamelen en labelen van hand landmark data.</li>
+                    <li>Implementatie en training van een k-Nearest Neighbors (k-NN) model in JavaScript.</li>
+                    <li>Data opsplitsen in training- en testsets voor nauwkeurigheidsberekening.</li>
+                    <li>Exporteren van de verzamelde data naar een JSON-bestand.</li>
+                    <li>HTML, CSS, JavaScript.</li>
+                </ul>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="https://github.com/nbjjans-pixel/prog8training" target="_blank" rel="noopener noreferrer" class="px-5 py-2 bg-gray-700 rounded-full hover:bg-gray-600 transition inline-flex items-center space-x-2">
+                        <img src="img/github.png" alt="GitHub" class="h-5 w-5">
+                        <span data-translate="cameraRecogTrainGithubLink">Training GitHub Repo</span>
+                    </a>
+                    <a href="https://nbjjans-pixel.github.io/prog8training/" target="_blank" rel="noopener noreferrer" class="px-5 py-2 bg-blue-600 rounded-full hover:bg-blue-500 transition inline-flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                        <span data-translate="cameraRecogTrainSiteLink">Live Training App</span>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="border-gray-700">
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="cameraRecogGameTitle">Deel 2: RPSLSHK Spel Applicatie</h3>
+                <img src="img/game_screenshot.png" alt="Screenshot Spel Applicatie" class="rounded-lg shadow-md mb-4 mx-auto max-w-md h-auto"> <!-- Placeholder image -->
+                <p class="text-lg leading-relaxed mb-4" data-translate="cameraRecogGameDesc">
+                    Deze applicatie laadt het `posedata.json`-bestand dat door de trainingstool is gegenereerd en gebruikt het getrainde k-NN model om het spel "Rock Paper Scissors Spock Lizard Hat Knife" (RPSLSHK) te spelen. De speler maakt een handgebaar voor de webcam, dat in real-time wordt geclassificeerd door het model. Wanneer de speler zijn zet bevestigt, genereert de computer een willekeurig gebaar en wordt de winnaar bepaald volgens de spelregels.
+                </p>
+                <h4 class="text-xl font-semibold mb-2 text-blue-300" data-translate="cameraRecogTechFeatures">Kernfunctionaliteiten & Technologieën:</h4>
+                <ul class="list-disc list-inside text-lg space-y-1 pl-4 mb-4" data-translate="cameraRecogGameFeatures">
+                    <li>Laden van de getrainde dataset (`posedata.json`).</li>
+                    <li>Initialiseren van het k-NN model met de geladen data.</li>
+                    <li>Real-time classificatie van het handgebaar van de speler via de webcam.</li>
+                    <li>Implementatie van de RPSLSHK spelregels en logica.</li>
+                    <li>Willekeurige zetgeneratie voor de computer tegenstander.</li>
+                    <li>Weergeven van spelerzet, computerzet en resultaat.</li>
+                    <li>MediaPipe HandLandmarker, k-NN (classificatie), JavaScript, HTML, CSS.</li>
+                </ul>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="https://github.com/nbjjans-pixel/prog8game" target="_blank" rel="noopener noreferrer" class="px-5 py-2 bg-gray-700 rounded-full hover:bg-gray-600 transition inline-flex items-center space-x-2">
+                        <img src="img/github.png" alt="GitHub" class="h-5 w-5">
+                        <span data-translate="cameraRecogGameGithubLink">Game GitHub Repo</span>
+                    </a>
+                    <a href="https://nbjjans-pixel.github.io/prog8game/" target="_blank" rel="noopener noreferrer" class="px-5 py-2 bg-blue-600 rounded-full hover:bg-blue-500 transition inline-flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                        <span data-translate="cameraRecogGameSiteLink">Live Game App</span>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="border-gray-700">
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectLearningTitle">Leerresultaten</h3>
+                <p class="text-lg leading-relaxed" data-translate="cameraRecogLearning">
+                    Dit tweedelige project bood waardevolle ervaring in het end-to-end proces van het bouwen van een machine learning-gestuurde applicatie voor het web. Belangrijke leerpunten waren de integratie van MediaPipe voor real-time computer vision, het praktische gebruik van het k-NN algoritme voor classificatie, het beheren en structureren van trainingsdata (inclusief export/import via JSON), en het verbinden van een dataverzamelings-/trainingsfase met een toepassingsfase (het spel). Het benadrukte ook het belang van voldoende en kwalitatieve trainingsdata voor de prestaties van het model.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
+    2024
+</footer>
+
+<script defer src="script.js"></script>
+</body>
+</html>

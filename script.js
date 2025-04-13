@@ -112,6 +112,34 @@ const translations = {
         unityExpSkillsDesc: "Door deze trajecten en eigen experimenten heb ik ervaring opgedaan met onder andere: C# programmeren specifiek voor Unity, werken met de Unity Editor (scenes, prefabs, UI), implementeren van game mechanics, physics, basis AI, en het integreren van assets.",
         unityExpCurrentProjectTitle: "Huidig Project: Co-op Roguelite",
         unityExpCurrentProjectDesc: "Momenteel werk ik in mijn vrije tijd aan een persoonlijk project: een co-op roguelite game. Dit is een uitdagend project waarin ik mijn kennis van C# verder ontwikkel. Het is een geweldige manier om te leren en iets neer te zetten waar ik blij mee ben.",
+        projectTitleCameraRecognition: "Project: Webcam Handgebarenherkenning",
+        projectTitleCameraRecognition: "Project: Webcam Handgebarenherkenning",
+        cameraRecogIntro: "In dit project wilde ik de mogelijkheden van webcam-gebaseerde handgebarenherkenning verkennen voor interactieve webapplicaties. Ik heb het opgesplitst in twee delen: eerst ontwikkelde ik een trainingstool om een k-Nearest Neighbors (k-NN) model te bouwen met MediaPipe hand landmarks. Vervolgens gebruikte ik dit getrainde model in een spelletje: \"Rock Paper Scissors Spock Lizard Hat Knife\" dat je volledig via de webcam speelt.",
+        cameraRecogTrainingTitle: "Deel 1: De Training Applicatie",
+        cameraRecogTrainingDesc: "Met deze applicatie wilde ik het mogelijk maken om zelf een dataset van handgebaren te creëren en een k-NN model te trainen. Via de webcam detecteert MediaPipe HandLandmarker de posities van de hand. Ik heb knoppen toegevoegd waarmee je specifieke gebaren (zoals Rock, Paper) kunt maken en direct kunt labelen. De verzamelde data – de genormaliseerde landmark-coördinaten en de labels – gebruikte ik vervolgens om het k-NN model te trainen. Ik heb ook een functie ingebouwd om de nauwkeurigheid te testen en de data op te slaan als een JSON-bestand (`posedata.json`).",
+        cameraRecogTechFeatures: "Wat ik heb gebruikt en geïmplementeerd:",
+        cameraRecogTrainingFeatures: `Real-time hand tracking implementeren met MediaPipe HandLandmarker.
+                                     Een systeem bouwen voor het verzamelen en labelen van hand landmark data.
+                                     Een k-Nearest Neighbors (k-NN) model in JavaScript implementeren en trainen.
+                                     Data opsplitsen in training- en testsets om de nauwkeurigheid te berekenen.
+                                     Een exportfunctie maken om de verzamelde data naar een JSON-bestand te schrijven.
+                                     Gewerkt met: HTML, CSS, JavaScript.`,
+        cameraRecogTrainGithubLink: "Bekijk de Training Code op GitHub",
+        cameraRecogTrainSiteLink: "Probeer de Training App Live",
+        cameraRecogGameTitle: "Deel 2: Het RPSLSHK Spel",
+        cameraRecogGameDesc: "Voor het tweede deel heb ik een applicatie gebouwd die het `posedata.json`-bestand (gegenereerd door mijn trainingstool) laadt. Dit bestand bevat de data waarmee ik het k-NN model train. Het doel was om hiermee het spel \"Rock Paper Scissors Spock Lizard Hat Knife\" (RPSLSHK) te spelen. Je maakt een handgebaar voor de webcam, dat ik real-time classificeer met het model. Zodra je je zet bevestigt, kiest de computer een willekeurig gebaar en toon ik wie er gewonnen heeft volgens de spelregels.",
+        cameraRecogTechFeatures: "Wat ik heb gebruikt en geïmplementeerd:",
+        cameraRecogGameFeatures: `Het laden en parsen van de getrainde dataset (\`posedata.json\`).
+                                  Het initialiseren van het k-NN model met deze data.
+                                  Real-time classificatie van het speler's handgebaar via de webcam.
+                                  De RPSLSHK spelregels en logica implementeren.
+                                  Willekeurige zetgeneratie voor de computer bouwen.
+                                  Het weergeven van de zetten en het resultaat.
+                                  Technologieën: MediaPipe HandLandmarker, k-NN (classificatie), JavaScript, HTML, CSS.`,
+        cameraRecogGameGithubLink: "Bekijk de Spel Code op GitHub",
+        cameraRecogGameSiteLink: "Speel het Spel Live",
+        cameraRecogLearning: "Dit tweedelige project was een super leerzame ervaring waarbij ik het hele proces doorliep van dataverzameling tot een werkende machine learning webapplicatie. Ik heb veel geleerd over het integreren van MediaPipe voor real-time computer vision en het praktische gebruik van het k-NN algoritme. Het beheren en structureren van de trainingsdata, inclusief de JSON export/import, was een interessant onderdeel. Vooral het verbinden van de trainingsfase met de uiteindelijke speltoepassing was een mooie uitdaging. Het project benadrukte voor mij ook hoe cruciaal de kwaliteit en kwantiteit van trainingsdata zijn voor de prestaties van het model.",
+        projectCardDescCameraRecog: "Een project waarin ik een k-NN model trainde met MediaPipe handgebaren en een webcam-spel (RPSLSHK) bouwde.",
     },
     en: {
         navPortfolio: "Portfolio",
@@ -224,6 +252,34 @@ const translations = {
         unityExpSkillsDesc: "Through these pathways and personal experiments, I have gained experience with, among other things: C# programming specifically for Unity, working with the Unity Editor (scenes, prefabs, UI), implementing game mechanics, physics, basic AI, and integrating assets.",
         unityExpCurrentProjectTitle: "Current Project: Co-op Roguelite",
         unityExpCurrentProjectDesc: "Currently, I am working on a personal project in my spare time: a co-op roguelite game. This is a challenging project in which I am further developing my C# knowledge. It's a great way to learn and create something I'm happy with.",
+        projectTitleCameraRecognition: "Project: Webcam Hand Gesture Recognition",
+        projectTitleCameraRecognition: "Project: Webcam Hand Gesture Recognition",
+        cameraRecogIntro: "In this project, I wanted to explore the possibilities of webcam-based hand gesture recognition for interactive web applications. I split it into two parts: first, I developed a training tool to build a k-Nearest Neighbors (k-NN) model using MediaPipe hand landmarks. Then, I used this trained model in a game: \"Rock Paper Scissors Spock Lizard Hat Knife\" that you play entirely via the webcam.",
+        cameraRecogTrainingTitle: "Part 1: The Training Application",
+        cameraRecogTrainingDesc: "With this application, I aimed to make it possible to create a dataset of hand gestures myself and train a k-NN model. Using the webcam, MediaPipe HandLandmarker detects the hand positions. I added buttons allowing you to make specific gestures (like Rock, Paper) and label them directly. I then used the collected data – the normalized landmark coordinates and labels – to train the k-NN model. I also built in a function to test its accuracy and save the data as a JSON file (`posedata.json`).",
+        cameraRecogTechFeatures: "What I Used and Implemented:",
+        cameraRecogTrainingFeatures: `Implementing real-time hand tracking with MediaPipe HandLandmarker.
+                                     Building a system for collecting and labeling hand landmark data.
+                                     Implementing and training a k-Nearest Neighbors (k-NN) model in JavaScript.
+                                     Splitting data into training and test sets to calculate accuracy.
+                                     Creating an export function to write the collected data to a JSON file.
+                                     Worked with: HTML, CSS, JavaScript.`,
+        cameraRecogTrainGithubLink: "View Training Code on GitHub",
+        cameraRecogTrainSiteLink: "Try the Live Training App",
+        cameraRecogGameTitle: "Part 2: The RPSLSHK Game",
+        cameraRecogGameDesc: "For the second part, I built an application that loads the `posedata.json` file (generated by my training tool). This file contains the data I use to train the k-NN model. The goal was to use this to play the game \"Rock Paper Scissors Spock Lizard Hat Knife\" (RPSLSHK). You make a hand gesture in front of the webcam, which I classify in real-time with the model. Once you confirm your move, the computer chooses a random gesture, and I display who won according to the game rules.",
+        cameraRecogTechFeatures: "What I Used and Implemented:",
+        cameraRecogGameFeatures: `Loading and parsing the trained dataset (\`posedata.json\`).
+                                  Initializing the k-NN model with this data.
+                                  Real-time classification of the player's hand gesture via the webcam.
+                                  Implementing the RPSLSHK game rules and logic.
+                                  Building random move generation for the computer.
+                                 Displaying the moves and the result.
+                                  Technologies: MediaPipe HandLandmarker, k-NN (classification), JavaScript, HTML, CSS.`,
+        cameraRecogGameGithubLink: "View Game Code on GitHub",
+        cameraRecogGameSiteLink: "Play the Live Game",
+        cameraRecogLearning: "This two-part project was a great learning experience where I went through the entire process from data collection to a working machine learning web application. I learned a lot about integrating MediaPipe for real-time computer vision and the practical use of the k-NN algorithm. Managing and structuring the training data, including the JSON export/import, was an interesting part. Connecting the training phase with the final game application was a particularly nice challenge. The project also emphasized to me how crucial the quality and quantity of training data are for the model's performance.",
+        projectCardDescCameraRecog: "A project where I trained a k-NN model with MediaPipe hand gestures and built a webcam game (RPSLSHK).",
     }
 };
 
