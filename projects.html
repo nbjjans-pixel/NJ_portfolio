@@ -1,169 +1,230 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en" data-title-en="Work · Nathaniël Jans" data-title-nl="Werk · Nathaniël Jans">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projecten - Nathaniël</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Work · Nathaniël Jans</title>
+  <meta name="description" content="All projects by Nathaniël Jans.">
+  <meta property="og:title" content="Work · Nathaniël Jans">
+  <meta property="og:description" content="All projects by Nathaniël Jans.">
+  <meta property="og:image" content="media/fnf/landing.jpg">
+  <script>(function(){var l='en';try{l=localStorage.getItem('lang')||'en'}catch(e){}var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en')l=q;document.documentElement.setAttribute('data-lang',l);if(l==='nl')document.documentElement.lang='nl';})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex flex-col">
-<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
-    <div class="flex items-center">
-      <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
-      <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
-      <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
-      <a href="https://github.com/nbjjans-pixel" class="mx-2">
-        <img src="img/github.png" alt="github logo" class="h-6 w-6">
-      </a>
-      <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
-        EN
-      </button>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <marker id="mk-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7483"/></marker>
+  <marker id="mk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a541"/></marker>
+  <marker id="mk-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ec2b7"/></marker>
+  <marker id="mk-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5675b"/></marker>
+</defs></svg>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathaniël Jans<span>.</span></a>
+    <div class="nav-right">
+      <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language / Wissel taal"><span class="l-en">NL</span><span class="l-nl">EN</span></button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="projects.html" aria-current="page"><span class="l-en">Work</span><span class="l-nl">Werk</span></a></li>
+      <li><a href="index.html#experience"><span class="l-en">Experience</span><span class="l-nl">Ervaring</span></a></li>
+      <li><a href="index.html#about"><span class="l-en">About</span><span class="l-nl">Over mij</span></a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="l-en" href="media/cv/Nathaniel_Jans_CV_EN.pdf" target="_blank" rel="noopener">CV</a><a class="l-nl" href="media/cv/Nathaniel_Jans_CV_NL.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
   </div>
 </nav>
 
-<main class="pt-24 pb-12 px-6 flex-grow">
-  <div class="text-center">
-    <h2 class="text-4xl font-bold mb-4" data-translate="projectsTitle">Mijn Projecten</h2>
-    <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto" data-translate="projectsIntro">
-      Hier is een selectie van projecten waaraan ik heb gewerkt, variërend van webapplicaties tot game development. Klik op een project voor meer details.
-    </p>
+<main>
+<div class="l-en" lang="en">
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Work</span>
+      <h1 style="font-size:clamp(2rem,5vw,3rem)">All projects</h1>
+      <p class="muted">The game design case studies come first. Below them are earlier game prototypes, web projects from my studies and some digital art.</p>
+    </div>
+
+    <h2 style="font-size:1.3rem;margin-top:12px">Game design case studies</h2>
+    <div class="grid grid-2" style="margin-top:18px">
+      <a class="card reveal" href="fall-n-fashion.html">
+        <div class="card-media"><img src="media/fnf/landing.jpg" alt="Fall 'n Fashion landing scene" loading="lazy"><span class="badge">Released</span></div>
+        <div class="card-body">
+          <span class="card-meta">2026 · Mobile · Unity · Team of 6</span>
+          <h3>Fall 'n Fashion</h3>
+          <p>Puzzle-runner with endless procedurally generated worlds and seeded, learnable levels.</p>
+          <ul class="chips"><li class="chip hl">Procedural generation</li><li class="chip">Gameplay programming</li><li class="chip">UI / level select</li></ul>
+        </div>
+      </a>
+      <a class="card reveal" href="conquest-rush.html">
+        <div class="card-media"><img src="media/cr/boss-oni-general.jpg" alt="Conquest Rush boss fight" loading="lazy"><span class="badge">Beta</span></div>
+        <div class="card-body">
+          <span class="card-meta">2026 · Android · Godot · 2-person studio</span>
+          <h3>Conquest Rush</h3>
+          <p>Lane strategy roguelite across five ages, with counters, perks, bosses and a War Chest meta layer.</p>
+          <ul class="chips"><li class="chip hl">Strategy</li><li class="chip">Progression</li><li class="chip">Balancing</li></ul>
+        </div>
+      </a>
+      <a class="card reveal" href="project-implant.html">
+        <div class="card-media"><img src="media/implant/cover.svg" alt="Implant HUD concept image" loading="lazy"><span class="badge wip">Work in progress</span></div>
+        <div class="card-body">
+          <span class="card-meta">2026 – 2027 · PC · Unity · Team of 15</span>
+          <h3>Project Implant <span class="muted" style="font-size:.8em">(working title)</span></h3>
+          <p>First-person horror-stealth game: invisible enemies, a reality flash and a fair detection model.</p>
+          <ul class="chips"><li class="chip hl">Stealth systems</li><li class="chip">Level design</li><li class="chip">GDD</li></ul>
+        </div>
+      </a>
+      <a class="card reveal" href="jim.html">
+        <div class="card-media"><img src="media/jim/chat-story.jpg" alt="JIM simulated desktop with a story chat" loading="lazy"><span class="badge">Showcase</span></div>
+        <div class="card-body">
+          <span class="card-meta">2026 · PC · Unity · Year-3 project</span>
+          <h3>JIM: hybrid escape room</h3>
+          <p>A simulated operating system combined with printed evidence. The puzzles only solve when both halves meet.</p>
+          <ul class="chips"><li class="chip hl">Puzzle design</li><li class="chip">Narrative</li><li class="chip">Unity UI</li></ul>
+        </div>
+      </a>
+    </div>
+
+    <h2 style="font-size:1.3rem;margin-top:64px">Earlier game projects &amp; prototypes</h2>
+    <div class="grid grid-3" style="margin-top:18px">
+      <a class="card reveal" href="AmericanDream.html">
+        <div class="card-media"><img src="media/american-dream/poster.jpg" alt="American Dream gameplay" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">Unreal Engine 5 · VR</span><h3>American Dream</h3><p>A VR horror game about the pressure of a 9-to-5 job, where your boss chases you.</p></div>
+      </a>
+      <a class="card reveal" href="Excalibur.html">
+        <div class="card-media"><img src="media/shiba/screen-1.jpg" alt="Shiba Rhythm Birthday Fiesta screenshot" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">Excalibur.js</span><h3>Shiba Rhythm Birthday Fiesta</h3><p>My first game engine project: a browser rhythm game with note lanes and timing windows.</p></div>
+      </a>
+      <a class="card reveal" href="CameraRecognition.html">
+        <div class="card-media"><img src="media/gesture/game.jpg" alt="Gesture recognition game" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">MediaPipe · k-NN · JavaScript</span><h3>Gesture-controlled game</h3><p>I trained a k-NN model on hand gestures and used it to play a webcam game.</p></div>
+      </a>
+      <a class="card reveal" href="TypeRacer.html">
+        <div class="card-media"><img src="media/typeracer/screen.jpg" alt="Type Racer screenshot" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">JavaScript · DOM</span><h3>Type Racer</h3><p>A typing-speed game with live accuracy, WPM and a local leaderboard.</p></div>
+      </a>
+    </div>
+
+    <h2 style="font-size:1.3rem;margin-top:64px">Web &amp; full-stack</h2>
+    <div class="grid grid-3" style="margin-top:18px">
+      <a class="card reveal" href="OpenHiring.html">
+        <div class="card-media"><img src="media/open-hiring/screen-1.jpg" alt="Open Hiring platform screenshot" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">Laravel · WCAG · IO Digital</span><h3>Open Hiring</h3><p>An accessible job platform: I took pages to WCAG AA and built a local-companies feature.</p></div>
+      </a>
+      <a class="card reveal" href="EcoJourney.html">
+        <div class="card-media"><img src="media/ecojourney/screen-1.jpg" alt="EcoJourney screenshot" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">JavaScript · API · SQLite</span><h3>EcoJourney</h3><p>A mobile web app that scans barcodes and shows a product's sustainability, with gamification.</p></div>
+      </a>
+      <a class="card reveal" href="DigitalArt.html">
+        <div class="card-media"><img src="media/art/drawing-4.jpg" alt="Digital drawing" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">Photoshop · Blender</span><h3>Digital art</h3><p>Drawings I make in Photoshop, which also feed into concept art and 3D modelling.</p></div>
+      </a>
+    </div>
   </div>
-  <div id="projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+</section>
+
+</div>
+<div class="l-nl" lang="nl">
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Werk</span>
+      <h1 style="font-size:clamp(2rem,5vw,3rem)">Alle projecten</h1>
+      <p class="muted">Eerst de case studies over game design. Daaronder eerdere game-prototypes, webprojecten uit mijn studie en wat digitale kunst.</p>
+    </div>
+
+    <h2 style="font-size:1.3rem;margin-top:12px">Case studies game design</h2>
+    <div class="grid grid-2" style="margin-top:18px">
+      <a class="card reveal" href="fall-n-fashion.html">
+        <div class="card-media"><img src="media/fnf/landing.jpg" alt="Fall 'n Fashion landingsscène" loading="lazy"><span class="badge">Uitgebracht</span></div>
+        <div class="card-body">
+          <span class="card-meta">2026 · Mobiel · Unity · Team van 6</span>
+          <h3>Fall 'n Fashion</h3>
+          <p>Puzzle-runner met eindeloze, procedureel gegenereerde werelden en geseede levels die je kunt leren.</p>
+          <ul class="chips"><li class="chip hl">Procedurele generatie</li><li class="chip">Gameplay programming</li><li class="chip">UI / level select</li></ul>
+        </div>
+      </a>
+      <a class="card reveal" href="conquest-rush.html">
+        <div class="card-media"><img src="media/cr/boss-oni-general.jpg" alt="Conquest Rush boss-gevecht" loading="lazy"><span class="badge">Bèta</span></div>
+        <div class="card-body">
+          <span class="card-meta">2026 · Android · Godot · Studio van 2 personen</span>
+          <h3>Conquest Rush</h3>
+          <p>Lane strategy roguelite door vijf tijdperken, met counters, perks, bosses en een War Chest als meta-laag.</p>
+          <ul class="chips"><li class="chip hl">Strategie</li><li class="chip">Progressie</li><li class="chip">Balancing</li></ul>
+        </div>
+      </a>
+      <a class="card reveal" href="project-implant.html">
+        <div class="card-media"><img src="media/implant/cover.svg" alt="Conceptbeeld implant-HUD" loading="lazy"><span class="badge wip">In ontwikkeling</span></div>
+        <div class="card-body">
+          <span class="card-meta">2026 – 2027 · PC · Unity · Team van 15</span>
+          <h3>Project Implant <span class="muted" style="font-size:.8em">(werktitel)</span></h3>
+          <p>First-person horror-stealthgame: onzichtbare vijanden, een reality flash en een eerlijk detectiemodel.</p>
+          <ul class="chips"><li class="chip hl">Stealth-systemen</li><li class="chip">Level design</li><li class="chip">GDD</li></ul>
+        </div>
+      </a>
+      <a class="card reveal" href="jim.html">
+        <div class="card-media"><img src="media/jim/chat-story.jpg" alt="JIM gesimuleerd bureaublad met een verhaalchat" loading="lazy"><span class="badge">Showcase</span></div>
+        <div class="card-body">
+          <span class="card-meta">2026 · PC · Unity · Jaar-3-project</span>
+          <h3>JIM: hybride escaperoom</h3>
+          <p>Een gesimuleerd besturingssysteem gecombineerd met geprint bewijs. De puzzels lossen pas op als beide helften samenkomen.</p>
+          <ul class="chips"><li class="chip hl">Puzzelontwerp</li><li class="chip">Narratief</li><li class="chip">Unity UI</li></ul>
+        </div>
+      </a>
+    </div>
+
+    <h2 style="font-size:1.3rem;margin-top:64px">Eerdere gameprojecten &amp; prototypes</h2>
+    <div class="grid grid-3" style="margin-top:18px">
+      <a class="card reveal" href="AmericanDream.html">
+        <div class="card-media"><img src="media/american-dream/poster.jpg" alt="American Dream gameplay" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">Unreal Engine 5 · VR</span><h3>American Dream</h3><p>Een VR-horrorgame over de druk van een 9-tot-5-baan, waarin je baas je achtervolgt.</p></div>
+      </a>
+      <a class="card reveal" href="Excalibur.html">
+        <div class="card-media"><img src="media/shiba/screen-1.jpg" alt="Shiba Rhythm Birthday Fiesta screenshot" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">Excalibur.js</span><h3>Shiba Rhythm Birthday Fiesta</h3><p>Mijn eerste project in een game-engine: een ritmespel in de browser met noot-lanes en timing.</p></div>
+      </a>
+      <a class="card reveal" href="CameraRecognition.html">
+        <div class="card-media"><img src="media/gesture/game.jpg" alt="Spel met gebarenherkenning" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">MediaPipe · k-NN · JavaScript</span><h3>Gebaren-gestuurd spel</h3><p>Ik trainde een k-NN-model op handgebaren en gebruikte het om een webcamspel te spelen.</p></div>
+      </a>
+      <a class="card reveal" href="TypeRacer.html">
+        <div class="card-media"><img src="media/typeracer/screen.jpg" alt="Type Racer screenshot" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">JavaScript · DOM</span><h3>Type Racer</h3><p>Een typesnelheidsspel met live nauwkeurigheid, WPM en een lokaal leaderboard.</p></div>
+      </a>
+    </div>
+
+    <h2 style="font-size:1.3rem;margin-top:64px">Web &amp; full-stack</h2>
+    <div class="grid grid-3" style="margin-top:18px">
+      <a class="card reveal" href="OpenHiring.html">
+        <div class="card-media"><img src="media/open-hiring/screen-1.jpg" alt="Screenshot Open Hiring-platform" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">Laravel · WCAG · IO Digital</span><h3>Open Hiring</h3><p>Een toegankelijk vacatureplatform: ik bracht pagina's naar WCAG AA en bouwde een feature voor lokale bedrijven.</p></div>
+      </a>
+      <a class="card reveal" href="EcoJourney.html">
+        <div class="card-media"><img src="media/ecojourney/screen-1.jpg" alt="EcoJourney screenshot" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">JavaScript · API · SQLite</span><h3>EcoJourney</h3><p>Een mobiele webapp die barcodes scant en laat zien hoe duurzaam een product is, met gamification.</p></div>
+      </a>
+      <a class="card reveal" href="DigitalArt.html">
+        <div class="card-media"><img src="media/art/drawing-4.jpg" alt="Digitale tekening" loading="lazy"></div>
+        <div class="card-body"><span class="card-meta">Photoshop · Blender</span><h3>Digitale kunst</h3><p>Tekeningen die ik in Photoshop maak, en die ook helpen bij concept art en 3D-modelleren.</p></div>
+      </a>
+    </div>
   </div>
+</section>
+
+</div>
 </main>
 
-<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
-  © 2024 Nathaniël. Alle rechten voorbehouden.
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Nathaniël Jans</span>
+    <span><a href="projects.html"><span class="l-en">Work</span><span class="l-nl">Werk</span></a> · <a href="mailto:nbjjans22@gmail.com">E-mail</a> · <a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
 </footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    once: true,
-    duration: 600,
-    offset: 50,
-  });
-
-  const projectsData = [
-    {
-      id: "OpenHiring",
-      title: "Open Hiring Project - IO Digital",
-      page: "OpenHiring.html",
-      descriptionKey: "projectCardDescOpenHiring",
-      image: "img/ohlogo.png",
-      tags: ["Laravel", "PHP", "Tailwind", "WCAG"]
-    },
-    {
-      id: "EcoJourney",
-      title: "EcoJourney",
-      page: "EcoJourney.html",
-      descriptionKey: "projectCardDescEcoJourney",
-      image: "img/EcoJourneyL2.png",
-      tags: ["JavaScript", "HTML", "CSS", "API"]
-    },
-    {
-      id: "CameraRecognition",
-      title: "Webcam Gesture Recognition (MediaPipe + k-NN)",
-      page: "CameraRecognition.html",
-      descriptionKey: "projectCardDescCameraRecog",
-      image: "img/HandGuide.png",
-      tags: ["MediaPipe", "k-NN", "JavaScript", "Machine Learning", "Webcam"]
-    },
-    {
-      id: "AmericanDream",
-      title: "American Dream - Unreal Engine Game",
-      page: "AmericanDream.html",
-      descriptionKey: "projectCardDescAmericanDream",
-      image: "img/ADlogo.png",
-      tags: ["Unreal Engine", "VR", "Blender", "GameDev"]
-    },
-    {
-      id: "TypeRacer",
-      title: "Type Racer",
-      page: "TypeRacer.html",
-      descriptionKey: "projectCardDescTypeRacer",
-      image: "img/toetsb.png",
-      tags: ["JavaScript", "HTML", "CSS", "DOM"]
-    },
-    {
-      id: "UnityExperience",
-      title: "Unity Game Development Ervaring",
-      page: "UnityExperience.html",
-      descriptionKey: "projectCardDescUnityExp",
-      image: "img/Unity-logo.png",
-      tags: ["Unity", "C#", "GameDev", "Roguelite"]
-    },
-    {
-      id: "DigitalArt",
-      title: "Digitale Kunst & Creativiteit",
-      page: "DigitalArt.html",
-      descriptionKey: "projectCardDescDigitalArt",
-      image: "img/tekening4.png",
-      tags: ["Photoshop", "Creativiteit", "Blender", "2D Art"]
-    },
-    {
-      id: "Excalibur",
-      title: "Excalibur js Ritme spel",
-      page: "Excalibur.html",
-      descriptionKey: "projectCardDescExcalibur",
-      image: "img/ShibParty.png",
-      tags: ["JavaScript", "Excalibur.js", "GameDev"]
-    },
-  ];
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const projectsContainer = document.getElementById("projects");
-    const currentLang = typeof currentLanguage !== 'undefined' ? currentLanguage : 'nl';
-
-    if (projectsContainer) {
-      projectsContainer.innerHTML = '';
-
-      projectsData.forEach((project, index) => {
-        const projectCard = document.createElement("div");
-        projectCard.className = "bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl";
-        projectCard.setAttribute('data-aos', 'fade-up');
-        projectCard.setAttribute('data-aos-delay', (index % 3) * 100);
-
-        const descriptionText = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][project.descriptionKey])
-                ? translations[currentLang][project.descriptionKey]
-                : "[Description Loading...]";
-        const detailLinkText = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang]['projectDetailsLink'])
-                ? translations[currentLang]['projectDetailsLink']
-                : "More details";
-
-        let tagsHTML = '';
-        if (project.tags && project.tags.length > 0) {
-          tagsHTML = project.tags.map(tag =>
-                  `<span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-xs font-semibold text-gray-300 mr-2 mb-2">${tag}</span>`
-          ).join('');
-        }
-
-        projectCard.innerHTML = `
-                <img class="w-full h-48 object-contain" src="${project.image}" alt="Thumbnail ${project.title}">
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2 text-white">${project.title}</h3>
-                    <div class="mb-4">
-                        ${tagsHTML}
-                    </div>
-                    <p class="text-gray-400 mb-4 text-base" data-translate="${project.descriptionKey}">${descriptionText}</p>
-                    <a href="${project.page}" class="text-blue-400 hover:underline text-base font-medium" data-translate="projectDetailsLink">${detailLinkText}</a>
-                </div>
-            `;
-        projectsContainer.appendChild(projectCard);
-      });
-
-      setTimeout(() => { AOS.refresh(); }, 100);
-
-    } else {
-      console.error("Projects container not found!");
-    }
-  });
-</script>
-<script defer src="script.js"></script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

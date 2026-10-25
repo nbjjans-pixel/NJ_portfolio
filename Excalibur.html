@@ -1,81 +1,112 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en" data-title-en="Shiba Rhythm Birthday Fiesta · Nathaniël Jans" data-title-nl="Shiba Rhythm Birthday Fiesta · Nathaniël Jans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project: Excalibur JS Ritme Spel</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiba Rhythm Birthday Fiesta · Nathaniël Jans</title>
+  <meta name="description" content="A browser rhythm game built with Excalibur.js.">
+  <meta property="og:title" content="Shiba Rhythm Birthday Fiesta · Nathaniël Jans">
+  <meta property="og:description" content="A browser rhythm game built with Excalibur.js.">
+  <meta property="og:image" content="media/shiba/screen-1.jpg">
+  <script>(function(){var l='en';try{l=localStorage.getItem('lang')||'en'}catch(e){}var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en')l=q;document.documentElement.setAttribute('data-lang',l);if(l==='nl')document.documentElement.lang='nl';})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="bg-gray-900 text-white">
-
-<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
-        <div class="flex items-center">
-            <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
-            <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
-            <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
-            <a href="https://github.com/nbjjans-pixel" class="mx-2">
-                <img src="img/github.png" alt="github logo" class="h-6 w-6">
-            </a>
-            <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
-                EN
-            </button>
-        </div>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <marker id="mk-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7483"/></marker>
+  <marker id="mk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a541"/></marker>
+  <marker id="mk-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ec2b7"/></marker>
+  <marker id="mk-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5675b"/></marker>
+</defs></svg>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathaniël Jans<span>.</span></a>
+    <div class="nav-right">
+      <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language / Wissel taal"><span class="l-en">NL</span><span class="l-nl">EN</span></button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="projects.html" aria-current="page"><span class="l-en">Work</span><span class="l-nl">Werk</span></a></li>
+      <li><a href="index.html#experience"><span class="l-en">Experience</span><span class="l-nl">Ervaring</span></a></li>
+      <li><a href="index.html#about"><span class="l-en">About</span><span class="l-nl">Over mij</span></a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="l-en" href="media/cv/Nathaniel_Jans_CV_EN.pdf" target="_blank" rel="noopener">CV</a><a class="l-nl" href="media/cv/Nathaniel_Jans_CV_NL.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
 </nav>
 
-<main class="pt-24 pb-12 px-6">
-    <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12" data-translate="projectTitleExcalibur">Project: Excalibur JS Ritme Spel</h2>
+<main class="wrap">
+<div class="l-en" lang="en">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← All work</a>
+  <span class="eyebrow">Earlier project · Rhythm game</span>
+  <h1>Shiba Rhythm Birthday Fiesta</h1>
+  <p class="tagline">A browser rhythm game about a Shiba's birthday party. Press the right key at the right moment, to the beat of the music.</p>
+  <dl class="facts"><div><dt>My role</dt><dd>Solo: design &amp; development</dd></div><div><dt>Engine</dt><dd>Excalibur.js</dd></div><div><dt>Tech</dt><dd>JavaScript, HTML, CSS</dd></div><div><dt>Note</dt><dd>My first game in a game engine</dd></div></dl>
+  <div class="btn-row" style="margin-top:22px"><a class="btn btn-primary" href="https://nbjjans-pixel.github.io/prg4-N-fix/" target="_blank" rel="noopener">Play it live</a><a class="btn btn-ghost" href="https://github.com/nbjjans-pixel/prg4-N-fix" target="_blank" rel="noopener">View code on GitHub</a></div>
+  <div class="gallery" style="grid-template-columns:1fr 1fr"><button data-zoom="media/shiba/screen-1.jpg"><img src="media/shiba/screen-1.jpg" alt="Shiba Rhythm Birthday Fiesta gameplay" loading="lazy"></button><button data-zoom="media/shiba/screen-2.jpg"><img src="media/shiba/screen-2.jpg" alt="Shiba Rhythm Birthday Fiesta gameplay" loading="lazy"></button></div>
+</header>
 
-        <div class="flex flex-col md:flex-row gap-4 mb-8">
-            <img src="img/Shib1.png" alt="Screenshot Excalibur 1" class="w-full md:w-1/2 rounded-lg shadow-lg h-auto">
-            <img src="img/Shib2.png" alt="Screenshot Excalibur 2" class="w-full md:w-1/2 rounded-lg shadow-lg h-auto">
-        </div>
+<section class="cs-section prose" id="built">
+  <span class="eyebrow">What I built</span>
+  <h2>Notes, lanes and timing</h2>
+  <ul><li>Approaching notes shown on separate lanes.</li><li>Detecting key presses at the right moment.</li><li>A playful, lighthearted birthday theme.</li></ul>
+</section>
 
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectOverviewTitle">Project Overzicht</h3>
-            <p class="text-lg leading-relaxed" data-translate="projectDescExcalibur">
-                Excalibur...
-            </p>
+<section class="cs-section prose" id="learned">
+  <span class="eyebrow">Reflection</span>
+  <h2>What I learned</h2>
+  <p>Building this first game deepened my JavaScript skills, especially around animation. It gave me my first real insight into <strong>game state management and the game loop</strong>.</p>
+</section>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectRoleTitle">Mijn Rol & Bijdrage</h3>
-            <p class="text-lg leading-relaxed" data-translate="projectRoleExcalibur">
-                ...
-            </p>
+<div class="next-project">
+  <div><span class="card-meta">Next project</span><h3 style="margin:4px 0 0">Gesture-controlled game</h3></div>
+  <a class="btn btn-primary" href="CameraRecognition.html">Read next →</a>
+</div>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectTechTitle">Gebruikte Technologieën</h3>
-            <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectTechListExcalibur">
-                <li><span class="font-semibold">Core:</span> HTML5...</li>
-            </ul>
+</div>
+<div class="l-nl" lang="nl">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← Al het werk</a>
+  <span class="eyebrow">Eerder project · Ritmespel</span>
+  <h1>Shiba Rhythm Birthday Fiesta</h1>
+  <p class="tagline">Een ritmespel in de browser over het verjaardagsfeest van een Shiba. Druk op het juiste moment op de juiste toets, op de maat van de muziek.</p>
+  <dl class="facts"><div><dt>Mijn rol</dt><dd>Solo: ontwerp &amp; development</dd></div><div><dt>Engine</dt><dd>Excalibur.js</dd></div><div><dt>Techniek</dt><dd>JavaScript, HTML, CSS</dd></div><div><dt>Let op</dt><dd>Mijn eerste game in een game-engine</dd></div></dl>
+  <div class="btn-row" style="margin-top:22px"><a class="btn btn-primary" href="https://nbjjans-pixel.github.io/prg4-N-fix/" target="_blank" rel="noopener">Speel het live</a><a class="btn btn-ghost" href="https://github.com/nbjjans-pixel/prg4-N-fix" target="_blank" rel="noopener">Bekijk de code op GitHub</a></div>
+  <div class="gallery" style="grid-template-columns:1fr 1fr"><button data-zoom="media/shiba/screen-1.jpg"><img src="media/shiba/screen-1.jpg" alt="Shiba Rhythm Birthday Fiesta gameplay" loading="lazy"></button><button data-zoom="media/shiba/screen-2.jpg"><img src="media/shiba/screen-2.jpg" alt="Shiba Rhythm Birthday Fiesta gameplay" loading="lazy"></button></div>
+</header>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectFeaturesTitle">Kernfunctionaliteiten & Uitdagingen</h3>
-            <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectFeaturesListExcalibur">
-                <li>Visuele...</li>
-            </ul>
+<section class="cs-section prose" id="built-nl">
+  <span class="eyebrow">Wat ik bouwde</span>
+  <h2>Noten, lanes en timing</h2>
+  <ul><li>Naderende noten op aparte lanes.</li><li>Detectie van toetsaanslagen op het juiste moment.</li><li>Een speels, luchtig verjaardagsthema.</li></ul>
+</section>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectLearningTitle">Leerresultaten</h3>
-            <p class="text-lg leading-relaxed" data-translate="projectLearningExcalibur">
-                Excalibur...
-            </p>
+<section class="cs-section prose" id="learned-nl">
+  <span class="eyebrow">Reflectie</span>
+  <h2>Wat ik leerde</h2>
+  <p>Met deze eerste game verdiepte ik mijn JavaScript-vaardigheden, vooral rond animatie. Het gaf me mijn eerste echte inzicht in <strong>game state management en de game loop</strong>.</p>
+</section>
 
-            <div class="mt-8 text-center">
-                <a href="https://github.com/nbjjans-pixel/prg4-N-fix"> Github page</a>
-            </div>
+<div class="next-project">
+  <div><span class="card-meta">Volgend project</span><h3 style="margin:4px 0 0">Gebaren-gestuurd spel</h3></div>
+  <a class="btn btn-primary" href="CameraRecognition.html">Lees verder →</a>
+</div>
 
-            <div class="mt-8 text-center">
-                <a href="https://nbjjans-pixel.github.io/prg4-N-fix/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition" data-translate="viewGitHubBtn">Speel het spel</a>
-            </div>
-        </div>
-    </div>
+</div>
 </main>
 
-<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
-    © 2024 Nathaniël. Alle rechten voorbehouden.
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Nathaniël Jans</span>
+    <span><a href="projects.html"><span class="l-en">Work</span><span class="l-nl">Werk</span></a> · <a href="mailto:nbjjans22@gmail.com">E-mail</a> · <a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
 </footer>
-
-<script defer src="script.js"></script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

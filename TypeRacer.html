@@ -1,78 +1,112 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en" data-title-en="Type Racer · Nathaniël Jans" data-title-nl="Type Racer · Nathaniël Jans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project: Type Racer</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type Racer · Nathaniël Jans</title>
+  <meta name="description" content="A typing-speed game in the browser, built with vanilla JavaScript.">
+  <meta property="og:title" content="Type Racer · Nathaniël Jans">
+  <meta property="og:description" content="A typing-speed game in the browser, built with vanilla JavaScript.">
+  <meta property="og:image" content="media/typeracer/screen.jpg">
+  <script>(function(){var l='en';try{l=localStorage.getItem('lang')||'en'}catch(e){}var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en')l=q;document.documentElement.setAttribute('data-lang',l);if(l==='nl')document.documentElement.lang='nl';})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="bg-gray-900 text-white">
-<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
-        <div class="flex items-center">
-            <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
-            <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
-            <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
-            <a href="https://github.com/nbjjans-pixel" class="mx-2">
-                <img src="img/github.png" alt="github logo" class="h-6 w-6">
-            </a>
-            <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
-                EN
-            </button>
-        </div>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <marker id="mk-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7483"/></marker>
+  <marker id="mk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a541"/></marker>
+  <marker id="mk-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ec2b7"/></marker>
+  <marker id="mk-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5675b"/></marker>
+</defs></svg>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathaniël Jans<span>.</span></a>
+    <div class="nav-right">
+      <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language / Wissel taal"><span class="l-en">NL</span><span class="l-nl">EN</span></button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="projects.html" aria-current="page"><span class="l-en">Work</span><span class="l-nl">Werk</span></a></li>
+      <li><a href="index.html#experience"><span class="l-en">Experience</span><span class="l-nl">Ervaring</span></a></li>
+      <li><a href="index.html#about"><span class="l-en">About</span><span class="l-nl">Over mij</span></a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="l-en" href="media/cv/Nathaniel_Jans_CV_EN.pdf" target="_blank" rel="noopener">CV</a><a class="l-nl" href="media/cv/Nathaniel_Jans_CV_NL.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
 </nav>
 
-<main class="pt-24 pb-12 px-6">
-    <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12" data-translate="projectTitleTypeRacer">Project: Type Racer</h2>
+<main class="wrap">
+<div class="l-en" lang="en">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← All work</a>
+  <span class="eyebrow">Earlier project · Browser game</span>
+  <h1>Type Racer</h1>
+  <p class="tagline">A web game that challenges you to type faster and more accurately. A spare-time project, inspired by the Donald Duck typing game I learned to type with as a kid.</p>
+  <dl class="facts"><div><dt>My role</dt><dd>Solo: design &amp; development</dd></div><div><dt>Tech</dt><dd>HTML, CSS, vanilla JavaScript</dd></div><div><dt>Concepts</dt><dd>DOM, events, timing</dd></div><div><dt>Context</dt><dd>Personal project</dd></div></dl>
+  <div class="btn-row" style="margin-top:22px"><a class="btn btn-primary" href="https://nbjjans-pixel.github.io/TypeRacer_Proj/" target="_blank" rel="noopener">Play it live</a><a class="btn btn-ghost" href="https://github.com/nbjjans-pixel/TypeRacer_Proj" target="_blank" rel="noopener">View code on GitHub</a></div>
+  <div class="cs-media" style="margin-top:28px"><img src="media/typeracer/screen.jpg" alt="Type Racer screenshot"></div>
+</header>
 
-        <img src="img/type.png" alt="Screenshot Type Racer" class="rounded-lg shadow-lg mb-8 mx-auto max-w-full h-auto">
+<section class="cs-section prose" id="built">
+  <span class="eyebrow">What I built</span>
+  <h2>Typing as a game loop</h2>
+  <p>I designed the interface and wrote the core logic in vanilla JavaScript.</p><ul><li>A text fragment to type.</li><li>Real-time tracking of typed characters against the source text.</li><li>Visual feedback for correct and wrong keystrokes.</li><li>Words per minute and accuracy when you finish.</li><li>A locally stored leaderboard.</li></ul>
+</section>
 
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectOverviewTitle">Project Overzicht</h3>
-            <p class="text-lg leading-relaxed" data-translate="projectDescTypeRacer">
-                Type Racer...
-            </p>
+<section class="cs-section prose" id="learned">
+  <span class="eyebrow">Reflection</span>
+  <h2>What I learned</h2>
+  <p>A great exercise in front-end JavaScript, DOM manipulation and event handling, and in building game-like logic such as scoring and timing with nothing but web technology.</p>
+</section>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectRoleTitle">Mijn Rol & Bijdrage</h3>
-            <p class="text-lg leading-relaxed" data-translate="projectRoleTypeRacer">
-                ...
-            </p>
+<div class="next-project">
+  <div><span class="card-meta">Next project</span><h3 style="margin:4px 0 0">Open Hiring (IO Digital)</h3></div>
+  <a class="btn btn-primary" href="OpenHiring.html">Read next →</a>
+</div>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectTechTitle">Gebruikte Technologieën</h3>
-            <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectTechListTypeRacer">
-                <li><span class="font-semibold">Frontend:</span> HTML5...</li>
-            </ul>
+</div>
+<div class="l-nl" lang="nl">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← Al het werk</a>
+  <span class="eyebrow">Eerder project · Browsergame</span>
+  <h1>Type Racer</h1>
+  <p class="tagline">Een webgame die je uitdaagt sneller en nauwkeuriger te typen. Een project uit mijn vrije tijd, geïnspireerd door het Donald Duck-typespel waarmee ik als kind leerde typen.</p>
+  <dl class="facts"><div><dt>Mijn rol</dt><dd>Solo: ontwerp &amp; development</dd></div><div><dt>Techniek</dt><dd>HTML, CSS, vanilla JavaScript</dd></div><div><dt>Concepten</dt><dd>DOM, events, timing</dd></div><div><dt>Context</dt><dd>Persoonlijk project</dd></div></dl>
+  <div class="btn-row" style="margin-top:22px"><a class="btn btn-primary" href="https://nbjjans-pixel.github.io/TypeRacer_Proj/" target="_blank" rel="noopener">Speel het live</a><a class="btn btn-ghost" href="https://github.com/nbjjans-pixel/TypeRacer_Proj" target="_blank" rel="noopener">Bekijk de code op GitHub</a></div>
+  <div class="cs-media" style="margin-top:28px"><img src="media/typeracer/screen.jpg" alt="Type Racer screenshot"></div>
+</header>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectFeaturesTitle">Kernfunctionaliteiten & Uitdagingen</h3>
-            <ul class="list-disc list-inside text-lg space-y-2" data-translate="projectFeaturesListTypeRacer">
-                <li>Weergave van...</li>
-            </ul>
+<section class="cs-section prose" id="built-nl">
+  <span class="eyebrow">Wat ik bouwde</span>
+  <h2>Typen als game loop</h2>
+  <p>Ik ontwierp de interface en schreef de kernlogica in vanilla JavaScript.</p><ul><li>Een tekstfragment om te typen.</li><li>Real-time vergelijken van getypte tekens met de brontekst.</li><li>Visuele feedback bij goede en foute toetsaanslagen.</li><li>Woorden per minuut en nauwkeurigheid aan het einde.</li><li>Een lokaal opgeslagen leaderboard.</li></ul>
+</section>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="projectLearningTitle">Leerresultaten</h3>
-            <p class="text-lg leading-relaxed" data-translate="projectLearningTypeRacer">
-                Dit project...
-            </p>
+<section class="cs-section prose" id="learned-nl">
+  <span class="eyebrow">Reflectie</span>
+  <h2>Wat ik leerde</h2>
+  <p>Een goede oefening in front-end JavaScript, DOM-manipulatie en event handling, en in het bouwen van game-achtige logica zoals score en timing met alleen webtechniek.</p>
+</section>
 
-            <div class="mt-8 text-center">
-                <a href="https://github.com/nbjjans-pixel/TypeRacer_Proj"> Github page</a>
-            </div>
+<div class="next-project">
+  <div><span class="card-meta">Volgend project</span><h3 style="margin:4px 0 0">Open Hiring (IO Digital)</h3></div>
+  <a class="btn btn-primary" href="OpenHiring.html">Lees verder →</a>
+</div>
 
-            <div class="mt-8 text-center">
-                <a href="https://nbjjans-pixel.github.io/TypeRacer_Proj/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-500 transition" data-translate="viewGitHubBtn">Speel het spel</a>
-            </div>
-
-        </div>
-    </div>
+</div>
 </main>
 
-<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
-    © 2024 Nathaniël. Alle rechten voorbehouden.
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Nathaniël Jans</span>
+    <span><a href="projects.html"><span class="l-en">Work</span><span class="l-nl">Werk</span></a> · <a href="mailto:nbjjans22@gmail.com">E-mail</a> · <a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
 </footer>
-
-<script defer src="script.js"></script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

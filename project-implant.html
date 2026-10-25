@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="Project Implant (WIP) · Nathaniël Jans" data-title-nl="Project Implant (WIP) · Nathaniël Jans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Implant (WIP) · Nathaniël Jans</title>
+  <meta name="description" content="Work in progress: designing fair stealth with invisible enemies in a first-person horror game.">
+  <meta property="og:title" content="Project Implant (WIP) · Nathaniël Jans">
+  <meta property="og:description" content="Work in progress: designing fair stealth with invisible enemies in a first-person horror game.">
+  <meta property="og:image" content="media/implant/cover.svg">
+  <script>(function(){var l='en';try{l=localStorage.getItem('lang')||'en'}catch(e){}var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en')l=q;document.documentElement.setAttribute('data-lang',l);if(l==='nl')document.documentElement.lang='nl';})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <marker id="mk-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7483"/></marker>
+  <marker id="mk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a541"/></marker>
+  <marker id="mk-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ec2b7"/></marker>
+  <marker id="mk-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5675b"/></marker>
+</defs></svg>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathaniël Jans<span>.</span></a>
+    <div class="nav-right">
+      <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language / Wissel taal"><span class="l-en">NL</span><span class="l-nl">EN</span></button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="projects.html" aria-current="page"><span class="l-en">Work</span><span class="l-nl">Werk</span></a></li>
+      <li><a href="index.html#experience"><span class="l-en">Experience</span><span class="l-nl">Ervaring</span></a></li>
+      <li><a href="index.html#about"><span class="l-en">About</span><span class="l-nl">Over mij</span></a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="l-en" href="media/cv/Nathaniel_Jans_CV_EN.pdf" target="_blank" rel="noopener">CV</a><a class="l-nl" href="media/cv/Nathaniel_Jans_CV_NL.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+<div class="l-en" lang="en">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← All work</a>
+  <span class="eyebrow">Case study · Currently in development</span>
+  <h1>Project Implant <span class="muted" style="font-size:.5em;font-weight:500">working title</span></h1>
+  <p class="tagline">A first-person psychological horror game set in a post-Soviet apartment block. An implant in your eye decides what you see, and the things hunting you are invisible. The core design question: <strong>how do you make stealth against invisible enemies feel fair?</strong></p>
+
+  <dl class="facts">
+    <div><dt>My role</dt><dd>Original concept &amp; pitch, game design (GDD), stealth &amp; detection design</dd></div>
+    <div><dt>Team</dt><dd>15 students: developers, artists, designers</dd></div>
+    <div><dt>Engine</dt><dd>Unity · first person · made for headphones</dd></div>
+    <div><dt>Status</dt><dd>In development · Minor GD&amp;D 2026–27</dd></div>
+  </dl>
+
+  <div class="wip-banner"><span class="wip-dot"></span><p style="margin:0"><strong>Work in progress.</strong> This is my current minor project and it's still in development. The design below reflects where we are now, and this page will grow with gameplay footage and playtest results.</p></div>
+
+  <div class="cs-media" style="margin-top:32px"><img src="media/implant/cover.svg" alt="Concept image: an eye inside a scanning HUD reticle over an apartment block"></div>
+
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#concept">Concept</a></li>
+    <li><a href="#flash">Reality flash</a></li>
+    <li><a href="#detection">Detection model</a></li>
+    <li><a href="#corners">The corner problem</a></li>
+    <li><a href="#combat">Combat</a></li>
+    <li><a href="#open">Open questions</a></li>
+  </ul>
+</header>
+
+<section class="cs-section prose" id="concept">
+  <span class="eyebrow">Concept</span>
+  <h2>Your HUD is not on your side (or is it?)</h2>
+  <p>I pitched the concept to the team: the player character has an <strong>implant with a talking AI</strong> that filters what they see. With the filter on, the world looks like propaganda: clean, bright, <em>too good</em>. Underneath is the real building: decayed, dangerous, and occupied.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Propaganda view (implant filter)</th><th>Reality</th></tr></thead>
+      <tbody>
+        <tr><td><strong>World</strong></td><td>Polished, cheerful, "too good"</td><td>Decay, traces, the truth</td></tr>
+        <tr><td><strong>Enemies</strong></td><td>Invisible</td><td>Visible</td></tr>
+        <tr><td><strong>HUD</strong></td><td>Objectives, health, status. Mostly truthful, with a few scripted lies</td><td>No objective help</td></tr>
+        <tr><td><strong>What you find</strong></td><td>The path the implant wants you on</td><td>Weapons &amp; ammo, hidden passages, environmental puzzle clues</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>After the first pitch we discussed the concept as a team and changed it in a few rounds. We dropped an idea where subtitles would lie and kept the HUD <strong>mostly honest, with scripted lies only</strong>. The interface stays reliable enough to play with, so the few moments it lies actually land.</p>
+</section>
+
+<section class="cs-section prose" id="flash">
+  <span class="eyebrow">Core mechanic</span>
+  <h2>From "take the eye out" to a reality flash</h2>
+  <div class="split">
+    <div>
+      <p>The first version had the player <strong>physically take the implant out</strong>: a 3–4 second animation with very limited movement, and the same again to put it back. It was strong as horror (you're vulnerable while you do it), but in a stealth game it became a problem. A long, locked toggle punishes the player for exactly the action the game wants them to take.</p>
+      <p>We replaced it with a <strong>reality flash</strong>: a short pulse that cuts through the filter and shows the real building, including the enemies. Now seeing reality is a <em>timing decision</em> instead of a menu-like state switch, and it fits the moment-to-moment rhythm of sneaking.</p>
+    </div>
+    <div class="pd" style="grid-template-columns:1fr;margin-top:0">
+      <div><h4>Before: toggle</h4><p>3–4 s take-out animation, limited movement. Strong dread, slow pacing. It fought the stealth loop.</p></div>
+      <div><h4>After: reality flash</h4><p>A short reveal you choose when to use. It keeps the tension of not seeing, without taking control away.</p></div>
+      <div><h4>Design rule</h4><p>Some sections lock you in one view on purpose. A set piece where you <em>can't</em> look at reality creates fear without combat.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section prose" id="detection">
+  <span class="eyebrow">System design</span>
+  <h2>A detection model for enemies you can't see</h2>
+  <p>If enemies are invisible, the player needs other information channels. I designed detection around <strong>sound first, HUD second</strong>, and a short grace window before you get punished.</p>
+
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 250" role="img" aria-label="Detection states: Unnoticed, Being looked at, Being chased">
+        
+        <rect class="d-box teal" x="20" y="60" width="230" height="110" rx="12"/>
+        <text class="d-t" x="40" y="92">1 · Unnoticed</text>
+        <text class="d-s" x="40" y="116">HUD: neutral status icon</text>
+        <text class="d-s" x="40" y="136">Info: patrol footsteps &amp; audio</text>
+        <text class="d-s" x="40" y="156">Player: plan a route, flash to check</text>
+        <rect class="d-box acc" x="335" y="60" width="230" height="110" rx="12"/>
+        <text class="d-t" x="355" y="92">2 · Being looked at</text>
+        <text class="d-s" x="355" y="116">HUD: "being looked at" icon</text>
+        <text class="d-s" x="355" y="136">Grace window: ~2 s (tuning)</text>
+        <text class="d-s" x="355" y="156">Player: break line of sight</text>
+        <rect class="d-box red" x="650" y="60" width="230" height="110" rx="12"/>
+        <text class="d-t" x="670" y="92">3 · Being chased</text>
+        <text class="d-s" x="670" y="116">HUD: "chased" icon</text>
+        <text class="d-s" x="670" y="136">Enemy glitches into view:</text>
+        <text class="d-s" x="670" y="156">its position is revealed</text>
+        <path class="d-l acc" d="M250 115H335" marker-end="url(#mk-g)"/><text class="d-s" x="292" y="46" text-anchor="middle">enemy</text><text class="d-s" x="292" y="40" dy="14" text-anchor="middle">faces you</text>
+        <path class="d-l" d="M565 115H650" marker-end="url(#mk-r)" style="stroke:#e5675b"/><text class="d-s" x="607" y="46" text-anchor="middle">still in view</text><text class="d-s" x="607" y="40" dy="14" text-anchor="middle">after ~2 s</text>
+        <path class="d-l teal" d="M450 170V215H135V170" marker-end="url(#mk-t)"/><text class="d-s" x="240" y="236">out of sight before the timer runs out → back to unnoticed</text>
+      </svg>
+    </div>
+    <figcaption>Three readable states. Being spotted is never instant: there is always a moment to react.</figcaption>
+  </figure>
+
+  <ul>
+    <li><strong>Audio is the main sense.</strong> Patrols are audible, and the game is designed for headphones so direction can be read.</li>
+    <li><strong>The HUD shows the enemy's attention, not its position.</strong> You know <em>that</em> you're being watched, not <em>where</em> from. That keeps the enemies invisible while giving fair warning.</li>
+    <li><strong>The chase reveals the enemy.</strong> Once you're chased, the enemy glitches into view. Running away is about movement and space, not guessing.</li>
+    <li><strong>The ~2 second window is a tuning value.</strong> It may be too harsh and will be tuned in playtests.</li>
+  </ul>
+</section>
+
+<section class="cs-section prose" id="corners">
+  <span class="eyebrow">Level design</span>
+  <h2>The corner problem</h2>
+  <p>The hardest fairness case: a <strong>corner</strong>. The player can't see around it, but an invisible enemy right behind it can spot them at very short range. The grace window doesn't help when you walk straight into someone.</p>
+
+  <h3>Option I rejected</h3>
+  <p>Casting light (a view cone) where enemies are looking would solve it, but it gives away the enemy's position and breaks the core fantasy of enemies you can't see. Fair, but no longer this game.</p>
+
+  <h3>What I'm going with: solve it in the level, not in the HUD</h3>
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 290" role="img" aria-label="Sharp corner with patrol along the wall versus rounded corner with patrol offset from the corner">
+        <g>
+          <text class="d-t" x="30" y="30" style="fill:#e5675b">✕ Sharp corner, patrol hugs the wall</text>
+          <path d="M40 60H300V270" fill="none" stroke="#9aa3b2" stroke-width="10" stroke-linejoin="miter"/>
+          <path d="M40 60H300V270" fill="none" stroke="#1b1f26" stroke-width="4"/>
+          <path d="M70 110H240V260" class="d-l dash" style="stroke:#e5675b"/>
+          <circle cx="240" cy="110" r="10" fill="#e5675b"/>
+          <circle cx="120" cy="230" r="10" fill="#5ec2b7"/><text class="d-s" x="80" y="258">player</text>
+          <text class="d-s" x="130" y="150">enemy at the corner</text>
+          <text class="d-s" x="70" y="96">spotted at point-blank range</text>
+        </g>
+        <g transform="translate(460,0)">
+          <text class="d-t" x="30" y="30" style="fill:#5ec2b7">✓ Rounded corner, patrol offset</text>
+          <path d="M40 60H200Q300 60 300 160V270" fill="none" stroke="#9aa3b2" stroke-width="10"/>
+          <path d="M40 60H200Q300 60 300 160V270" fill="none" stroke="#1b1f26" stroke-width="4"/>
+          <path d="M60 100H140" class="d-l dash teal"/><path d="M260 210V260" class="d-l dash teal"/>
+          <circle cx="140" cy="100" r="10" fill="#f2a541"/>
+          <circle cx="150" cy="230" r="10" fill="#5ec2b7"/><text class="d-s" x="110" y="258">player</text>
+          <path d="M150 230L245 125" stroke="#5ec2b7" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <text class="d-s" x="160" y="150">sight line opens</text><text class="d-s" x="160" y="166">gradually</text>
+          <text class="d-s" x="40" y="128">patrol turns before the corner</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Rounded corners open the view gradually, and patrol routes never run right along a corner.</figcaption>
+  </figure>
+  <ol>
+    <li><strong>Rounded instead of hard corners</strong>, so sight lines open gradually for both sides.</li>
+    <li><strong>Patrol routes never run directly along a corner</strong>, the one spot where you could be caught at point-blank range.</li>
+    <li><strong>Overview first:</strong> when the player enters a new space, they first get a vantage point over the whole room, so they can plan with flashes and sound before committing.</li>
+  </ol>
+  <div class="callout"><p><strong>Takeaway:</strong> some fairness problems are better solved with geometry and authoring rules than with more UI. The level designers get a short, checkable rule list instead of a new mechanic.</p></div>
+</section>
+
+<section class="cs-section prose" id="combat">
+  <span class="eyebrow">Combat</span>
+  <h2>Weak on purpose</h2>
+  <p>Combat is inspired by classic survival horror: possible, but discouraged. Weak enemies can be killed (with effort). The big creature can only be staggered. Weapons are found only by looking through to reality, but they can be used in both views, and work better in reality. Fighting is always a trade-off against staying hidden.</p>
+  <p>Planned structure for the vertical slice (15–20 minutes): an example level built around the stealth loop, dream/hallucination sequences, a locked-view set piece with an unseen creature you can't kill, and a boss encounter with multiple endings.</p>
+</section>
+
+<section class="cs-section prose" id="open">
+  <span class="eyebrow">Still open</span>
+  <h2>Open design questions</h2>
+  <ul>
+    <li>Flash economy: cooldown, charges or a cost (battery, noise, attention)?</li>
+    <li>Is ~2 seconds of "being looked at" readable enough, or too harsh? This will be tuned through playtests.</li>
+    <li>Story direction: is the implant a manipulator, or an "all in the head" helper for a traumatised character?</li>
+  </ul>
+  <p class="muted">This page will be updated with gameplay footage and playtest results as the project develops.</p>
+</section>
+
+<div class="next-project">
+  <div><span class="card-meta">Next case study</span><h3 style="margin:4px 0 0">JIM: an escape room on your own laptop</h3></div>
+  <a class="btn btn-primary" href="jim.html">Read next →</a>
+</div>
+
+</div>
+<div class="l-nl" lang="nl">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← Al het werk</a>
+  <span class="eyebrow">Case study · Momenteel in ontwikkeling</span>
+  <h1>Project Implant <span class="muted" style="font-size:.5em;font-weight:500">werktitel</span></h1>
+  <p class="tagline">Een first-person psychologische horrorgame in een post-Sovjet flatgebouw. Een implantaat in je oog bepaalt wat je ziet, en de wezens die op je jagen zijn onzichtbaar. De centrale ontwerpvraag: <strong>hoe maak je stealth tegen onzichtbare vijanden eerlijk?</strong></p>
+
+  <dl class="facts">
+    <div><dt>Mijn rol</dt><dd>Oorspronkelijk concept &amp; pitch, game design (GDD), stealth- &amp; detectieontwerp</dd></div>
+    <div><dt>Team</dt><dd>15 studenten: developers, artists, designers</dd></div>
+    <div><dt>Engine</dt><dd>Unity · first person · gemaakt voor koptelefoon</dd></div>
+    <div><dt>Status</dt><dd>In ontwikkeling · Minor GD&amp;D 2026–27</dd></div>
+  </dl>
+
+  <div class="wip-banner"><span class="wip-dot"></span><p style="margin:0"><strong>Work in progress.</strong> Dit is mijn huidige minorproject en het is nog in ontwikkeling. Het ontwerp hieronder laat zien waar we nu staan, en deze pagina groeit mee met gameplaybeelden en playtest-resultaten.</p></div>
+
+  <div class="cs-media" style="margin-top:32px"><img src="media/implant/cover.svg" alt="Conceptbeeld: een oog in een scannend HUD-vizier boven een flatgebouw"></div>
+
+  <ul class="toc" aria-label="Op deze pagina">
+    <li><a href="#concept-nl">Concept</a></li>
+    <li><a href="#flash-nl">Reality flash</a></li>
+    <li><a href="#detection-nl">Detectiemodel</a></li>
+    <li><a href="#corners-nl">Het hoekprobleem</a></li>
+    <li><a href="#combat-nl">Gevechten</a></li>
+    <li><a href="#open-nl">Open vragen</a></li>
+  </ul>
+</header>
+
+<section class="cs-section prose" id="concept-nl">
+  <span class="eyebrow">Concept</span>
+  <h2>Je HUD staat niet aan jouw kant (of toch wel?)</h2>
+  <p>Ik pitchte het concept aan het team: het personage heeft een <strong>implantaat met een pratende AI</strong> die filtert wat hij ziet. Met het filter aan ziet de wereld eruit als propaganda: schoon, helder, <em>te mooi</em>. Daaronder zit het echte gebouw: vervallen, gevaarlijk en bewoond.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Propaganda-weergave (implantaatfilter)</th><th>Realiteit</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Wereld</strong></td><td>Gepolijst, vrolijk, "te mooi"</td><td>Verval, sporen, de waarheid</td></tr>
+        <tr><td><strong>Vijanden</strong></td><td>Onzichtbaar</td><td>Zichtbaar</td></tr>
+        <tr><td><strong>HUD</strong></td><td>Doelen, gezondheid, status. Grotendeels eerlijk, met een paar gescripte leugens</td><td>Geen hulp bij doelen</td></tr>
+        <tr><td><strong>Wat je vindt</strong></td><td>Het pad waar het implantaat je wil hebben</td><td>Wapens &amp; munitie, verborgen doorgangen, aanwijzingen voor omgevingspuzzels</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Na de eerste pitch hebben we het concept als team besproken en in een paar rondes aangepast. We schrapten een idee waarin ondertitels zouden liegen, en hielden de HUD <strong>grotendeels eerlijk, met alleen gescripte leugens</strong>. De interface blijft betrouwbaar genoeg om mee te spelen, zodat de paar momenten waarop hij liegt echt binnenkomen.</p>
+</section>
+
+<section class="cs-section prose" id="flash-nl">
+  <span class="eyebrow">Kernmechaniek</span>
+  <h2>Van "het oog eruit halen" naar een reality flash</h2>
+  <div class="split">
+    <div>
+      <p>In de eerste versie haalde de speler het <strong>implantaat fysiek uit zijn oog</strong>: een animatie van 3–4 seconden met heel beperkte beweging, en hetzelfde om het terug te plaatsen. Als horror was dat sterk (je bent kwetsbaar terwijl je het doet), maar in een stealthgame werd het een probleem. Een lange, vergrendelde wissel straft de speler voor precies de actie die de game van ze vraagt.</p>
+      <p>We vervingen het door een <strong>reality flash</strong>: een korte puls die door het filter heen snijdt en het echte gebouw laat zien, inclusief de vijanden. De realiteit zien is nu een <em>timingkeuze</em> in plaats van een menu-achtige schakelaar, en het past bij het ritme van sluipen.</p>
+    </div>
+    <div class="pd" style="grid-template-columns:1fr;margin-top:0">
+      <div><h4>Eerst: schakelaar</h4><p>Animatie van 3–4 s, beperkte beweging. Sterke angst, traag tempo. Het botste met de stealth-loop.</p></div>
+      <div><h4>Nu: reality flash</h4><p>Een korte onthulling die je zelf timet. De spanning van niet-zien blijft, zonder dat je de controle kwijtraakt.</p></div>
+      <div><h4>Ontwerpregel</h4><p>Sommige stukken houden je bewust in één weergave. Een set piece waarin je de realiteit <em>niet</em> kunt zien, maakt angst zonder gevecht.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section prose" id="detection-nl">
+  <span class="eyebrow">Systeemontwerp</span>
+  <h2>Een detectiemodel voor vijanden die je niet ziet</h2>
+  <p>Als vijanden onzichtbaar zijn, heeft de speler andere informatiekanalen nodig. Ik ontwierp de detectie rond <strong>eerst geluid, dan de HUD</strong>, met een korte respijtperiode voordat je gestraft wordt.</p>
+
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 250" role="img" aria-label="Detectiestaten: onopgemerkt, bekeken, achtervolgd">
+        <rect class="d-box teal" x="20" y="60" width="230" height="110" rx="12"/>
+        <text class="d-t" x="40" y="92">1 · Onopgemerkt</text>
+        <text class="d-s" x="40" y="116">HUD: neutraal statusicoon</text>
+        <text class="d-s" x="40" y="136">Info: voetstappen &amp; geluid</text>
+        <text class="d-s" x="40" y="156">Speler: route plannen, flash</text>
+        <rect class="d-box acc" x="335" y="60" width="230" height="110" rx="12"/>
+        <text class="d-t" x="355" y="92">2 · Bekeken</text>
+        <text class="d-s" x="355" y="116">HUD: icoon "je wordt bekeken"</text>
+        <text class="d-s" x="355" y="136">Respijt: ~2 s (wordt getuned)</text>
+        <text class="d-s" x="355" y="156">Speler: zichtlijn breken</text>
+        <rect class="d-box red" x="650" y="60" width="230" height="110" rx="12"/>
+        <text class="d-t" x="670" y="92">3 · Achtervolgd</text>
+        <text class="d-s" x="670" y="116">HUD: icoon "achtervolgd"</text>
+        <text class="d-s" x="670" y="136">Vijand glitcht in beeld:</text>
+        <text class="d-s" x="670" y="156">zijn positie wordt onthuld</text>
+        <path class="d-l acc" d="M250 115H335" marker-end="url(#mk-g)"/><text class="d-s" x="292" y="46" text-anchor="middle">vijand</text><text class="d-s" x="292" y="40" dy="14" text-anchor="middle">kijkt naar je</text>
+        <path class="d-l" d="M565 115H650" marker-end="url(#mk-r)" style="stroke:#e5675b"/><text class="d-s" x="607" y="46" text-anchor="middle">nog in beeld</text><text class="d-s" x="607" y="40" dy="14" text-anchor="middle">na ~2 s</text>
+        <path class="d-l teal" d="M450 170V215H135V170" marker-end="url(#mk-t)"/><text class="d-s" x="240" y="236">uit zicht voordat de timer afloopt → terug naar onopgemerkt</text>
+      </svg>
+    </div>
+    <figcaption>Drie leesbare staten. Gespot worden gaat nooit direct: er is altijd een moment om te reageren.</figcaption>
+  </figure>
+
+  <ul>
+    <li><strong>Geluid is het belangrijkste zintuig.</strong> Patrouilles zijn hoorbaar, en de game is ontworpen voor een koptelefoon zodat je de richting kunt horen.</li>
+    <li><strong>De HUD toont de aandacht van de vijand, niet zijn positie.</strong> Je weet <em>dat</em> je bekeken wordt, niet <em>vanaf waar</em>. Zo blijven vijanden onzichtbaar en krijg je toch een eerlijke waarschuwing.</li>
+    <li><strong>De achtervolging onthult de vijand.</strong> Zodra je achtervolgd wordt, glitcht de vijand in beeld. Vluchten draait om beweging en ruimte, niet om gokken.</li>
+    <li><strong>Het venster van ~2 seconden is een tuningwaarde.</strong> Het is misschien te streng en wordt in playtests afgesteld.</li>
+  </ul>
+</section>
+
+<section class="cs-section prose" id="corners-nl">
+  <span class="eyebrow">Level design</span>
+  <h2>Het hoekprobleem</h2>
+  <p>Het lastigste eerlijkheidsgeval: een <strong>hoek</strong>. De speler kan er niet omheen kijken, maar een onzichtbare vijand vlak erachter kan hem van heel dichtbij spotten. Het respijt helpt niet als je recht tegen iemand aan loopt.</p>
+
+  <h3>Optie die ik afwees</h3>
+  <p>Licht (een kijkkegel) laten schijnen waar vijanden kijken zou het oplossen, maar dat verraadt de positie van de vijand en breekt de kernfantasie van vijanden die je niet ziet. Eerlijk, maar niet meer deze game.</p>
+
+  <h3>Waar ik voor kies: het oplossen in het level, niet in de HUD</h3>
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 290" role="img" aria-label="Scherpe hoek met patrouille langs de muur tegenover afgeronde hoek met patrouille op afstand">
+        <g>
+          <text class="d-t" x="30" y="30" style="fill:#e5675b">✕ Scherpe hoek, patrouille langs de muur</text>
+          <path d="M40 60H300V270" fill="none" stroke="#9aa3b2" stroke-width="10" stroke-linejoin="miter"/>
+          <path d="M40 60H300V270" fill="none" stroke="#1b1f26" stroke-width="4"/>
+          <path d="M70 110H240V260" class="d-l dash" style="stroke:#e5675b"/>
+          <circle cx="240" cy="110" r="10" fill="#e5675b"/>
+          <circle cx="120" cy="230" r="10" fill="#5ec2b7"/><text class="d-s" x="86" y="258">speler</text>
+          <text class="d-s" x="130" y="150">vijand bij de hoek</text>
+          <text class="d-s" x="70" y="96">van dichtbij gespot</text>
+        </g>
+        <g transform="translate(460,0)">
+          <text class="d-t" x="30" y="30" style="fill:#5ec2b7">✓ Afgeronde hoek, patrouille op afstand</text>
+          <path d="M40 60H200Q300 60 300 160V270" fill="none" stroke="#9aa3b2" stroke-width="10"/>
+          <path d="M40 60H200Q300 60 300 160V270" fill="none" stroke="#1b1f26" stroke-width="4"/>
+          <path d="M60 100H140" class="d-l dash teal"/><path d="M260 210V260" class="d-l dash teal"/>
+          <circle cx="140" cy="100" r="10" fill="#f2a541"/>
+          <circle cx="150" cy="230" r="10" fill="#5ec2b7"/><text class="d-s" x="116" y="258">speler</text>
+          <path d="M150 230L245 125" stroke="#5ec2b7" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <text class="d-s" x="160" y="150">zichtlijn opent</text><text class="d-s" x="160" y="166">geleidelijk</text>
+          <text class="d-s" x="40" y="128">patrouille draait vóór de hoek</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Afgeronde hoeken openen het zicht geleidelijk, en patrouilleroutes lopen nooit vlak langs een hoek.</figcaption>
+  </figure>
+  <ol>
+    <li><strong>Afgeronde in plaats van harde hoeken</strong>, zodat zichtlijnen voor beide kanten geleidelijk openen.</li>
+    <li><strong>Patrouilleroutes lopen nooit direct langs een hoek</strong>, de enige plek waar je van heel dichtbij gepakt kunt worden.</li>
+    <li><strong>Eerst overzicht:</strong> als de speler een nieuwe ruimte binnenkomt, krijgt hij eerst een uitkijkpunt over de hele kamer, zodat hij met flashes en geluid kan plannen voordat hij instapt.</li>
+  </ol>
+  <div class="callout"><p><strong>Les:</strong> sommige eerlijkheidsproblemen los je beter op met geometrie en bouwregels dan met meer UI. De level designers krijgen een korte, controleerbare regellijst in plaats van een nieuwe mechaniek.</p></div>
+</section>
+
+<section class="cs-section prose" id="combat-nl">
+  <span class="eyebrow">Gevechten</span>
+  <h2>Bewust zwak</h2>
+  <p>De gevechten zijn geïnspireerd op klassieke survival horror: mogelijk, maar ontmoedigd. Zwakke vijanden zijn te verslaan (met moeite). Het grote wezen kun je alleen laten wankelen. Wapens vind je alleen door naar de realiteit te kijken, maar je kunt ze in beide weergaves gebruiken, en ze werken beter in de realiteit. Vechten is altijd een afweging tegen verborgen blijven.</p>
+  <p>Geplande opbouw van de vertical slice (15–20 minuten): een voorbeeldlevel rond de stealth-loop, droom- en hallucinatiesequenties, een set piece in een vergrendelde weergave met een onzichtbaar wezen dat je niet kunt doden, en een bossgevecht met meerdere eindes.</p>
+</section>
+
+<section class="cs-section prose" id="open-nl">
+  <span class="eyebrow">Nog open</span>
+  <h2>Open ontwerpvragen</h2>
+  <ul>
+    <li>Flash-economie: cooldown, ladingen of een kostprijs (batterij, geluid, aandacht)?</li>
+    <li>Is ~2 seconden "bekeken" leesbaar genoeg, of te streng? Dat wordt in playtests getuned.</li>
+    <li>Verhaalrichting: is het implantaat een manipulator, of een helper die "alles in het hoofd" van een getraumatiseerd personage zit?</li>
+  </ul>
+  <p class="muted">Deze pagina wordt aangevuld met gameplaybeelden en playtest-resultaten naarmate het project vordert.</p>
+</section>
+
+<div class="next-project">
+  <div><span class="card-meta">Volgende case study</span><h3 style="margin:4px 0 0">JIM: een escaperoom op je eigen laptop</h3></div>
+  <a class="btn btn-primary" href="jim.html">Lees verder →</a>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Nathaniël Jans</span>
+    <span><a href="projects.html"><span class="l-en">Work</span><span class="l-nl">Werk</span></a> · <a href="mailto:nbjjans22@gmail.com">E-mail</a> · <a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

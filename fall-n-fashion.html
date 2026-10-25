@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="Fall &#x27;n Fashion · Case study · Nathaniël Jans" data-title-nl="Fall &#x27;n Fashion · Case study · Nathaniël Jans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fall &#x27;n Fashion · Case study · Nathaniël Jans</title>
+  <meta name="description" content="Case study: procedural worlds, seeded levels and data-driven design in the mobile game Fall &#x27;n Fashion.">
+  <meta property="og:title" content="Fall &#x27;n Fashion · Case study · Nathaniël Jans">
+  <meta property="og:description" content="Case study: procedural worlds, seeded levels and data-driven design in the mobile game Fall &#x27;n Fashion.">
+  <meta property="og:image" content="media/fnf/landing.jpg">
+  <script>(function(){var l='en';try{l=localStorage.getItem('lang')||'en'}catch(e){}var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en')l=q;document.documentElement.setAttribute('data-lang',l);if(l==='nl')document.documentElement.lang='nl';})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <marker id="mk-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7483"/></marker>
+  <marker id="mk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a541"/></marker>
+  <marker id="mk-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ec2b7"/></marker>
+  <marker id="mk-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5675b"/></marker>
+</defs></svg>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathaniël Jans<span>.</span></a>
+    <div class="nav-right">
+      <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language / Wissel taal"><span class="l-en">NL</span><span class="l-nl">EN</span></button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="projects.html" aria-current="page"><span class="l-en">Work</span><span class="l-nl">Werk</span></a></li>
+      <li><a href="index.html#experience"><span class="l-en">Experience</span><span class="l-nl">Ervaring</span></a></li>
+      <li><a href="index.html#about"><span class="l-en">About</span><span class="l-nl">Over mij</span></a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="l-en" href="media/cv/Nathaniel_Jans_CV_EN.pdf" target="_blank" rel="noopener">CV</a><a class="l-nl" href="media/cv/Nathaniel_Jans_CV_NL.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+<div class="l-en" lang="en">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← All work</a>
+  <span class="eyebrow">Case study · Mobile puzzle-runner</span>
+  <h1>Fall 'n Fashion</h1>
+  <p class="tagline">An alien falls from his UFO and has to grab the right outfit before he lands among humans. My focus was turning 7 hand-made levels into <strong>endless, fair and learnable content</strong>: procedurally generated worlds on top of a data-driven level setup.</p>
+
+  <dl class="facts">
+    <div><dt>My role</dt><dd>Gameplay programming, procedural worlds, level select &amp; UI, co-author of the Technical Design</dd></div>
+    <div><dt>Team</dt><dd>6 students (Minor Game Design &amp; Development)</dd></div>
+    <div><dt>Engine &amp; platform</dt><dd>Unity 6 · C# · Android (portrait)</dd></div>
+    <div><dt>Status</dt><dd>Released on Google Play &amp; itch.io, 2026</dd></div>
+  </dl>
+
+  <div class="btn-row" style="margin-top:22px">
+    <a class="btn btn-primary" href="https://uwomp.itch.io/fall-n-fashion" target="_blank" rel="noopener">Play on itch.io</a>
+    <a class="btn btn-ghost" href="#generator">Jump to the generator</a>
+  </div>
+
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#data">Data-driven levels</a></li>
+    <li><a href="#generator">Procedural worlds</a></li>
+    <li><a href="#fairness">Fairness rules</a></li>
+    <li><a href="#ui">Level select &amp; UI</a></li>
+    <li><a href="#testing">Testing</a></li>
+    <li><a href="#learned">What I learned</a></li>
+  </ul>
+</header>
+
+<!-- OVERVIEW -->
+<section class="cs-section prose" id="overview">
+  <div class="split media-right">
+    <div>
+      <span class="eyebrow">Overview</span>
+      <h2>Learn the outfit, then nail it</h2>
+      <p>Each level lasts about <strong>22 seconds</strong>. Clothes float up past the falling alien, and touching one equips it in its slot (head, top or bottom). The game never tells you which outfit is right. You find out from the stars that appear for matching pieces, and from the dressed-up humans waiting for you when you land.</p>
+      <p>The player has two actions:</p>
+      <ul>
+        <li><strong>Swipe sideways</strong> to move under your finger and grab or avoid clothes.</li>
+        <li><strong>Swipe down to dive.</strong> You fall 1.6× faster, the level ends sooner and you dodge some hazards, but you have less time to react. Swiping up cancels the dive.</li>
+      </ul>
+      <p>There is no mid-run fail state. Hazards knock off your best piece of clothing, and when you land the outfit is scored from 0 to 3 stars. This makes the game forgiving to start but hard to master, because 3 stars needs a clean run.</p>
+      <div class="pd">
+        <div><h4>Design goal</h4><p>A runner where you learn and puzzle, not just react.</p></div>
+        <div><h4>Constraint</h4><p>22-second levels burn through hand-made content fast.</p></div>
+        <div><h4>Answer</h4><p>Data-driven levels and a generator that never runs out.</p></div>
+      </div>
+    </div>
+    <figure class="figure">
+      <div class="phone">
+        <video poster="media/fnf/poster.jpg" autoplay muted loop playsinline aria-label="Gameplay: the alien falls, catches clothes, earns stars and lands"><source src="media/fnf/fnf-gameplay.webm" type="video/webm"><source src="media/fnf/fnf-gameplay.mp4" type="video/mp4"></video>
+      </div>
+      <figcaption style="text-align:center">Gameplay: catch pieces, watch the star meter, land.</figcaption>
+    </figure>
+  </div>
+
+  <div class="gallery">
+    <button class="tall" data-zoom="media/fnf/shot-5.jpg"><img src="media/fnf/shot-5.jpg" alt="Catching a matching piece gives a star burst" loading="lazy"></button>
+    <button class="tall" data-zoom="media/fnf/shot-13.jpg"><img src="media/fnf/shot-13.jpg" alt="The HUD meter shows a red star when a perfect piece is lost" loading="lazy"></button>
+    <button class="tall" data-zoom="media/fnf/shot-19.jpg"><img src="media/fnf/shot-19.jpg" alt="Landing among humans in the Winter level" loading="lazy"></button>
+    <button class="tall" data-zoom="media/fnf/shot-21.jpg"><img src="media/fnf/shot-21.jpg" alt="End screen with two out of three stars" loading="lazy"></button>
+  </div>
+</section>
+
+<!-- DATA DRIVEN -->
+<section class="cs-section prose" id="data">
+  <span class="eyebrow">System 1</span>
+  <h2>One level scene, many levels: data-driven by design</h2>
+  <p>We chose early to have <strong>a single Level scene</strong>. What a level becomes is decided entirely by data in ScriptableObjects, which designers can edit in the Inspector without touching code. Adding a level means creating a data asset, not copying a scene. That decision is also what made endless worlds possible later: the generator only has to <em>produce data</em>.</p>
+
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 300" role="img" aria-label="Data flow: GlobeData and LevelData and ThemeData feed the Level scene managers">
+        
+        <rect class="d-box" x="20" y="30" width="200" height="66" rx="10"/><text class="d-t" x="40" y="58">GlobeData</text><text class="d-s" x="40" y="80">a world: levels + unlock order</text>
+        <rect class="d-box" x="20" y="120" width="200" height="66" rx="10"/><text class="d-t" x="40" y="148">LevelData</text><text class="d-s" x="40" y="170">rules: speed, spawns, hazards</text>
+        <rect class="d-box" x="20" y="210" width="200" height="66" rx="10"/><text class="d-t" x="40" y="238">ThemeData</text><text class="d-s" x="40" y="260">look, crowd, perfect clothes</text>
+        <rect class="d-box acc" x="290" y="30" width="270" height="66" rx="10"/><text class="d-t" x="320" y="58">GlobeGenerator</text><text class="d-s" x="320" y="80">copies a template, applies difficulty</text>
+        <rect class="d-box teal" x="290" y="150" width="270" height="66" rx="10"/><text class="d-t" x="320" y="178">LevelManager (singleton)</text><text class="d-s" x="320" y="200">keeps the chosen level between scenes</text>
+        <rect class="d-box" x="620" y="30" width="260" height="246" rx="10"/><text class="d-t" x="640" y="58">Level scene</text>
+        <text class="d-s" x="640" y="88">GameManager · timer &amp; fall speed</text>
+        <text class="d-s" x="640" y="114">ClothesManager · seeded spawns</text>
+        <text class="d-s" x="640" y="140">Obstacle managers · one per hazard</text>
+        <text class="d-s" x="640" y="166">ScoreManager / MeterManager · stars</text>
+        <text class="d-s" x="640" y="192">EndGame · landing state machine</text>
+        <text class="d-s" x="640" y="232">Every manager reads the current</text>
+        <text class="d-s" x="640" y="250">LevelData in Start() and sets itself up</text>
+        <path class="d-l" d="M220 63H290" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M220 153H260V183H290" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M220 243H260V190" />
+        <path class="d-l acc" d="M415 96V150" marker-end="url(#mk-a)"/>
+        <path class="d-l" d="M560 183H620" marker-end="url(#mk-g)"/>
+      </svg>
+    </div>
+    <figcaption>Everything that differs between levels lives in data. The scene only contains systems.</figcaption>
+  </figure>
+
+  <h3>A few decisions that paid off</h3>
+  <ul>
+    <li><strong>Scores live on the clothing item, not on the level.</strong> Each clothing prefab lists a score per theme (perfect = 4, otherwise 1 or 0). Adding a new piece of clothing doesn't require editing every level.</li>
+    <li><strong>Hazards are toggles plus a frequency.</strong> Each obstacle type (lightning, vulture, seagull, giraffe, balloon, wind, storm) has its own manager that reads its toggle from LevelData. A designer can mix hazards per level from the Inspector.</li>
+    <li><strong>Restart = reload the scene.</strong> Only two managers survive scene loads, so there is no state that has to be reset by hand.</li>
+  </ul>
+</section>
+
+<!-- GENERATOR -->
+<section class="cs-section prose" id="generator">
+  <span class="eyebrow">System 2 · my main focus</span>
+  <h2>Endless worlds that still feel designed</h2>
+  <p>World 1 is hand-made: 7 levels, one per theme (Winter, Beach, Cowboy, Safari, Fancy, Party and the twist level Comet Con). At 22 seconds a level, a good player finishes that in a few minutes. We wanted the game to keep going without it becoming random noise. Every world after the first is generated.</p>
+
+  <h3>How a world is built</h3>
+  <ol>
+    <li>Every theme appears exactly once per world, in a shuffled order.</li>
+    <li>For each level, the generator <strong>copies the hand-made level of the same theme</strong> (clothes, duration, spawn timing). The generated levels keep the feel we tuned by hand.</li>
+    <li>On top of that it applies a <strong>difficulty value <code>d</code></strong> that changes fall speed, hazard frequency, the number of hazards and how many outfit slots are hidden.</li>
+  </ol>
+
+  <h3>The difficulty curve: logarithmic on purpose</h3>
+  <div class="split">
+    <div>
+      <p>The difficulty for generated world <code>w</code> is:</p>
+      <p><code>d(w) = 0.5 + 0.35 × ln(1 + 0.15·w) / 0.15</code></p>
+      <p>A linear curve keeps climbing until later worlds are physically impossible on a phone. The log curve rises quickly in the first worlds, where players are still learning, and then flattens into a long plateau that skilled players can keep pushing. Every effect also has a hard cap, and <code>d</code> rises a little from the first to the last level inside a world.</p>
+    </div>
+    <figure class="figure small" style="margin-top:0">
+      <div class="frame">
+        <svg viewBox="0 0 660 310" role="img" aria-label="Chart comparing logarithmic and linear difficulty over 20 worlds">
+          <g stroke="#2c323d" stroke-width="1" fill="none">
+            <path d="M60 20V260H620"/>
+            <path d="M60 200H620M60 140H620M60 80H620M60 20H620" stroke-dasharray="3 5"/>
+          </g>
+          <g class="d-s"><text x="30" y="264">0</text><text x="30" y="204">2</text><text x="30" y="144">4</text><text x="30" y="84">6</text><text x="30" y="24">8</text>
+            <text x="56" y="282">0</text><text x="196" y="282">5</text><text x="336" y="282">10</text><text x="476" y="282">15</text><text x="610" y="282">20</text>
+            <text x="270" y="302">generated world (w)</text></g>
+          <polyline fill="none" stroke="#6b7483" stroke-width="2.5" stroke-dasharray="7 6" points="60,245.0 74,239.8 88,234.5 102,229.2 116,224.0 130,218.8 144,213.5 158,208.2 172,203.0 186,197.8 200,192.5 214,187.2 228,182.0 242,176.8 256,171.5 270,166.2 284,161.0 298,155.8 312,150.5 326,145.2 340,140.0 354,134.8 368,129.5 382,124.3 396,119.0 410,113.8 424,108.5 438,103.2 452,98.0 466,92.8 480,87.5 494,82.2 508,77.0 522,71.8 536,66.5 550,61.2 564,56.0 578,50.8 592,45.5 606,40.3 620,35.0"/>
+          <polyline fill="none" stroke="#f2a541" stroke-width="3" points="60,245.0 74,239.9 88,235.2 102,230.8 116,226.6 130,222.7 144,219.0 158,215.5 172,212.1 186,208.9 200,205.8 214,202.9 228,200.1 242,197.4 256,194.8 270,192.2 284,189.8 298,187.5 312,185.2 326,183.0 340,180.9 354,178.8 368,176.8 382,174.8 396,172.9 410,171.1 424,169.3 438,167.5 452,165.8 466,164.1 480,162.5 494,160.9 508,159.3 522,157.8 536,156.3 550,154.9 564,153.4 578,152.0 592,150.6 606,149.3 620,148.0"/>
+          <text x="470" y="40" class="d-s">linear: unplayable</text>
+          <text x="470" y="140" fill="#f2a541" style="font:600 12px Inter,sans-serif">logarithmic (used)</text>
+          <text x="66" y="38" class="d-s">difficulty d</text>
+        </svg>
+      </div>
+      <figcaption>Linear vs. the logarithmic curve we shipped (start 0.5, growth 0.35, slowdown 0.15).</figcaption>
+    </figure>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Setting</th><th>How <code>d</code> changes it</th><th>Cap</th></tr></thead>
+      <tbody>
+        <tr><td>Fall speed</td><td>1 + 0.05 × d</td><td>2×</td></tr>
+        <tr><td>Hazard frequency</td><td>1 + 0.05 × d</td><td>2×</td></tr>
+        <tr><td>Number of hazards</td><td>0.3 + 0.4 × d (the fraction is the chance of one extra)</td><td>4</td></tr>
+        <tr><td>Hidden outfit slots</td><td>Always at least 1. Two slots possible from d = 4, all three from d = 8</td><td>3</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Two rules that keep it from feeling random</h3>
+  <div class="pd">
+    <div><h4>Introduction order</h4><p>Each hazard has a list of themes where it must appear first. The giraffe shows up in Safari, then Cowboy, and only after that anywhere. New players meet one hazard at a time, in a place where it makes sense.</p></div>
+    <div><h4>No duplicates</h4><p>If two levels in the same world end up with the same hazard combination, the generator re-rolls (up to 10 times), so every level in a world asks something different.</p></div>
+    <div><h4>Stable saves</h4><p>A generated world is saved as JSON the first time it's opened. Later balance updates don't change a world you already started, and new themes get added to the end of existing worlds.</p></div>
+  </div>
+
+  <h3>Seeds: levels you can learn</h3>
+  <p>A game about learning the outfit only works if a level plays the same on every attempt. All spawning uses <code>System.Random</code> with a level seed instead of Unity's global random. <strong>Each hazard manager gets its own stream</strong> (the level seed XOR a constant per hazard), so turning lightning on for a level doesn't shift when the birds come. World seeds are derived from a base seed plus the world number, so every player gets the same World 2.</p>
+</section>
+
+<!-- FAIRNESS -->
+<section class="cs-section prose" id="fairness">
+  <span class="eyebrow">System 3</span>
+  <h2>Small rules that make random feel fair</h2>
+  <div class="split">
+    <div>
+      <h3>Guaranteed good clothes</h3>
+      <p>A level is unfair if the perfect items never show up. Clothes are split into a <strong>guaranteed</strong> list (the theme's perfect pieces, shuffled with the seed) and a <strong>filler</strong> list (wrong choices). The spawner works out the minimum number of spawns a level can have (duration ÷ max interval), divides that by the number of guaranteed items, and takes every <em>N</em>th spawn from the guaranteed list. The right answers are spread across the whole fall. Fillers never repeat the previous slot, so you don't get three hats in a row.</p>
+    </div>
+    <figure class="figure small" style="margin-top:8px">
+      <div class="frame">
+        <svg viewBox="0 0 520 150" role="img" aria-label="Spawn sequence where every Nth spawn is guaranteed">
+          <g font-family="Inter,sans-serif" font-size="12">
+            <g transform="translate(16,40)">
+              <rect x="0" width="40" height="40" rx="8" class="d-box"/><rect x="48" width="40" height="40" rx="8" class="d-box"/><rect x="96" width="40" height="40" rx="8" class="d-box acc" style="fill:rgba(242,165,65,.18)"/>
+              <rect x="144" width="40" height="40" rx="8" class="d-box"/><rect x="192" width="40" height="40" rx="8" class="d-box"/><rect x="240" width="40" height="40" rx="8" class="d-box acc" style="fill:rgba(242,165,65,.18)"/>
+              <rect x="288" width="40" height="40" rx="8" class="d-box"/><rect x="336" width="40" height="40" rx="8" class="d-box"/><rect x="384" width="40" height="40" rx="8" class="d-box acc" style="fill:rgba(242,165,65,.18)"/>
+              <rect x="432" width="40" height="40" rx="8" class="d-box"/>
+              <text x="108" y="25" fill="#f2a541">★</text><text x="252" y="25" fill="#f2a541">★</text><text x="396" y="25" fill="#f2a541">★</text>
+            </g>
+            <text x="16" y="28" fill="#9aa3b2">spawn order →</text>
+            <text x="16" y="110" fill="#f2a541">★ guaranteed (every Nth)</text><text x="220" y="110" fill="#9aa3b2">□ filler, never same slot twice in a row</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Example with N = 3.</figcaption>
+    </figure>
+  </div>
+
+  <h3>More fairness details</h3>
+  <ul>
+    <li><strong>Same speed on every phone.</strong> Vertical speed is <code>levelSpeed × diveMultiplier × relativeScreenHeight</code>. Without the last factor, clothes stay on screen longer on tall phones and the game gets easier there.</li>
+    <li><strong>One finger, two gestures.</strong> After 0.05 s and 10 px of movement, the direction is locked once. Within 22.5° of vertical counts as a dive or cancel swipe, anything else is steering. Steering follows the finger with a lerp, so it feels smooth rather than snappy.</li>
+    <li><strong>Hazards always hurt when they can.</strong> A hit removes a piece that currently gives a star, if there is one. Stars are only counted on landing, so a late hit costs you, and reading the final seconds matters.</li>
+    <li><strong>Telegraphs.</strong> Lightning crackles before it strikes and only has a collider in its last frames. Vultures blink a warning at the screen edge for 1 second before flying in at your height.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Playtest insight: players didn't dive.</strong> In early tests some players never used the dive until a level forced it. We added a short reminder tutorial that makes you swipe down and up right before the first hazard that requires diving. That's why the tutorials trigger at the moment they become relevant ("Dive" on level 2, "Question Mark" on the first hidden-slot level), not all at the start.</p>
+  </div>
+  <div class="callout">
+    <p><strong>Designing a twist: Comet Con.</strong> The last level of World 1 flips the rules: you start with 3 stars and lose one for each slot you fill, because you land at a comic convention where everyone is dressed as aliens. One playtester said "I think I'm falling towards a nude beach". Target-audience players figured it out on landing or on their second try. The level never appears in generated worlds, so it stays special.</p>
+  </div>
+</section>
+
+<!-- UI -->
+<section class="cs-section prose" id="ui">
+  <span class="eyebrow">UI &amp; flow</span>
+  <h2>A spinning globe as the level select</h2>
+  <div class="split media-right">
+    <div>
+      <p>The level select is a 3D globe in an otherwise 2D game. You spin it by dragging, and it keeps turning with damping when you let go. Level markers sit on the globe and are found with a physics raycast. A touch only counts as a tap if the finger moved less than 10 px, so spinning never opens a level by accident.</p>
+      <ul>
+        <li><strong>Readable progress:</strong> locked levels are hidden, a level you've never opened blinks, and a 3-star level turns gold.</li>
+        <li><strong>Unlock rules:</strong> 1 star unlocks the next level. A new world unlocks when every level in the current one has at least 1 star. You never need 3 stars to progress, but you'll want them.</li>
+        <li><strong>Decoupled UI:</strong> the globe manager fires one <code>Changed</code> event. The world arrows and every marker subscribe to it and refresh themselves, so the UI scripts don't depend on each other.</li>
+        <li><strong>HUD meter:</strong> stars fly from the player to the meter with an overshoot "pop". A running animation is cut to its end state when a new one starts, so icons can't get stuck halfway during quick pickups.</li>
+      </ul>
+    </div>
+    <figure class="figure" style="margin-top:0">
+      <button class="cs-media" data-zoom="media/fnf/landing.jpg" style="padding:0;cursor:zoom-in;border:1px solid var(--line);display:block;width:100%;margin-top:0"><img src="media/fnf/landing.jpg" alt="The alien lands on the beach among humans" loading="lazy"></button>
+      <figcaption>The landing is a small state machine: spawning stops, the ground scrolls in, the camera follows the landing, and then the stars pop in one by one.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- TESTING -->
+<section class="cs-section prose" id="testing">
+  <span class="eyebrow">Tools</span>
+  <h2>Making generated content testable</h2>
+  <p>You can't balance World 6 if you have to play 35 levels to reach it. We added two shortcuts:</p>
+  <ul>
+    <li><strong>Editor menu</strong> (<code>Tools › Infinite Mode</code>) to unlock the next world or reset all progress.</li>
+    <li><strong>Hidden cheat panel in builds:</strong> tap the Settings title 10 times and an "Unlock next world" toggle appears. Testers could reach generated worlds on a real phone in seconds.</li>
+  </ul>
+  <p>Together with a teammate, I documented the whole game in a <strong>Technical Design</strong>, written for people outside the team, including an honest "known limitations" section.</p>
+</section>
+
+<!-- LEARNED -->
+<section class="cs-section prose" id="learned">
+  <span class="eyebrow">Reflection</span>
+  <h2>What I learned &amp; what I'd change</h2>
+  <ol class="learned">
+    <li><strong>Data first makes everything later cheaper.</strong> One scene plus ScriptableObjects meant the generator could be "just" a data producer. On my next project I'd push this further and give LevelData a direct reference to its theme and a level-type enum. Right now a theme is found by asset name and Comet Con by a string compare, and a typo breaks it silently.</li>
+    <li><strong>Every random call should go through the seed.</strong> Which clothing piece a hazard knocks off still uses Unity's global random. That's small, but it means a level isn't 100% reproducible. I'd pass the seeded random everywhere.</li>
+    <li><strong>Timers should share one clock.</strong> The level timer is scaled by diving but the hazard timers aren't, so diving quietly reduces the number of hazards. That's a balancing bug that only shows up when you check the numbers. I'd drive everything from the game's elapsed time.</li>
+    <li><strong>Test the generator.</strong> The generator is a pure static class with no scene dependencies, so it would be the ideal first target for unit tests (caps, introduction order, no duplicates).</li>
+  </ol>
+</section>
+
+<div class="next-project">
+  <div><span class="card-meta">Next case study</span><h3 style="margin:4px 0 0">Conquest Rush: lane strategy across five ages</h3></div>
+  <a class="btn btn-primary" href="conquest-rush.html">Read next →</a>
+</div>
+
+</div>
+<div class="l-nl" lang="nl">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← Al het werk</a>
+  <span class="eyebrow">Case study · Mobiele puzzle-runner</span>
+  <h1>Fall 'n Fashion</h1>
+  <p class="tagline">Een alien valt uit zijn ufo en moet de juiste outfit pakken voordat hij tussen de mensen landt. Mijn focus: 7 handgemaakte levels omzetten in <strong>eindeloze, eerlijke en leerbare content</strong>, met procedureel gegenereerde werelden bovenop een data-driven levelopzet.</p>
+
+  <dl class="facts">
+    <div><dt>Mijn rol</dt><dd>Gameplay programming, procedurele werelden, level select &amp; UI, co-auteur van het Technical Design</dd></div>
+    <div><dt>Team</dt><dd>6 studenten (minor Game Design &amp; Development)</dd></div>
+    <div><dt>Engine &amp; platform</dt><dd>Unity 6 · C# · Android (staand)</dd></div>
+    <div><dt>Status</dt><dd>Uitgebracht op Google Play &amp; itch.io, 2026</dd></div>
+  </dl>
+
+  <div class="btn-row" style="margin-top:22px">
+    <a class="btn btn-primary" href="https://uwomp.itch.io/fall-n-fashion" target="_blank" rel="noopener">Speel op itch.io</a>
+    <a class="btn btn-ghost" href="#generator-nl">Naar de generator</a>
+  </div>
+
+  <ul class="toc" aria-label="Op deze pagina">
+    <li><a href="#overview-nl">Overzicht</a></li>
+    <li><a href="#data-nl">Data-driven levels</a></li>
+    <li><a href="#generator-nl">Procedurele werelden</a></li>
+    <li><a href="#fairness-nl">Eerlijkheidsregels</a></li>
+    <li><a href="#ui-nl">Level select &amp; UI</a></li>
+    <li><a href="#testing-nl">Testen</a></li>
+    <li><a href="#learned-nl">Wat ik leerde</a></li>
+  </ul>
+</header>
+
+<section class="cs-section prose" id="overview-nl">
+  <div class="split media-right">
+    <div>
+      <span class="eyebrow">Overzicht</span>
+      <h2>Leer de outfit, en zet hem dan neer</h2>
+      <p>Elk level duurt ongeveer <strong>22 seconden</strong>. Kleding zweeft omhoog langs de vallende alien, en als je een stuk aanraakt trek je het aan in het bijbehorende slot (hoofd, boven of onder). De game vertelt nooit welke outfit goed is. Dat ontdek je aan de sterren die verschijnen bij passende stukken, en aan de verklede mensen die op je wachten als je landt.</p>
+      <p>De speler heeft twee acties:</p>
+      <ul>
+        <li><strong>Swipe opzij</strong> om onder je vinger te bewegen en kleding te pakken of te ontwijken.</li>
+        <li><strong>Swipe omlaag om te duiken.</strong> Je valt 1,6× sneller, het level is eerder klaar en je ontwijkt sommige obstakels, maar je hebt minder tijd om te reageren. Omhoog swipen stopt de duik.</li>
+      </ul>
+      <p>Je kunt halverwege niet verliezen. Obstakels slaan je beste kledingstuk eraf, en bij de landing krijgt de outfit 0 tot 3 sterren. Daardoor is de game vergevingsgezind voor beginners maar lastig te beheersen, want 3 sterren vraagt een foutloze run.</p>
+      <div class="pd">
+        <div><h4>Ontwerpdoel</h4><p>Een runner waarin je leert en puzzelt, niet alleen reageert.</p></div>
+        <div><h4>Beperking</h4><p>Levels van 22 seconden verbruiken handgemaakte content snel.</p></div>
+        <div><h4>Antwoord</h4><p>Data-driven levels en een generator die nooit opraakt.</p></div>
+      </div>
+    </div>
+    <figure class="figure">
+      <div class="phone">
+        <video poster="media/fnf/poster.jpg" autoplay muted loop playsinline aria-label="Gameplay: de alien valt, vangt kleding, verdient sterren en landt"><source src="media/fnf/fnf-gameplay.webm" type="video/webm"><source src="media/fnf/fnf-gameplay.mp4" type="video/mp4"></video>
+      </div>
+      <figcaption style="text-align:center">Gameplay: vang kledingstukken, let op de sterrenmeter, land.</figcaption>
+    </figure>
+  </div>
+
+  <div class="gallery">
+    <button class="tall" data-zoom="media/fnf/shot-5.jpg"><img src="media/fnf/shot-5.jpg" alt="Een passend stuk vangen geeft een sterrenexplosie" loading="lazy"></button>
+    <button class="tall" data-zoom="media/fnf/shot-13.jpg"><img src="media/fnf/shot-13.jpg" alt="De HUD-meter toont een rode ster als een perfect stuk verloren gaat" loading="lazy"></button>
+    <button class="tall" data-zoom="media/fnf/shot-19.jpg"><img src="media/fnf/shot-19.jpg" alt="Landing tussen mensen in het Winter-level" loading="lazy"></button>
+    <button class="tall" data-zoom="media/fnf/shot-21.jpg"><img src="media/fnf/shot-21.jpg" alt="Eindscherm met twee van de drie sterren" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="data-nl">
+  <span class="eyebrow">Systeem 1</span>
+  <h2>Eén levelscène, veel levels: data-driven by design</h2>
+  <p>We kozen al vroeg voor <strong>één Level-scène</strong>. Wat een level wordt, bepaalt volledig de data in ScriptableObjects, die designers in de Inspector kunnen aanpassen zonder code aan te raken. Een level toevoegen betekent een data-asset maken, geen scène kopiëren. Die keuze maakte later ook de eindeloze werelden mogelijk: de generator hoeft alleen <em>data te maken</em>.</p>
+
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 300" role="img" aria-label="Datastroom: GlobeData, LevelData en ThemeData voeden de managers in de Level-scène">
+        
+        <rect class="d-box" x="20" y="30" width="200" height="66" rx="10"/><text class="d-t" x="40" y="58">GlobeData</text><text class="d-s" x="40" y="80">een wereld: levels + volgorde</text>
+        <rect class="d-box" x="20" y="120" width="200" height="66" rx="10"/><text class="d-t" x="40" y="148">LevelData</text><text class="d-s" x="40" y="170">regels: snelheid, spawns, obstakels</text>
+        <rect class="d-box" x="20" y="210" width="200" height="66" rx="10"/><text class="d-t" x="40" y="238">ThemeData</text><text class="d-s" x="40" y="260">uiterlijk, publiek, perfecte kleding</text>
+        <rect class="d-box acc" x="290" y="30" width="270" height="66" rx="10"/><text class="d-t" x="320" y="58">GlobeGenerator</text><text class="d-s" x="320" y="80">kopieert een template, past moeilijkheid toe</text>
+        <rect class="d-box teal" x="290" y="150" width="270" height="66" rx="10"/><text class="d-t" x="320" y="178">LevelManager (singleton)</text><text class="d-s" x="320" y="200">bewaart het gekozen level tussen scènes</text>
+        <rect class="d-box" x="620" y="30" width="260" height="246" rx="10"/><text class="d-t" x="640" y="58">Level-scène</text>
+        <text class="d-s" x="640" y="88">GameManager · timer &amp; valsnelheid</text>
+        <text class="d-s" x="640" y="114">ClothesManager · geseede spawns</text>
+        <text class="d-s" x="640" y="140">Obstakel-managers · één per obstakel</text>
+        <text class="d-s" x="640" y="166">ScoreManager / MeterManager · sterren</text>
+        <text class="d-s" x="640" y="192">EndGame · state machine voor landing</text>
+        <text class="d-s" x="640" y="232">Elke manager leest de huidige</text>
+        <text class="d-s" x="640" y="250">LevelData in Start() en stelt zich in</text>
+        <path class="d-l" d="M220 63H290" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M220 153H260V183H290" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M220 243H260V190" />
+        <path class="d-l acc" d="M415 96V150" marker-end="url(#mk-a)"/>
+        <path class="d-l" d="M560 183H620" marker-end="url(#mk-g)"/>
+      </svg>
+    </div>
+    <figcaption>Alles wat tussen levels verschilt zit in data. De scène bevat alleen systemen.</figcaption>
+  </figure>
+
+  <h3>Een paar keuzes die zich terugbetaalden</h3>
+  <ul>
+    <li><strong>Scores staan op het kledingstuk, niet op het level.</strong> Elke kleding-prefab heeft een score per thema (perfect = 4, anders 1 of 0). Een nieuw kledingstuk toevoegen vraagt dus niet om elk level aan te passen.</li>
+    <li><strong>Obstakels zijn schakelaars plus een frequentie.</strong> Elk type (bliksem, gier, meeuw, giraffe, ballon, wind, storm) heeft een eigen manager die zijn schakelaar uit LevelData leest. Een designer kan per level obstakels combineren vanuit de Inspector.</li>
+    <li><strong>Herstarten = de scène herladen.</strong> Maar twee managers overleven een scènewissel, dus er is geen state die je handmatig moet resetten.</li>
+  </ul>
+</section>
+
+<section class="cs-section prose" id="generator-nl">
+  <span class="eyebrow">Systeem 2 · mijn hoofdfocus</span>
+  <h2>Eindeloze werelden die toch ontworpen voelen</h2>
+  <p>Wereld 1 is handgemaakt: 7 levels, één per thema (Winter, Beach, Cowboy, Safari, Fancy, Party en het twist-level Comet Con). Met 22 seconden per level is een goede speler daar in een paar minuten doorheen. We wilden dat de game doorging zonder willekeurige ruis te worden. Elke wereld na de eerste wordt gegenereerd.</p>
+
+  <h3>Hoe een wereld wordt opgebouwd</h3>
+  <ol>
+    <li>Elk thema komt precies één keer per wereld voor, in een geschudde volgorde.</li>
+    <li>Voor elk level <strong>kopieert de generator het handgemaakte level van hetzelfde thema</strong> (kleding, duur, spawn-timing). Zo houden de gegenereerde levels het gevoel dat we met de hand hebben getuned.</li>
+    <li>Daarbovenop past hij een <strong>moeilijkheidswaarde <code>d</code></strong> toe, die valsnelheid, obstakelfrequentie, het aantal obstakels en het aantal verborgen outfit-slots verandert.</li>
+  </ol>
+
+  <h3>De moeilijkheidscurve: bewust logaritmisch</h3>
+  <div class="split">
+    <div>
+      <p>De moeilijkheid voor gegenereerde wereld <code>w</code> is:</p>
+      <p><code>d(w) = 0.5 + 0.35 × ln(1 + 0.15·w) / 0.15</code></p>
+      <p>Een lineaire curve blijft stijgen tot latere werelden op een telefoon fysiek onmogelijk worden. De logaritmische curve stijgt snel in de eerste werelden, waar spelers nog leren, en vlakt dan af tot een lang plateau waarop goede spelers kunnen blijven doorgaan. Elk effect heeft ook een harde limiet, en <code>d</code> stijgt binnen een wereld een beetje van het eerste naar het laatste level.</p>
+    </div>
+    <figure class="figure small" style="margin-top:0">
+      <div class="frame">
+        <svg viewBox="0 0 660 310" role="img" aria-label="Grafiek die logaritmische en lineaire moeilijkheid over 20 werelden vergelijkt">
+          <g stroke="#2c323d" stroke-width="1" fill="none">
+            <path d="M60 20V260H620"/>
+            <path d="M60 200H620M60 140H620M60 80H620M60 20H620" stroke-dasharray="3 5"/>
+          </g>
+          <g class="d-s"><text x="30" y="264">0</text><text x="30" y="204">2</text><text x="30" y="144">4</text><text x="30" y="84">6</text><text x="30" y="24">8</text>
+            <text x="56" y="282">0</text><text x="196" y="282">5</text><text x="336" y="282">10</text><text x="476" y="282">15</text><text x="610" y="282">20</text>
+            <text x="270" y="302">gegenereerde wereld (w)</text></g>
+          <polyline fill="none" stroke="#6b7483" stroke-width="2.5" stroke-dasharray="7 6" points="60,245.0 74,239.8 88,234.5 102,229.2 116,224.0 130,218.8 144,213.5 158,208.2 172,203.0 186,197.8 200,192.5 214,187.2 228,182.0 242,176.8 256,171.5 270,166.2 284,161.0 298,155.8 312,150.5 326,145.2 340,140.0 354,134.8 368,129.5 382,124.3 396,119.0 410,113.8 424,108.5 438,103.2 452,98.0 466,92.8 480,87.5 494,82.2 508,77.0 522,71.8 536,66.5 550,61.2 564,56.0 578,50.8 592,45.5 606,40.3 620,35.0"/>
+          <polyline fill="none" stroke="#f2a541" stroke-width="3" points="60,245.0 74,239.9 88,235.2 102,230.8 116,226.6 130,222.7 144,219.0 158,215.5 172,212.1 186,208.9 200,205.8 214,202.9 228,200.1 242,197.4 256,194.8 270,192.2 284,189.8 298,187.5 312,185.2 326,183.0 340,180.9 354,178.8 368,176.8 382,174.8 396,172.9 410,171.1 424,169.3 438,167.5 452,165.8 466,164.1 480,162.5 494,160.9 508,159.3 522,157.8 536,156.3 550,154.9 564,153.4 578,152.0 592,150.6 606,149.3 620,148.0"/>
+          <text x="470" y="40" class="d-s">lineair: onspeelbaar</text>
+          <text x="470" y="140" fill="#f2a541" style="font:600 12px Inter,sans-serif">logaritmisch (gebruikt)</text>
+          <text x="66" y="38" class="d-s">moeilijkheid d</text>
+        </svg>
+      </div>
+      <figcaption>Lineair tegenover de logaritmische curve die we uitbrachten (start 0,5, groei 0,35, vertraging 0,15).</figcaption>
+    </figure>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Instelling</th><th>Hoe <code>d</code> het verandert</th><th>Limiet</th></tr></thead>
+      <tbody>
+        <tr><td>Valsnelheid</td><td>1 + 0.05 × d</td><td>2×</td></tr>
+        <tr><td>Obstakelfrequentie</td><td>1 + 0.05 × d</td><td>2×</td></tr>
+        <tr><td>Aantal obstakels</td><td>0.3 + 0.4 × d (het decimale deel is de kans op één extra)</td><td>4</td></tr>
+        <tr><td>Verborgen outfit-slots</td><td>Altijd minstens 1. Twee slots mogelijk vanaf d = 4, alle drie vanaf d = 8</td><td>3</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Twee regels die voorkomen dat het willekeurig voelt</h3>
+  <div class="pd">
+    <div><h4>Introductievolgorde</h4><p>Elk obstakel heeft een lijst met thema's waar het eerst moet verschijnen. De giraffe komt eerst in Safari, dan in Cowboy, en pas daarna overal. Nieuwe spelers leren één obstakel tegelijk kennen, op een plek waar het logisch is.</p></div>
+    <div><h4>Geen duplicaten</h4><p>Als twee levels in dezelfde wereld dezelfde combinatie van obstakels krijgen, gooit de generator opnieuw (tot 10 keer), zodat elk level in een wereld iets anders vraagt.</p></div>
+    <div><h4>Stabiele saves</h4><p>Een gegenereerde wereld wordt de eerste keer dat je hem opent als JSON opgeslagen. Latere balance-updates veranderen een wereld die je al begonnen bent dus niet, en nieuwe thema's worden achteraan bestaande werelden toegevoegd.</p></div>
+  </div>
+
+  <h3>Seeds: levels die je kunt leren</h3>
+  <p>Een game over het leren van de outfit werkt alleen als een level bij elke poging hetzelfde speelt. Alle spawning gebruikt <code>System.Random</code> met een level-seed in plaats van Unity's globale random. <strong>Elke obstakel-manager krijgt zijn eigen reeks</strong> (de level-seed XOR een constante per obstakel), dus als je bliksem aanzet in een level, verschuift dat niet wanneer de vogels komen. Wereld-seeds worden afgeleid van een basis-seed plus het wereldnummer, zodat elke speler dezelfde Wereld 2 krijgt.</p>
+</section>
+
+<section class="cs-section prose" id="fairness-nl">
+  <span class="eyebrow">Systeem 3</span>
+  <h2>Kleine regels die toeval eerlijk laten voelen</h2>
+  <div class="split">
+    <div>
+      <h3>Gegarandeerd goede kleding</h3>
+      <p>Een level is oneerlijk als de perfecte stukken nooit verschijnen. Kleding is verdeeld in een <strong>gegarandeerde</strong> lijst (de perfecte stukken van het thema, geschud met de seed) en een <strong>opvul</strong>lijst (verkeerde keuzes). De spawner berekent het minimale aantal spawns dat een level kan hebben (duur ÷ maximaal interval), deelt dat door het aantal gegarandeerde stukken, en neemt elke <em>N</em>-de spawn uit de gegarandeerde lijst. Zo zijn de juiste antwoorden over de hele val verspreid. Opvulstukken herhalen nooit het vorige slot, dus je krijgt geen drie hoeden achter elkaar.</p>
+    </div>
+    <figure class="figure small" style="margin-top:8px">
+      <div class="frame">
+        <svg viewBox="0 0 520 150" role="img" aria-label="Spawnvolgorde waarin elke N-de spawn gegarandeerd is">
+          <g font-family="Inter,sans-serif" font-size="12">
+            <g transform="translate(16,40)">
+              <rect x="0" width="40" height="40" rx="8" class="d-box"/><rect x="48" width="40" height="40" rx="8" class="d-box"/><rect x="96" width="40" height="40" rx="8" class="d-box acc" style="fill:rgba(242,165,65,.18)"/>
+              <rect x="144" width="40" height="40" rx="8" class="d-box"/><rect x="192" width="40" height="40" rx="8" class="d-box"/><rect x="240" width="40" height="40" rx="8" class="d-box acc" style="fill:rgba(242,165,65,.18)"/>
+              <rect x="288" width="40" height="40" rx="8" class="d-box"/><rect x="336" width="40" height="40" rx="8" class="d-box"/><rect x="384" width="40" height="40" rx="8" class="d-box acc" style="fill:rgba(242,165,65,.18)"/>
+              <rect x="432" width="40" height="40" rx="8" class="d-box"/>
+              <text x="108" y="25" fill="#f2a541">★</text><text x="252" y="25" fill="#f2a541">★</text><text x="396" y="25" fill="#f2a541">★</text>
+            </g>
+            <text x="16" y="28" fill="#9aa3b2">spawnvolgorde →</text>
+            <text x="16" y="110" fill="#f2a541">★ gegarandeerd (elke N-de)</text><text x="220" y="110" fill="#9aa3b2">□ opvulling, nooit 2× hetzelfde slot</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Voorbeeld met N = 3.</figcaption>
+    </figure>
+  </div>
+
+  <h3>Meer eerlijkheidsdetails</h3>
+  <ul>
+    <li><strong>Dezelfde snelheid op elke telefoon.</strong> De verticale snelheid is <code>levelSpeed × diveMultiplier × relativeScreenHeight</code>. Zonder die laatste factor blijft kleding op lange telefoons langer in beeld en wordt de game daar makkelijker.</li>
+    <li><strong>Eén vinger, twee gebaren.</strong> Na 0,05 s en 10 px beweging wordt de richting één keer vastgezet. Binnen 22,5° van verticaal telt als duik- of stop-swipe, al het andere is sturen. Sturen volgt de vinger met een lerp, zodat het soepel voelt in plaats van schokkerig.</li>
+    <li><strong>Obstakels doen altijd pijn als het kan.</strong> Een treffer verwijdert een stuk dat op dat moment een ster oplevert, als dat er is. Sterren worden pas bij de landing geteld, dus een late treffer kost je iets, en de laatste seconden goed lezen telt.</li>
+    <li><strong>Waarschuwingen.</strong> Bliksem knettert voordat hij inslaat en heeft alleen in de laatste frames een collider. Gieren knipperen 1 seconde een waarschuwing aan de rand van het scherm voordat ze op jouw hoogte invliegen.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Playtest-inzicht: spelers doken niet.</strong> In vroege tests gebruikten sommige spelers de duik pas als een level ze ertoe dwong. We voegden een korte herinneringstutorial toe die je laat omlaag en omhoog swipen vlak voor het eerste obstakel waarvoor je moet duiken. Daarom starten de tutorials op het moment dat ze relevant worden ("Dive" in level 2, "Question Mark" in het eerste level met verborgen slots), niet allemaal aan het begin.</p>
+  </div>
+  <div class="callout">
+    <p><strong>Een twist ontwerpen: Comet Con.</strong> Het laatste level van Wereld 1 draait de regels om: je begint met 3 sterren en verliest er één voor elk slot dat je vult, omdat je landt op een comicconventie waar iedereen verkleed is als alien. Een playtester zei: "Ik denk dat ik naar een naaktstrand val." Spelers uit de doelgroep snapten het bij de landing of bij hun tweede poging. Het level komt nooit voor in gegenereerde werelden, zodat het speciaal blijft.</p>
+  </div>
+</section>
+
+<section class="cs-section prose" id="ui-nl">
+  <span class="eyebrow">UI &amp; flow</span>
+  <h2>Een draaiende wereldbol als level select</h2>
+  <div class="split media-right">
+    <div>
+      <p>Het level select is een 3D-wereldbol in een verder 2D-game. Je draait hem door te slepen, en hij draait na met demping als je loslaat. Levelmarkers staan op de bol en worden gevonden met een physics raycast. Een aanraking telt alleen als tik als de vinger minder dan 10 px bewoog, zodat draaien nooit per ongeluk een level opent.</p>
+      <ul>
+        <li><strong>Leesbare voortgang:</strong> vergrendelde levels zijn verborgen, een level dat je nooit opende knippert, en een level met 3 sterren wordt goud.</li>
+        <li><strong>Ontgrendelregels:</strong> 1 ster ontgrendelt het volgende level. Een nieuwe wereld gaat open als elk level in de huidige minstens 1 ster heeft. Je hebt nooit 3 sterren nodig om verder te komen, maar je wilt ze wel.</li>
+        <li><strong>Losgekoppelde UI:</strong> de globe-manager vuurt één <code>Changed</code>-event af. De wereldpijlen en elke marker luisteren daarnaar en verversen zichzelf, zodat de UI-scripts niet van elkaar afhankelijk zijn.</li>
+        <li><strong>HUD-meter:</strong> sterren vliegen van de speler naar de meter met een overshoot-"pop". Een lopende animatie springt naar zijn eindstand als er een nieuwe start, zodat iconen bij snelle pickups niet halverwege blijven hangen.</li>
+      </ul>
+    </div>
+    <figure class="figure" style="margin-top:0">
+      <button class="cs-media" data-zoom="media/fnf/landing.jpg" style="padding:0;cursor:zoom-in;border:1px solid var(--line);display:block;width:100%;margin-top:0"><img src="media/fnf/landing.jpg" alt="De alien landt op het strand tussen mensen" loading="lazy"></button>
+      <figcaption>De landing is een kleine state machine: spawnen stopt, de grond schuift in beeld, de camera volgt de landing en daarna verschijnen de sterren één voor één.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="cs-section prose" id="testing-nl">
+  <span class="eyebrow">Tools</span>
+  <h2>Gegenereerde content testbaar maken</h2>
+  <p>Je kunt Wereld 6 niet balancen als je eerst 35 levels moet spelen om er te komen. We voegden twee shortcuts toe:</p>
+  <ul>
+    <li><strong>Editor-menu</strong> (<code>Tools › Infinite Mode</code>) om de volgende wereld te ontgrendelen of alle voortgang te resetten.</li>
+    <li><strong>Verborgen cheat-paneel in builds:</strong> tik 10 keer op de titel van Settings en er verschijnt een knop "Unlock next world". Testers konden zo binnen seconden op een echte telefoon bij gegenereerde werelden komen.</li>
+  </ul>
+  <p>Samen met een teamgenoot documenteerde ik de hele game in een <strong>Technical Design</strong>, geschreven voor mensen buiten het team, inclusief een eerlijk hoofdstuk "bekende beperkingen".</p>
+</section>
+
+<section class="cs-section prose" id="learned-nl">
+  <span class="eyebrow">Reflectie</span>
+  <h2>Wat ik leerde &amp; wat ik zou veranderen</h2>
+  <ol class="learned">
+    <li><strong>Eerst data maakt alles daarna goedkoper.</strong> Eén scène plus ScriptableObjects betekende dat de generator "gewoon" data kon maken. In mijn volgende project ga ik hierin verder en geef ik LevelData een directe referentie naar zijn thema en een enum voor het leveltype. Nu wordt een thema op assetnaam gevonden en Comet Con via een stringvergelijking, en een typfout breekt dat ongemerkt.</li>
+    <li><strong>Elke random-aanroep hoort via de seed te gaan.</strong> Welk kledingstuk een obstakel eraf slaat, gebruikt nog Unity's globale random. Dat is klein, maar het betekent dat een level niet 100% reproduceerbaar is. Ik zou de geseede random overal doorgeven.</li>
+    <li><strong>Timers horen één klok te delen.</strong> De leveltimer schaalt mee met duiken, maar de obstakeltimers niet, dus duiken vermindert ongemerkt het aantal obstakels. Dat is een balance-bug die je pas ziet als je de cijfers controleert. Ik zou alles aansturen vanuit de verstreken speltijd.</li>
+    <li><strong>Test de generator.</strong> De generator is een pure statische klasse zonder afhankelijkheden van de scène, en daarmee het ideale eerste doel voor unit tests (limieten, introductievolgorde, geen duplicaten).</li>
+  </ol>
+</section>
+
+<div class="next-project">
+  <div><span class="card-meta">Volgende case study</span><h3 style="margin:4px 0 0">Conquest Rush: lane strategy door vijf tijdperken</h3></div>
+  <a class="btn btn-primary" href="conquest-rush.html">Lees verder →</a>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Nathaniël Jans</span>
+    <span><a href="projects.html"><span class="l-en">Work</span><span class="l-nl">Werk</span></a> · <a href="mailto:nbjjans22@gmail.com">E-mail</a> · <a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

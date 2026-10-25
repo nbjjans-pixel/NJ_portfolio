@@ -1,66 +1,100 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en" data-title-en="Digital art · Nathaniël Jans" data-title-nl="Digitale kunst · Nathaniël Jans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digitale Kunst & Creativiteit - Nathaniël</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital art · Nathaniël Jans</title>
+  <meta name="description" content="Digital drawings made in Photoshop.">
+  <meta property="og:title" content="Digital art · Nathaniël Jans">
+  <meta property="og:description" content="Digital drawings made in Photoshop.">
+  <meta property="og:image" content="media/art/drawing-4.jpg">
+  <script>(function(){var l='en';try{l=localStorage.getItem('lang')||'en'}catch(e){}var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en')l=q;document.documentElement.setAttribute('data-lang',l);if(l==='nl')document.documentElement.lang='nl';})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="bg-gray-900 text-white">
-
-<nav class="fixed w-full z-50 bg-black bg-opacity-70 shadow backdrop-filter backdrop-blur-lg">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="text-xl font-bold" data-translate="navPortfolio">Portfolio</a>
-        <div class="flex items-center">
-            <a href="index.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navHome">Home</a>
-            <a href="projects.html" class="mx-2 text-lg hover:text-gray-300" data-translate="navProjects">Projecten</a>
-            <a href="index.html#contact" class="mx-2 text-lg hover:text-gray-300" data-translate="navContact">Contact</a>
-            <a href="https://github.com/nbjjans-pixel" class="mx-2">
-                <img src="img/github.png" alt="github logo" class="h-6 w-6">
-            </a>
-            <button id="language-toggle" class="mx-2 bg-blue-600 px-4 py-2 text-sm rounded hover:bg-blue-500 transition" data-translate="toggleButton">
-                EN
-            </button>
-        </div>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <marker id="mk-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7483"/></marker>
+  <marker id="mk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a541"/></marker>
+  <marker id="mk-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ec2b7"/></marker>
+  <marker id="mk-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5675b"/></marker>
+</defs></svg>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathaniël Jans<span>.</span></a>
+    <div class="nav-right">
+      <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language / Wissel taal"><span class="l-en">NL</span><span class="l-nl">EN</span></button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="projects.html" aria-current="page"><span class="l-en">Work</span><span class="l-nl">Werk</span></a></li>
+      <li><a href="index.html#experience"><span class="l-en">Experience</span><span class="l-nl">Ervaring</span></a></li>
+      <li><a href="index.html#about"><span class="l-en">About</span><span class="l-nl">Over mij</span></a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="l-en" href="media/cv/Nathaniel_Jans_CV_EN.pdf" target="_blank" rel="noopener">CV</a><a class="l-nl" href="media/cv/Nathaniel_Jans_CV_NL.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
 </nav>
 
-<main class="pt-24 pb-12 px-6">
-    <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-12" data-translate="pageTitleDigitalArt">Digitale Kunst & Creativiteit</h2>
+<main class="wrap">
+<div class="l-en" lang="en">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← All work</a>
+  <span class="eyebrow">Art</span>
+  <h1>Digital art</h1>
+  <p class="tagline">Besides programming and game development I enjoy drawing digitally in Photoshop. It's how I explore ideas and bring visual concepts to life.</p>
+  <dl class="facts"><div><dt>Tools</dt><dd>Photoshop · Blender</dd></div><div><dt>Focus</dt><dd>Shape, light, composition</dd></div><div><dt>Used for</dt><dd>Concept art before 3D</dd></div><div><dt>Context</dt><dd>Personal</dd></div></dl>
+  
+  <div class="gallery"><button class="tall" data-zoom="media/art/drawing-1.jpg"><img src="media/art/drawing-1.jpg" alt="Digital drawing" loading="lazy"></button><button class="tall" data-zoom="media/art/drawing-2.jpg"><img src="media/art/drawing-2.jpg" alt="Digital drawing" loading="lazy"></button><button data-zoom="media/art/drawing-3.jpg"><img src="media/art/drawing-3.jpg" alt="Digital drawing" loading="lazy"></button><button data-zoom="media/art/drawing-4.jpg"><img src="media/art/drawing-4.jpg" alt="Digital drawing" loading="lazy"></button></div>
+</header>
 
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
-            <p class="text-lg leading-relaxed" data-translate="digitalArtIntro">
-                Naast programmeren..
-            </p>
+<section class="cs-section prose" id="process">
+  <span class="eyebrow">Process</span>
+  <h2>Drawing as a way of looking</h2>
+  <p>Drawing makes me look at the world differently: at shapes, light, shadow and composition. That way of observing helps me think outside the box in design too.</p><h3>Connection to 3D</h3><p>2D drawing is a strong base for modelling in Blender. I use it for concept art of characters or environments before building them in 3D, and the understanding of form, proportion and anatomy carries over into better-looking models.</p>
+</section>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="digitalArtCreativeProcessTitle">Het Creatieve Proces</h3>
-            <p class="text-lg leading-relaxed" data-translate="digitalArtCreativeProcessDesc">
-                Tekenen ....
-            </p>
+<div class="next-project">
+  <div><span class="card-meta">Next project</span><h3 style="margin:4px 0 0">Back to the case studies: Fall 'n Fashion</h3></div>
+  <a class="btn btn-primary" href="fall-n-fashion.html">Read next →</a>
+</div>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="digitalArtBlenderLinkTitle">Verbinding met 3D Modelleren (Blender)</h3>
-            <p class="text-lg leading-relaxed" data-translate="digitalArtBlenderLinkDesc">
-                Mijn ervaring met 2D-tekenen..
-            </p>
+</div>
+<div class="l-nl" lang="nl">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← Al het werk</a>
+  <span class="eyebrow">Kunst</span>
+  <h1>Digitale kunst</h1>
+  <p class="tagline">Naast programmeren en game development teken ik graag digitaal in Photoshop. Zo verken ik ideeën en breng ik visuele concepten tot leven.</p>
+  <dl class="facts"><div><dt>Tools</dt><dd>Photoshop · Blender</dd></div><div><dt>Focus</dt><dd>Vorm, licht, compositie</dd></div><div><dt>Gebruikt voor</dt><dd>Concept art vóór 3D</dd></div><div><dt>Context</dt><dd>Persoonlijk</dd></div></dl>
+  
+  <div class="gallery"><button class="tall" data-zoom="media/art/drawing-1.jpg"><img src="media/art/drawing-1.jpg" alt="Digital drawing" loading="lazy"></button><button class="tall" data-zoom="media/art/drawing-2.jpg"><img src="media/art/drawing-2.jpg" alt="Digital drawing" loading="lazy"></button><button data-zoom="media/art/drawing-3.jpg"><img src="media/art/drawing-3.jpg" alt="Digital drawing" loading="lazy"></button><button data-zoom="media/art/drawing-4.jpg"><img src="media/art/drawing-4.jpg" alt="Digital drawing" loading="lazy"></button></div>
+</header>
 
-            <h3 class="text-2xl font-semibold mb-4 text-blue-400" data-translate="digitalArtGalleryTitle">Galerij</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <img src="img/tekening1.jpg" alt="Digitale tekening 1" class="rounded-lg shadow-md w-full h-auto object-cover">
-                <img src="img/tekening3.png" alt="Digitale tekening 2" class="rounded-lg shadow-md w-full h-auto object-cover">
-                <img src="img/tekening2.jpg" alt="Digitale tekening 3" class="rounded-lg shadow-md w-full h-auto object-cover">
-                <img src="img/tekening4.png" alt="Digitale tekening 4" class="rounded-lg shadow-md w-full h-auto object-cover">
-            </div>
+<section class="cs-section prose" id="process-nl">
+  <span class="eyebrow">Proces</span>
+  <h2>Tekenen als manier van kijken</h2>
+  <p>Tekenen laat me anders naar de wereld kijken: naar vormen, licht, schaduw en compositie. Die manier van observeren helpt me ook in design om out-of-the-box te denken.</p><h3>Verbinding met 3D</h3><p>2D-tekenen is een sterke basis voor modelleren in Blender. Ik gebruik het voor concept art van personages of omgevingen voordat ik ze in 3D bouw, en het begrip van vorm, verhouding en anatomie zie je terug in mooiere modellen.</p>
+</section>
 
-        </div>
-    </div>
+<div class="next-project">
+  <div><span class="card-meta">Volgend project</span><h3 style="margin:4px 0 0">Terug naar de case studies: Fall 'n Fashion</h3></div>
+  <a class="btn btn-primary" href="fall-n-fashion.html">Lees verder →</a>
+</div>
+
+</div>
 </main>
 
-<footer class="py-6 bg-black text-center text-gray-500" data-translate="footerCopyright">
-    © 2024 Nathaniël. Alle rechten voorbehouden.
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Nathaniël Jans</span>
+    <span><a href="projects.html"><span class="l-en">Work</span><span class="l-nl">Werk</span></a> · <a href="mailto:nbjjans22@gmail.com">E-mail</a> · <a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
 </footer>
-
-<script defer src="script.js"></script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

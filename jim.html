@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="JIM · Case study · Nathaniël Jans" data-title-nl="JIM · Case study · Nathaniël Jans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JIM · Case study · Nathaniël Jans</title>
+  <meta name="description" content="Case study: JIM, a hybrid escape room where a simulated operating system and physical evidence form one puzzle chain.">
+  <meta property="og:title" content="JIM · Case study · Nathaniël Jans">
+  <meta property="og:description" content="Case study: JIM, a hybrid escape room where a simulated operating system and physical evidence form one puzzle chain.">
+  <meta property="og:image" content="media/jim/chat-story.jpg">
+  <script>(function(){var l='en';try{l=localStorage.getItem('lang')||'en'}catch(e){}var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en')l=q;document.documentElement.setAttribute('data-lang',l);if(l==='nl')document.documentElement.lang='nl';})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <marker id="mk-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7483"/></marker>
+  <marker id="mk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a541"/></marker>
+  <marker id="mk-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ec2b7"/></marker>
+  <marker id="mk-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5675b"/></marker>
+</defs></svg>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathaniël Jans<span>.</span></a>
+    <div class="nav-right">
+      <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language / Wissel taal"><span class="l-en">NL</span><span class="l-nl">EN</span></button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="projects.html" aria-current="page"><span class="l-en">Work</span><span class="l-nl">Werk</span></a></li>
+      <li><a href="index.html#experience"><span class="l-en">Experience</span><span class="l-nl">Ervaring</span></a></li>
+      <li><a href="index.html#about"><span class="l-en">About</span><span class="l-nl">Over mij</span></a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="l-en" href="media/cv/Nathaniel_Jans_CV_EN.pdf" target="_blank" rel="noopener">CV</a><a class="l-nl" href="media/cv/Nathaniel_Jans_CV_NL.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+<div class="l-en" lang="en">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← All work</a>
+  <span class="eyebrow">Case study · Hybrid escape room</span>
+  <h1>JIM</h1>
+  <p class="tagline">A laptop bag on the side of the road. Notes from a missing journalist. JIM is an escape room you play at home: you dig through Jim's <strong>simulated computer</strong> and cross-reference it with <strong>real, printed evidence</strong>. Neither half can be solved on its own.</p>
+
+  <dl class="facts">
+    <div><dt>My role</dt><dd>Concept, puzzle &amp; narrative design, Unity development, props, promo site</dd></div>
+    <div><dt>Context</dt><dd>CMGT year 3 · Hogeschool Rotterdam</dd></div>
+    <div><dt>Tech</dt><dd>Unity · C# · DreamOS (simulated OS framework)</dd></div>
+    <div><dt>Players</dt><dd>1–4 · own pace, no built-in timer</dd></div>
+  </dl>
+
+  <div class="btn-row" style="margin-top:22px">
+    <a class="btn btn-primary" href="https://cmgt.hr.nl/projecten/JIM" target="_blank" rel="noopener">CMGT Showcase page</a>
+    <a class="btn btn-ghost" href="https://nbjjans-pixel.github.io/jim-escape-room/" target="_blank" rel="noopener">Promo website</a>
+  </div>
+
+  <div class="cs-media" style="margin-top:32px"><img src="media/jim/chat-story.jpg" alt="Jim's simulated computer: a chat with the contact M, ending in two reply choices"></div>
+
+  <div class="callout"><p><strong>From school project to client work:</strong> after the showcase, Skunx Studios hired me to improve and expand JIM and adapt it to their own IP. I can't share details of that version yet.</p></div>
+
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#concept">Concept</a></li>
+    <li><a href="#puzzles">Puzzle design</a></li>
+    <li><a href="#os">The fake OS</a></li>
+    <li><a href="#props">Physical evidence</a></li>
+    <li><a href="#learned">What I learned</a></li>
+  </ul>
+</header>
+
+<section class="cs-section prose" id="concept">
+  <span class="eyebrow">Concept</span>
+  <h2>An escape room without the booking</h2>
+  <p>JIM brings the escape room feeling of "aha, <em>that's</em> what this note means" to the kitchen table: no booking, no travel. The player becomes the person who found Jim's bag: a password-protected laptop (the game) and a stack of documents (printed or shipped props). Jim was a journalist working on a story nobody wanted published, and the deeper you dig, the darker it gets.</p>
+  <div class="pd">
+    <div><h4>Pillar 1</h4><p><strong>Narrative-first.</strong> Every puzzle exists inside the story. Nothing should feel like a random lock.</p></div>
+    <div><h4>Pillar 2</h4><p><strong>Two halves, one puzzle.</strong> A scribble on paper unlocks a file, and a code on screen explains a note.</p></div>
+    <div><h4>Pillar 3</h4><p><strong>Low barrier.</strong> Any laptop, A4 printouts, play solo or as a game night. Use a stopwatch if you want pressure.</p></div>
+  </div>
+</section>
+
+<section class="cs-section prose" id="puzzles">
+  <span class="eyebrow">Puzzle design</span>
+  <h2>Designing the back-and-forth</h2>
+  <p>The core loop is <strong>cross-referencing</strong>. I designed the puzzle chain so players keep switching between the screen and the table. Each step gives an answer in one medium that's only useful in the other.</p>
+
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 260" role="img" aria-label="Puzzle flow alternating between physical evidence and digital files">
+        
+        <text class="d-s" x="20" y="34" style="fill:#f2a541;font-weight:600">PHYSICAL</text>
+        <text class="d-s" x="20" y="214" style="fill:#5ec2b7;font-weight:600">DIGITAL</text>
+        <rect class="d-box acc" x="100" y="20" width="170" height="60" rx="10"/><text class="d-t" x="116" y="46">Handwritten notes</text><text class="d-s" x="116" y="66">names, numbers, hints</text>
+        <rect class="d-box teal" x="210" y="170" width="170" height="60" rx="10"/><text class="d-t" x="226" y="196">Log in as Jim</text><text class="d-s" x="226" y="216">credentials from clues</text>
+        <rect class="d-box acc" x="370" y="20" width="170" height="60" rx="10"/><text class="d-t" x="386" y="46">Documents &amp; profile</text><text class="d-s" x="386" y="66">give context to a chat</text>
+        <rect class="d-box teal" x="470" y="170" width="190" height="60" rx="10"/><text class="d-t" x="486" y="196">Messages unlock</text><text class="d-s" x="486" y="216">new contacts, hidden chats</text>
+        <rect class="d-box acc" x="640" y="20" width="170" height="60" rx="10"/><text class="d-t" x="656" y="46">Newspaper clipping</text><text class="d-s" x="656" y="66">confirms the theory</text>
+        <rect class="d-box" x="725" y="170" width="160" height="60" rx="10"/><text class="d-t" x="741" y="196">The truth</text><text class="d-s" x="741" y="216">ending + credits</text>
+        <path class="d-l" d="M240 80L280 170" marker-end="url(#mk-g)"/><path class="d-l" d="M330 170L420 80" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M500 80L540 170" marker-end="url(#mk-g)"/><path class="d-l" d="M610 170L690 80" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M760 80L790 170" marker-end="url(#mk-g)"/>
+      </svg>
+    </div>
+    <figcaption>Simplified flow (no spoilers): the chain zig-zags between the table and the screen.</figcaption>
+  </figure>
+
+  <h3>Puzzle types I used</h3>
+  <ul>
+    <li><strong>Credential puzzles:</strong> Jim's work login on the newspaper's site. The username is given, and the password has to be deduced from what you know about him.</li>
+    <li><strong>Notation puzzles:</strong> a note that encodes a Wi-Fi combination as music notes, and a scribbled web address that only means something once you open the browser.</li>
+    <li><strong>Connection puzzles:</strong> a note asks whether an apartment number and a name are "connected?", and the answer is in Jim's messages.</li>
+    <li><strong>Cipher puzzles:</strong> an in-game website written in a symbol cipher that has to be decoded with information from the physical notes.</li>
+    <li><strong>Progressive reveal:</strong> new chats and contacts only appear once the story reaches them, so players are never overwhelmed by a full inbox on minute one.</li>
+  </ul>
+  <div class="callout"><p><strong>Design principle:</strong> a clue should point to the <em>other</em> medium. A note on paper leads to something on screen, and something on screen explains a note. That keeps the table and the screen equally important.</p></div>
+</section>
+
+<section class="cs-section prose" id="os">
+  <span class="eyebrow">Technical design</span>
+  <h2>Building a believable fake operating system</h2>
+  <p>JIM runs on <strong>DreamOS</strong>, a Unity framework for simulated desktops (apps, windows, browser, messaging). Most of my technical work was bending it to support a <em>story</em> instead of a sandbox:</p>
+  <ul>
+    <li><strong>Story-driven messaging.</strong> A story-teller step pushes new messages and turns on the unread badge at the right moment. Hidden chats in the sidebar are enabled through progression instead of being visible from the start.</li>
+    <li><strong>Clickable phone numbers in chats</strong> that open the next conversation. I fixed a bug where a single click triggered the link several times, which broke the story order.</li>
+    <li><strong>Login that feels like a real login:</strong> I added Enter-key support, because pressing Enter to log in is what everyone does automatically.</li>
+    <li><strong>Smooth scrolling.</strong> The default scroll felt chunky on long pages and chats, so I wrote a scroll smoothing fix that works for both scroll views and in-game websites.</li>
+    <li><strong>In-game websites</strong>, such as a newspaper with an employee portal and a site written in a cipher, so the browser becomes part of the investigation.</li>
+    <li><strong>Choice-based chats:</strong> some conversations end in reply options, so the player takes part in the story instead of only reading it.</li>
+  </ul>
+  <div class="gallery">
+    <button data-zoom="media/jim/lock-screen.jpg"><img src="media/jim/lock-screen.jpg" alt="Lock screen of Jim's computer" loading="lazy"></button>
+    <button data-zoom="media/jim/login.jpg"><img src="media/jim/login.jpg" alt="Login screen for the user Jim Jones" loading="lazy"></button>
+    <button data-zoom="media/jim/desktop.jpg"><img src="media/jim/desktop.jpg" alt="Jim's desktop with apps such as Messaging, Web Browser and Notepad" loading="lazy"></button>
+    <button data-zoom="media/jim/messaging.jpg"><img src="media/jim/messaging.jpg" alt="Messaging app with three chats" loading="lazy"></button>
+    <button data-zoom="media/jim/cipher-site.jpg"><img src="media/jim/cipher-site.jpg" alt="In-game website with a message written in a symbol cipher" loading="lazy"></button>
+    <button data-zoom="media/jim/chat-story.jpg"><img src="media/jim/chat-story.jpg" alt="Story chat with reply choices" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="props">
+  <span class="eyebrow">Physical design</span>
+  <h2>Evidence you can hold</h2>
+  <div class="split media-right">
+    <div>
+      <p>The physical half is designed to print on A4 at home. Every document is written in-world: handwritten notes, a personal profile, newspaper clippings and a press badge.</p>
+      <p>Physical props do something a screen can't: players spread them out, point at them and argue over them. That makes JIM work as a <strong>group game</strong> even though there's only one laptop.</p>
+      <p>To present the project, I also built a <strong>promo website</strong> with a noir "case file" style, two (fictional) editions and an FAQ. It's clearly labelled as a student project.</p>
+    </div>
+    <div class="gallery" style="grid-template-columns:1fr 1fr;margin-top:0">
+      <button class="tall" data-zoom="media/jim/prop-notes.jpg"><img src="media/jim/prop-notes.jpg" alt="Prop: Jim's handwritten notes with codes and hints" loading="lazy"></button>
+      <button class="tall" data-zoom="media/jim/prop-profile.jpg"><img src="media/jim/prop-profile.jpg" alt="Prop: a personal profile page with likes and dealbreakers" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section prose" id="learned">
+  <span class="eyebrow">Reflection</span>
+  <h2>What I learned</h2>
+  <ol class="learned">
+    <li><strong>A fake OS has to behave like a real one.</strong> Pressing Enter to log in or clicking a link once are things players expect without thinking. When the interface doesn't respond the way they expect, players blame the puzzle.</li>
+    <li><strong>Pacing a puzzle game is a gating problem.</strong> Revealing chats and apps step by step controls how much the player has to deal with at once.</li>
+    <li><strong>Next time:</strong> build a hint system that escalates from a nudge to the answer, and log where players get stuck, so the difficulty curve is based on data instead of observation alone.</li>
+  </ol>
+</section>
+
+<div class="next-project">
+  <div><span class="card-meta">Next case study</span><h3 style="margin:4px 0 0">Fall 'n Fashion: endless worlds that still feel designed</h3></div>
+  <a class="btn btn-primary" href="fall-n-fashion.html">Read next →</a>
+</div>
+
+</div>
+<div class="l-nl" lang="nl">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← Al het werk</a>
+  <span class="eyebrow">Case study · Hybride escaperoom</span>
+  <h1>JIM</h1>
+  <p class="tagline">Een laptoptas langs de kant van de weg. Aantekeningen van een vermiste journalist. JIM is een escaperoom die je thuis speelt: je doorzoekt Jims <strong>gesimuleerde computer</strong> en legt die naast <strong>echt, geprint bewijs</strong>. Geen van beide helften is in z'n eentje op te lossen.</p>
+
+  <dl class="facts">
+    <div><dt>Mijn rol</dt><dd>Concept, puzzel- &amp; narratief ontwerp, Unity-development, props, promowebsite</dd></div>
+    <div><dt>Context</dt><dd>CMGT jaar 3 · Hogeschool Rotterdam</dd></div>
+    <div><dt>Techniek</dt><dd>Unity · C# · DreamOS (framework voor gesimuleerde OS'en)</dd></div>
+    <div><dt>Spelers</dt><dd>1–4 · eigen tempo, geen ingebouwde timer</dd></div>
+  </dl>
+
+  <div class="btn-row" style="margin-top:22px">
+    <a class="btn btn-primary" href="https://cmgt.hr.nl/projecten/JIM" target="_blank" rel="noopener">CMGT Showcase-pagina</a>
+    <a class="btn btn-ghost" href="https://nbjjans-pixel.github.io/jim-escape-room/" target="_blank" rel="noopener">Promowebsite</a>
+  </div>
+
+  <div class="cs-media" style="margin-top:32px"><img src="media/jim/chat-story.jpg" alt="Jims gesimuleerde computer: een chat met het contact M, die eindigt in twee antwoordkeuzes"></div>
+
+  <div class="callout"><p><strong>Van schoolproject naar opdracht:</strong> na de showcase vroeg Skunx Studios mij om JIM te verbeteren, uit te breiden en om te zetten naar hun eigen IP. Over die versie kan ik nog geen details delen.</p></div>
+
+  <ul class="toc" aria-label="Op deze pagina">
+    <li><a href="#concept-nl">Concept</a></li>
+    <li><a href="#puzzles-nl">Puzzelontwerp</a></li>
+    <li><a href="#os-nl">Het nep-OS</a></li>
+    <li><a href="#props-nl">Fysiek bewijs</a></li>
+    <li><a href="#learned-nl">Wat ik leerde</a></li>
+  </ul>
+</header>
+
+<section class="cs-section prose" id="concept-nl">
+  <span class="eyebrow">Concept</span>
+  <h2>Een escaperoom zonder reservering</h2>
+  <p>JIM brengt het escaperoom-gevoel van "aha, <em>dát</em> betekent dit briefje" naar de keukentafel: niet reserveren, niet reizen. De speler is degene die Jims tas heeft gevonden: een laptop met wachtwoord (de game) en een stapel documenten (geprinte of opgestuurde props). Jim was een journalist die werkte aan een verhaal dat niemand gepubliceerd wilde zien, en hoe dieper je graaft, hoe duisterder het wordt.</p>
+  <div class="pd">
+    <div><h4>Pijler 1</h4><p><strong>Verhaal eerst.</strong> Elke puzzel bestaat binnen het verhaal. Niets mag voelen als een willekeurig slot.</p></div>
+    <div><h4>Pijler 2</h4><p><strong>Twee helften, één puzzel.</strong> Een krabbel op papier ontgrendelt een bestand, en een code op het scherm verklaart een briefje.</p></div>
+    <div><h4>Pijler 3</h4><p><strong>Lage drempel.</strong> Elke laptop, A4-prints, alleen of als spelavond. Wil je druk? Zet een stopwatch aan.</p></div>
+  </div>
+</section>
+
+<section class="cs-section prose" id="puzzles-nl">
+  <span class="eyebrow">Puzzelontwerp</span>
+  <h2>Het heen-en-weer ontwerpen</h2>
+  <p>De core loop is <strong>kruisverwijzen</strong>. Ik ontwierp de puzzelketen zo dat spelers steeds wisselen tussen het scherm en de tafel. Elke stap geeft een antwoord in het ene medium dat alleen in het andere bruikbaar is.</p>
+
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 260" role="img" aria-label="Puzzelflow die afwisselt tussen fysiek bewijs en digitale bestanden">
+        <text class="d-s" x="20" y="34" style="fill:#f2a541;font-weight:600">FYSIEK</text>
+        <text class="d-s" x="20" y="214" style="fill:#5ec2b7;font-weight:600">DIGITAAL</text>
+        <rect class="d-box acc" x="100" y="20" width="170" height="60" rx="10"/><text class="d-t" x="116" y="46">Handgeschreven notities</text><text class="d-s" x="116" y="66">namen, nummers, hints</text>
+        <rect class="d-box teal" x="210" y="170" width="170" height="60" rx="10"/><text class="d-t" x="226" y="196">Inloggen als Jim</text><text class="d-s" x="226" y="216">gegevens uit aanwijzingen</text>
+        <rect class="d-box acc" x="370" y="20" width="170" height="60" rx="10"/><text class="d-t" x="386" y="46">Documenten &amp; profiel</text><text class="d-s" x="386" y="66">geven context aan een chat</text>
+        <rect class="d-box teal" x="470" y="170" width="190" height="60" rx="10"/><text class="d-t" x="486" y="196">Berichten ontgrendelen</text><text class="d-s" x="486" y="216">nieuwe contacten, verborgen chats</text>
+        <rect class="d-box acc" x="640" y="20" width="170" height="60" rx="10"/><text class="d-t" x="656" y="46">Krantenknipsel</text><text class="d-s" x="656" y="66">bevestigt de theorie</text>
+        <rect class="d-box" x="725" y="170" width="160" height="60" rx="10"/><text class="d-t" x="741" y="196">De waarheid</text><text class="d-s" x="741" y="216">einde + credits</text>
+        <path class="d-l" d="M240 80L280 170" marker-end="url(#mk-g)"/><path class="d-l" d="M330 170L420 80" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M500 80L540 170" marker-end="url(#mk-g)"/><path class="d-l" d="M610 170L690 80" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M760 80L790 170" marker-end="url(#mk-g)"/>
+      </svg>
+    </div>
+    <figcaption>Vereenvoudigde flow (zonder spoilers): de keten zigzagt tussen de tafel en het scherm.</figcaption>
+  </figure>
+
+  <h3>Soorten puzzels die ik gebruikte</h3>
+  <ul>
+    <li><strong>Inlogpuzzels:</strong> Jims werklogin op de site van een krant. De gebruikersnaam is gegeven, het wachtwoord moet je afleiden uit wat je over hem weet.</li>
+    <li><strong>Notatiepuzzels:</strong> een briefje dat een wifi-combinatie als muzieknoten codeert, en een gekrabbeld webadres dat pas iets betekent als je de browser opent.</li>
+    <li><strong>Verbandpuzzels:</strong> een briefje vraagt of een appartementnummer en een naam "verbonden?" zijn, en het antwoord staat in Jims berichten.</li>
+    <li><strong>Cijferschrift-puzzels:</strong> een website in de game is geschreven in een symbolenschrift dat je ontcijfert met informatie van de fysieke notities.</li>
+    <li><strong>Stapsgewijs onthullen:</strong> nieuwe chats en contacten verschijnen pas als het verhaal er is, zodat spelers in de eerste minuut niet overspoeld worden door een volle inbox.</li>
+  </ul>
+  <div class="callout"><p><strong>Ontwerpprincipe:</strong> een aanwijzing hoort naar het <em>andere</em> medium te wijzen. Een briefje leidt naar iets op het scherm, en iets op het scherm verklaart een briefje. Zo blijven de tafel en het scherm even belangrijk.</p></div>
+</section>
+
+<section class="cs-section prose" id="os-nl">
+  <span class="eyebrow">Technisch ontwerp</span>
+  <h2>Een geloofwaardig nep-besturingssysteem bouwen</h2>
+  <p>JIM draait op <strong>DreamOS</strong>, een Unity-framework voor gesimuleerde bureaubladen (apps, vensters, browser, berichten). Het meeste technische werk was het framework ombuigen zodat het een <em>verhaal</em> ondersteunt in plaats van een sandbox:</p>
+  <ul>
+    <li><strong>Verhaalgestuurde berichten.</strong> Een story-teller-stap stuurt nieuwe berichten en zet op het juiste moment de ongelezen-badge aan. Verborgen chats in de zijbalk worden pas zichtbaar door voortgang in het verhaal.</li>
+    <li><strong>Klikbare telefoonnummers in chats</strong> die het volgende gesprek openen. Ik loste een bug op waarbij één klik de link meerdere keren activeerde, waardoor de volgorde van het verhaal brak.</li>
+    <li><strong>Een login die voelt als een echte login:</strong> ik voegde ondersteuning voor de Enter-toets toe, omdat iedereen automatisch op Enter drukt om in te loggen.</li>
+    <li><strong>Soepel scrollen.</strong> Het standaard scrollen voelde schokkerig op lange pagina's en chats, dus ik schreef een fix voor vloeiend scrollen die werkt voor scroll views én websites in de game.</li>
+    <li><strong>Websites in de game</strong>, zoals een krant met een medewerkersportaal en een site in cijferschrift, zodat de browser onderdeel wordt van het onderzoek.</li>
+    <li><strong>Chats met keuzes:</strong> sommige gesprekken eindigen in antwoordopties, zodat de speler deelneemt aan het verhaal in plaats van alleen te lezen.</li>
+  </ul>
+  <div class="gallery">
+    <button data-zoom="media/jim/lock-screen.jpg"><img src="media/jim/lock-screen.jpg" alt="Vergrendelscherm van Jims computer" loading="lazy"></button>
+    <button data-zoom="media/jim/login.jpg"><img src="media/jim/login.jpg" alt="Inlogscherm voor de gebruiker Jim Jones" loading="lazy"></button>
+    <button data-zoom="media/jim/desktop.jpg"><img src="media/jim/desktop.jpg" alt="Jims bureaublad met apps zoals Messaging, Web Browser en Notepad" loading="lazy"></button>
+    <button data-zoom="media/jim/messaging.jpg"><img src="media/jim/messaging.jpg" alt="Berichtenapp met drie chats" loading="lazy"></button>
+    <button data-zoom="media/jim/cipher-site.jpg"><img src="media/jim/cipher-site.jpg" alt="Website in de game met een bericht in symbolenschrift" loading="lazy"></button>
+    <button data-zoom="media/jim/chat-story.jpg"><img src="media/jim/chat-story.jpg" alt="Verhaalchat met antwoordkeuzes" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="props-nl">
+  <span class="eyebrow">Fysiek ontwerp</span>
+  <h2>Bewijs dat je kunt vasthouden</h2>
+  <div class="split media-right">
+    <div>
+      <p>De fysieke helft is ontworpen om thuis op A4 te printen. Elk document is in de wereld van het verhaal geschreven: handgeschreven notities, een persoonlijk profiel, krantenknipsels en een perskaart.</p>
+      <p>Fysieke props doen iets wat een scherm niet kan: spelers leggen ze uit, wijzen ernaar en discussiëren erover. Daardoor werkt JIM als <strong>groepsspel</strong>, terwijl er maar één laptop is.</p>
+      <p>Om het project te presenteren bouwde ik ook een <strong>promowebsite</strong> in een noir "dossier"-stijl, met twee (fictieve) edities en een FAQ. Er staat duidelijk bij dat het een studentenproject is.</p>
+    </div>
+    <div class="gallery" style="grid-template-columns:1fr 1fr;margin-top:0">
+      <button class="tall" data-zoom="media/jim/prop-notes.jpg"><img src="media/jim/prop-notes.jpg" alt="Prop: Jims handgeschreven notities met codes en hints" loading="lazy"></button>
+      <button class="tall" data-zoom="media/jim/prop-profile.jpg"><img src="media/jim/prop-profile.jpg" alt="Prop: een persoonlijk profiel met hobby's en dealbreakers" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section prose" id="learned-nl">
+  <span class="eyebrow">Reflectie</span>
+  <h2>Wat ik leerde</h2>
+  <ol class="learned">
+    <li><strong>Een nep-OS moet zich gedragen als een echt OS.</strong> Op Enter drukken om in te loggen of één keer op een link klikken verwachten spelers zonder na te denken. Als de interface niet reageert zoals verwacht, geven spelers de puzzel de schuld.</li>
+    <li><strong>Het tempo van een puzzelgame is een kwestie van doseren.</strong> Door chats en apps stap voor stap te onthullen bepaal je hoeveel de speler tegelijk moet verwerken.</li>
+    <li><strong>Volgende keer:</strong> een hintsysteem bouwen dat oploopt van een duwtje tot het antwoord, en loggen waar spelers vastlopen, zodat de moeilijkheidscurve op data gebaseerd is en niet alleen op observatie.</li>
+  </ol>
+</section>
+
+<div class="next-project">
+  <div><span class="card-meta">Volgende case study</span><h3 style="margin:4px 0 0">Fall 'n Fashion: eindeloze werelden die toch ontworpen voelen</h3></div>
+  <a class="btn btn-primary" href="fall-n-fashion.html">Lees verder →</a>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Nathaniël Jans</span>
+    <span><a href="projects.html"><span class="l-en">Work</span><span class="l-nl">Werk</span></a> · <a href="mailto:nbjjans22@gmail.com">E-mail</a> · <a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
