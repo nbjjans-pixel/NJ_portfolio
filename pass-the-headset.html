@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="Pass the Headset · Case study · Nathaniël Jans" data-title-nl="Pass the Headset · Case study · Nathaniël Jans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pass the Headset · Case study · Nathaniël Jans</title>
+  <meta name="description" content="Case study: Pass the Headset, a Jackbox-style VR party pack where one player wears the headset and everyone else plays on their phone.">
+  <meta property="og:title" content="Pass the Headset · Case study · Nathaniël Jans">
+  <meta property="og:description" content="Case study: Pass the Headset, a Jackbox-style VR party pack where one player wears the headset and everyone else plays on their phone.">
+  <meta property="og:image" content="https://nbjjans-pixel.github.io/NJ_portfolio/media/pth/perfect.jpg">
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+  <script>(function(){var l='en';try{l=localStorage.getItem('lang')||'en'}catch(e){}var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en')l=q;document.documentElement.setAttribute('data-lang',l);if(l==='nl')document.documentElement.lang='nl';})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <marker id="mk-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7483"/></marker>
+  <marker id="mk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2a541"/></marker>
+  <marker id="mk-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5ec2b7"/></marker>
+  <marker id="mk-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5675b"/></marker>
+</defs></svg>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathaniël Jans<span>.</span></a>
+    <div class="nav-right">
+      <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language / Wissel taal"><span class="l-en">NL</span><span class="l-nl">EN</span></button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="projects.html" aria-current="page"><span class="l-en">Work</span><span class="l-nl">Werk</span></a></li>
+      <li><a href="index.html#experience"><span class="l-en">Experience</span><span class="l-nl">Ervaring</span></a></li>
+      <li><a href="index.html#about"><span class="l-en">About</span><span class="l-nl">Over mij</span></a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="l-en" href="media/cv/Nathaniel_Jans_CV_EN.pdf" target="_blank" rel="noopener">CV</a><a class="l-nl" href="media/cv/Nathaniel_Jans_CV_NL.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+<div class="l-en" lang="en">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← All work</a>
+  <span class="eyebrow">Case study · VR party pack prototype</span>
+  <h1>Pass the Headset</h1>
+  <p class="tagline">A Jackbox-style party pack for 2–8 players: one player wears the VR headset, everyone else plays on their phone. The phones build the VR player's world, and the VR player's body becomes the show.</p>
+
+  <dl class="facts">
+    <div><dt>My role</dt><dd>Solo: game design (GDD) &amp; development</dd></div>
+    <div><dt>Team</dt><dd>Solo project</dd></div>
+    <div><dt>Engine &amp; platform</dt><dd>Godot 4 + OpenXR (PC VR) · TypeScript phone client · Node.js relay</dd></div>
+    <div><dt>Status</dt><dd>Playable prototype, Oct–Nov 2026 · three games</dd></div>
+  </dl>
+
+  <div class="gallery" style="margin-top:32px">
+    <button data-zoom="media/pth/perfect.jpg"><img src="media/pth/perfect.jpg" alt="Strike a Pose: the VR player fits through a wall, PERFECT 100%" loading="lazy"></button>
+    <button data-zoom="media/pth/scare-room.jpg"><img src="media/pth/scare-room.jpg" alt="Scare Architects: the VR player in a haunted room while the fear meter rises" loading="lazy"></button>
+    <button data-zoom="media/pth/tour-octopus.jpg"><img src="media/pth/tour-octopus.jpg" alt="Blind Tour Guide: an octopus DJ scene with the forbidden words floating in view" loading="lazy"></button>
+    <button data-zoom="media/pth/lobby.jpg"><img src="media/pth/lobby.jpg" alt="The TV lobby: room code, QR code and the three games" loading="lazy"></button>
+  </div>
+
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#strike">Strike a Pose</a></li>
+    <li><a href="#scare">Scare Architects</a></li>
+    <li><a href="#tour">Blind Tour Guide</a></li>
+    <li><a href="#testing">Testing</a></li>
+    <li><a href="#learned">What I learned</a></li>
+  </ul>
+</header>
+
+<section class="cs-section prose" id="vision">
+  <span class="eyebrow">Vision</span>
+  <h2>Phones create, VR performs</h2>
+  <p>In most VR games the people on the couch just watch. Research on asymmetric VR co-play points the same way: non-VR players have a worse time by default, and what fixes it is <strong>interdependence</strong>. Each side needs the other, and the world visibly reacts to what the non-VR players do. I wrote a full game design document around that idea, with five pillars:</p>
+  <div class="pd">
+    <div><h4>Everyone plays, always</h4><p>Every VR moment has a phone action: predicting, reacting, grading, buzzing.</p></div>
+    <div><h4>Phones create, VR performs</h4><p>Phone input becomes the VR world: poses become walls, doodles become monsters.</p></div>
+    <div><h4>The body is the show</h4><p>Use what only VR can do: full-body movement, scale, presence. The TV shows a clean spectator camera, never the shaky headset view.</p></div>
+  </div>
+  <p>The other two pillars keep it a party game: <strong>understood in 10 seconds</strong> (every phone screen has one job), and <strong>short headset turns with clean handoffs</strong>. Putting the headset on is part of the flow: a calm lounge, two triggers, a 10-second calibration, and you're in.</p>
+</section>
+
+<section class="cs-section prose" id="architecture">
+  <span class="eyebrow">Technical design</span>
+  <h2>Three apps, one room code</h2>
+  <p>A TV/host app, the VR app and a phone web page share one four-letter room code. The <strong>host is the single source of truth</strong>: it runs the lobby, phases, timers and scoring. Phones are thin controllers that show whatever screen the host sends them, so no game rules live on the phone.</p>
+
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 250" role="img" aria-label="Architecture: phones connect over WebSocket to a relay, the relay talks to the host, the host and VR app run as one program on the PC">
+        <rect class="d-box" x="20" y="40" width="170" height="62" rx="10"/><text class="d-t" x="38" y="66">Phones (2–8)</text><text class="d-s" x="38" y="86">TypeScript web page</text>
+        <rect class="d-box" x="250" y="40" width="170" height="62" rx="10"/><text class="d-t" x="268" y="66">Relay</text><text class="d-s" x="268" y="86">Node.js WebSocket</text>
+        <rect class="d-box acc" x="480" y="40" width="190" height="62" rx="10"/><text class="d-t" x="498" y="66">Host / TV (Godot)</text><text class="d-s" x="498" y="86">phases, timers, scoring</text>
+        <rect class="d-box teal" x="720" y="40" width="160" height="62" rx="10"/><text class="d-t" x="738" y="66">VR (OpenXR)</text><text class="d-s" x="738" y="86">walls, rooms, scenes</text>
+        <rect class="d-box" x="480" y="160" width="190" height="62" rx="10"/><text class="d-t" x="498" y="186">TV screen</text><text class="d-s" x="498" y="206">spectator cam + curtain</text>
+        <path class="d-l" d="M190 64H250" marker-end="url(#mk-g)"/><path class="d-l" d="M250 80H190" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M420 64H480" marker-end="url(#mk-g)"/><path class="d-l" d="M480 80H420" marker-end="url(#mk-g)"/>
+        <path class="d-l acc" d="M670 64H720" marker-end="url(#mk-a)"/><path class="d-l teal" d="M720 80H670" marker-end="url(#mk-t)"/>
+        <path class="d-l" d="M575 102V160" marker-end="url(#mk-g)"/>
+        <text class="d-s" x="690" y="125">head + hands ~30×/s</text>
+      </svg>
+    </div>
+    <figcaption>In PC VR the host and VR app run as one program (role <code>host+vr</code>). Game code talks to a <code>VrLink</code> interface, so the same games can later run with a standalone Quest over the network.</figcaption>
+  </figure>
+
+  <div class="split">
+    <div>
+      <h3>TV visibility states</h3>
+      <p>The host sets one state per phase so nobody sees what they shouldn't: <strong>Public</strong> (everything), <strong>Curtain</strong> (only a timer while phones build secret content) and <strong>Stage-only</strong> (the VR player's avatar on an empty stage, used when the scene itself must stay hidden).</p>
+    </div>
+    <div>
+      <h3>One frame, three games</h3>
+      <p>Every game implements one <code>GameMode</code> interface: its phases, the phone screen per phase and its scoring. Lobby, handoff, calibration, reactions, scores and podium are built once in <code>core/</code>, so adding a fourth game means adding one folder.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section prose" id="strike">
+  <span class="eyebrow">Game 1</span>
+  <h2>Strike a Pose: your friends' poses become walls</h2>
+  <p>Phone players pose a stickman around a shared theme ("Superhero landing", "Stepping on a LEGO brick"). Each pose becomes a wall with a matching hole that flies at the VR player, who has to fit through it with their body.</p>
+
+  <div class="split media-right">
+    <div>
+      <h3>A pose editor that can't make impossible poses</h3>
+      <p>The stickman has exactly three drag handles: <strong>head, left hand and right hand</strong>. Those are the three points a headset tracks, so every pose is measurable. Each arm is a two-bone IK chain with fixed lengths: drag a hand too far and the arm straightens instead of stretching. Drag the head down and the knees bend into a squat; drag it sideways and the torso leans from the hips.</p>
+      <p>The same pose maths runs in GDScript on the host and in TypeScript on the phone, kept in sync by shared test fixtures.</p>
+      <h3>Fair for tall and short players</h3>
+      <p>Poses are stored in a normalised body that is 1 tall. In the lounge, the VR player stands straight and holds their arms out, and every wall is scaled to their <strong>calibrated height and arm span</strong>.</p>
+    </div>
+    <div class="gallery" style="grid-template-columns:1fr;margin-top:0">
+      <button class="tall" style="aspect-ratio:1/2;max-width:300px;width:100%;justify-self:center" data-zoom="media/pth/phone-pose.jpg"><img src="media/pth/phone-pose.jpg" alt="Phone pose editor: a blue stickman in a superhero landing with drag rings on the head and hands" loading="lazy"></button>
+    </div>
+  </div>
+
+  <h3>Readable precision</h3>
+  <p>Three target rings in the hole glow when the matching body point is inside them, so the VR player gets feedback without reading text. When the wall arrives, each point scores 100 down to 0 by distance (full score within 0.05 body heights, zero at 0.24), and the wall's precision is the average:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Precision</th><th>Result</th><th>What happens</th></tr></thead>
+      <tbody>
+        <tr><td>90–100%</td><td>Perfect</td><td>Gold flash, the cardboard crowd cheers</td></tr>
+        <tr><td>70–89%</td><td>Good</td><td>The wall passes cleanly</td></tr>
+        <tr><td>50–69%</td><td>Scrape</td><td>Bits of foam fly off</td></tr>
+        <tr><td>&lt; 50%</td><td>Fail</td><td>The wall breaks into soft foam blocks: "The wall isn't angry. Just disappointed."</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The approach time starts at 6 seconds and drops by 0.35 s per wall (minimum 3.5 s), so the pressure builds during a run. For comfort, the fail effect never fills the view or hits the face.</p>
+  <div class="gallery">
+    <button data-zoom="media/pth/wall-incoming.jpg"><img src="media/pth/wall-incoming.jpg" alt="A wall approaches the VR player, with the target pose in the corner" loading="lazy"></button>
+    <button data-zoom="media/pth/copy-shape.jpg"><img src="media/pth/copy-shape.jpg" alt="Headset view: copy the shape, put your head and hands in the rings" loading="lazy"></button>
+    <button data-zoom="media/pth/fail.jpg"><img src="media/pth/fail.jpg" alt="FAIL 0%: the wall breaks into foam blocks" loading="lazy"></button>
+    <button data-zoom="media/pth/pose-podium.jpg"><img src="media/pth/pose-podium.jpg" alt="Podium with the Pose of the night" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="scare">
+  <span class="eyebrow">Game 2</span>
+  <h2>Scare Architects: your doodle, but real</h2>
+  <p>Every phone player draws a monster, gives it a voice line and hides it in their own room of a haunted mansion. Then the VR player walks through, room by room, searching for the key.</p>
+  <div class="split media-right">
+    <div>
+      <h3>Building a scare in four screens</h3>
+      <p><strong>Draw it</strong>, <strong>give it a voice</strong> (whisper, granny, robot, opera, screamer), <strong>hide it</strong> (wardrobe, under the bed, behind the mirror, ceiling, door) and <strong>pick its move</strong>: jump out, creep closer, peekaboo (only moves while you look away), fake-out or drop in. There's no separate trigger step: the hiding spot and the move decide when it fires. Fewer choices, the same variety.</p>
+      <p>I chose drawing over ready-made monsters because the joke is your bad doodle becoming real, and because it's cheap to produce: the whole house is a paper theatre where doodles fit right in.</p>
+      <h3>A design pivot: who scores the fear?</h3>
+      <p>The GDD planned to measure the flinch from head, hand and microphone data, and flagged that as the <strong>biggest risk</strong>. In the playable version the phone players <strong>grade the fear live</strong> on a slider instead, and the average drives the TV's fear meter. Room owners can't grade their own scare. That also keeps every phone player busy during the walkthrough, alongside a one-time <strong>jolt</strong> (flicker the lights, knock, breathe in their ear, slam a door) whose timing is the skill.</p>
+    </div>
+    <div class="gallery" style="grid-template-columns:1fr;margin-top:0">
+      <button class="tall" style="aspect-ratio:1/2;max-width:300px;width:100%;justify-self:center" data-zoom="media/pth/phone-scare.jpg"><img src="media/pth/phone-scare.jpg" alt="Phone: draw a monster that lives in your fridge" loading="lazy"></button>
+    </div>
+  </div>
+  <div class="gallery">
+    <button data-zoom="media/pth/find-key.jpg"><img src="media/pth/find-key.jpg" alt="Headset view: find the key, touch things to search" loading="lazy"></button>
+    <button data-zoom="media/pth/scare-replay.jpg"><img src="media/pth/scare-replay.jpg" alt="Replay card: the doodle, its voice line and the fear peak" loading="lazy"></button>
+    <button data-zoom="media/pth/scare-podium.jpg"><img src="media/pth/scare-podium.jpg" alt="Podium with the Scariest of the night" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="tour">
+  <span class="eyebrow">Game 3</span>
+  <h2>Blind Tour Guide: only they can see it</h2>
+  <p>The VR player stands inside an absurd postcard scene ("a giraffe ironing shirts on a rooftop while it rains fish") and describes it out loud, hands allowed. The phone players draw what they hear and then vote for the most accurate drawing.</p>
+  <div class="split media-right">
+    <div>
+      <p>I picked <strong>scenes you stand inside</strong> over single objects because they use what VR is good at: details sit around and behind the guide, so they physically have to turn and look, which is fun to watch. Some scenes change your scale, like standing on a pizza or being a giant in a tiny supermarket.</p>
+      <p>The rules make everyone part of it:</p>
+      <ul>
+        <li><strong>Forbidden words</strong> float in the guide's view, so they have to get creative.</li>
+        <li><strong>The room polices the rules:</strong> if most drawers press BUZZ within 3 seconds, a buzzer sounds in VR and the guide loses points.</li>
+        <li><strong>Three quick questions</strong> per drawer ("What colour?", "How big?") appear as signs in the asker's colour.</li>
+        <li>The TV is <strong>stage-only</strong>: the room sees the guide mime, but not the scene, until the reveal.</li>
+      </ul>
+    </div>
+    <div class="gallery" style="grid-template-columns:1fr;margin-top:0">
+      <button class="tall" style="aspect-ratio:1/2;max-width:300px;width:100%;justify-self:center" data-zoom="media/pth/phone-tour.jpg"><img src="media/pth/phone-tour.jpg" alt="Phone: draw what you hear, with question buttons and a BUZZ button" loading="lazy"></button>
+    </div>
+  </div>
+  <div class="gallery">
+    <button data-zoom="media/pth/tour-giraffe.jpg"><img src="media/pth/tour-giraffe.jpg" alt="Headset view: the giraffe scene, with the forbidden words giraffe and iron" loading="lazy"></button>
+    <button data-zoom="media/pth/tour-supermarket.jpg"><img src="media/pth/tour-supermarket.jpg" alt="Headset view: a giant in a tiny supermarket" loading="lazy"></button>
+    <button data-zoom="media/pth/tour-stage.jpg"><img src="media/pth/tour-stage.jpg" alt="TV in stage-only mode: only the guide's avatar is visible" loading="lazy"></button>
+    <button data-zoom="media/pth/tour-podium.jpg"><img src="media/pth/tour-podium.jpg" alt="Podium with the most accurate drawing" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="testing">
+  <span class="eyebrow">Production</span>
+  <h2>Risk first, then the cheapest game</h2>
+  <p>The production plan starts with the riskiest parts: a connection spike (phones, relay and headset in one room) and then <strong>Strike a Pose as the vertical slice</strong>, because it's the cheapest game that proves the whole shared frame. Blind Tour Guide and Scare Architects followed, reusing the drawing canvas.</p>
+  <ul>
+    <li><strong>Desktop simulator:</strong> the whole game runs without a headset. Space acts as "both triggers", and keys 1–4 make the simulated player perfect, good, scraping or failing.</li>
+    <li><strong>End-to-end test with scripted phones:</strong> bots join, pose, draw and vote through a full session, and the test saves TV and headset screenshots, which I review after visual changes.</li>
+    <li><strong>Unit tests</strong> for the pose maths (shared fixtures between GDScript and TypeScript), the relay and the audio.</li>
+    <li><strong>On a real headset:</strong> Strike a Pose ran through SteamVR on 31 October 2026, and calibration, triggers and scoring worked. Every run writes a session log with calibration values and how far off each wall was, for tuning the thresholds.</li>
+  </ul>
+  <div class="callout"><p><strong>Next steps:</strong> a playtest with 4+ people to tune the precision thresholds and approach speed, the other two games on a headset, and remote play, where the audience joins from anywhere through a hosted relay. That part is already built and tested on the relay side.</p></div>
+</section>
+
+<section class="cs-section prose" id="learned">
+  <span class="eyebrow">Reflection</span>
+  <h2>What I learned</h2>
+  <ol class="learned">
+    <li><strong>Asymmetric design is about the people outside VR.</strong> The headset is the easy part. The real design work was making sure every phone player always has something meaningful to do.</li>
+    <li><strong>Constrain input to what you can measure.</strong> Limiting the pose editor to the three tracked points made every pose fair, scorable and readable on the wall.</li>
+    <li><strong>Name your biggest risk early.</strong> Flagging flinch detection in the GDD made it easy to switch to human grading for the first playable instead of getting stuck on sensor tuning.</li>
+  </ol>
+</section>
+
+<div class="next-project">
+  <div><span class="card-meta">Next case study</span><h3 style="margin:4px 0 0">Project Implant: fair stealth with invisible enemies</h3></div>
+  <a class="btn btn-primary" href="project-implant.html">Read next →</a>
+</div>
+
+</div>
+<div class="l-nl" lang="nl">
+<header class="cs-hero">
+  <a class="back" href="projects.html">← Al het werk</a>
+  <span class="eyebrow">Case study · VR-partypack prototype</span>
+  <h1>Pass the Headset</h1>
+  <p class="tagline">Een partypack in Jackbox-stijl voor 2–8 spelers: één speler draagt de VR-bril, de rest speelt op de telefoon. De telefoons bouwen de wereld van de VR-speler, en het lichaam van de VR-speler wordt de show.</p>
+
+  <dl class="facts">
+    <div><dt>Mijn rol</dt><dd>Solo: game design (GDD) &amp; development</dd></div>
+    <div><dt>Team</dt><dd>Soloproject</dd></div>
+    <div><dt>Engine &amp; platform</dt><dd>Godot 4 + OpenXR (PC VR) · TypeScript-telefoonclient · Node.js-relay</dd></div>
+    <div><dt>Status</dt><dd>Speelbaar prototype, okt–nov 2026 · drie games</dd></div>
+  </dl>
+
+  <div class="gallery" style="margin-top:32px">
+    <button data-zoom="media/pth/perfect.jpg"><img src="media/pth/perfect.jpg" alt="Strike a Pose: de VR-speler past door een muur, PERFECT 100%" loading="lazy"></button>
+    <button data-zoom="media/pth/scare-room.jpg"><img src="media/pth/scare-room.jpg" alt="Scare Architects: de VR-speler in een spookkamer terwijl de angstmeter stijgt" loading="lazy"></button>
+    <button data-zoom="media/pth/tour-octopus.jpg"><img src="media/pth/tour-octopus.jpg" alt="Blind Tour Guide: een octopus-dj-scène met de verboden woorden in beeld" loading="lazy"></button>
+    <button data-zoom="media/pth/lobby.jpg"><img src="media/pth/lobby.jpg" alt="De tv-lobby: roomcode, QR-code en de drie games" loading="lazy"></button>
+  </div>
+
+  <ul class="toc" aria-label="Op deze pagina">
+    <li><a href="#vision-nl">Visie</a></li>
+    <li><a href="#architecture-nl">Architectuur</a></li>
+    <li><a href="#strike-nl">Strike a Pose</a></li>
+    <li><a href="#scare-nl">Scare Architects</a></li>
+    <li><a href="#tour-nl">Blind Tour Guide</a></li>
+    <li><a href="#testing-nl">Testen</a></li>
+    <li><a href="#learned-nl">Wat ik leerde</a></li>
+  </ul>
+</header>
+
+<section class="cs-section prose" id="vision-nl">
+  <span class="eyebrow">Visie</span>
+  <h2>Telefoons maken, VR speelt</h2>
+  <p>Bij de meeste VR-games kijken de mensen op de bank alleen maar toe. Onderzoek naar asymmetrisch VR-samenspel wijst dezelfde kant op: spelers zonder bril hebben standaard minder plezier, en wat dat oplost is <strong>wederzijdse afhankelijkheid</strong>. Beide kanten hebben elkaar nodig, en de wereld reageert zichtbaar op wat de spelers zonder bril doen. Rond dat idee schreef ik een volledig game design document met vijf pijlers:</p>
+  <div class="pd">
+    <div><h4>Iedereen speelt, altijd</h4><p>Bij elk VR-moment hoort een telefoonactie: voorspellen, reageren, beoordelen, zoemen.</p></div>
+    <div><h4>Telefoons maken, VR speelt</h4><p>Telefooninput wordt de VR-wereld: poses worden muren, krabbels worden monsters.</p></div>
+    <div><h4>Het lichaam is de show</h4><p>Gebruik wat alleen VR kan: bewegen met je hele lichaam, schaal, aanwezigheid. De tv toont een rustige toeschouwerscamera, nooit het schokkerige brilbeeld.</p></div>
+  </div>
+  <p>De andere twee pijlers houden het een partygame: <strong>binnen 10 seconden te snappen</strong> (elk telefoonscherm heeft één taak), en <strong>korte beurten met een soepele wissel</strong>. De bril opzetten hoort bij de flow: een rustige lounge, twee triggers, 10 seconden kalibreren en je bent binnen.</p>
+</section>
+
+<section class="cs-section prose" id="architecture-nl">
+  <span class="eyebrow">Technisch ontwerp</span>
+  <h2>Drie apps, één roomcode</h2>
+  <p>Een tv/host-app, de VR-app en een webpagina voor de telefoon delen één roomcode van vier letters. De <strong>host is de enige bron van waarheid</strong>: die regelt de lobby, fases, timers en scores. Telefoons zijn dunne controllers die tonen welk scherm de host stuurt, dus er staan geen spelregels op de telefoon.</p>
+
+  <figure class="figure">
+    <div class="frame">
+      <svg viewBox="0 0 900 250" role="img" aria-label="Architectuur: telefoons verbinden via WebSocket met een relay, de relay praat met de host, host en VR-app draaien als één programma op de pc">
+        <rect class="d-box" x="20" y="40" width="170" height="62" rx="10"/><text class="d-t" x="38" y="66">Telefoons (2–8)</text><text class="d-s" x="38" y="86">TypeScript-webpagina</text>
+        <rect class="d-box" x="250" y="40" width="170" height="62" rx="10"/><text class="d-t" x="268" y="66">Relay</text><text class="d-s" x="268" y="86">Node.js WebSocket</text>
+        <rect class="d-box acc" x="480" y="40" width="190" height="62" rx="10"/><text class="d-t" x="498" y="66">Host / tv (Godot)</text><text class="d-s" x="498" y="86">fases, timers, scores</text>
+        <rect class="d-box teal" x="720" y="40" width="160" height="62" rx="10"/><text class="d-t" x="738" y="66">VR (OpenXR)</text><text class="d-s" x="738" y="86">muren, kamers, scènes</text>
+        <rect class="d-box" x="480" y="160" width="190" height="62" rx="10"/><text class="d-t" x="498" y="186">Tv-scherm</text><text class="d-s" x="498" y="206">toeschouwerscam + gordijn</text>
+        <path class="d-l" d="M190 64H250" marker-end="url(#mk-g)"/><path class="d-l" d="M250 80H190" marker-end="url(#mk-g)"/>
+        <path class="d-l" d="M420 64H480" marker-end="url(#mk-g)"/><path class="d-l" d="M480 80H420" marker-end="url(#mk-g)"/>
+        <path class="d-l acc" d="M670 64H720" marker-end="url(#mk-a)"/><path class="d-l teal" d="M720 80H670" marker-end="url(#mk-t)"/>
+        <path class="d-l" d="M575 102V160" marker-end="url(#mk-g)"/>
+        <text class="d-s" x="690" y="125">hoofd + handen ~30×/s</text>
+      </svg>
+    </div>
+    <figcaption>Bij PC VR draaien host en VR-app als één programma (rol <code>host+vr</code>). De gamecode praat met een <code>VrLink</code>-interface, zodat dezelfde games later ook met een losse Quest via het netwerk kunnen draaien.</figcaption>
+  </figure>
+
+  <div class="split">
+    <div>
+      <h3>Wat de tv laat zien</h3>
+      <p>De host kiest per fase één stand, zodat niemand ziet wat geheim moet blijven: <strong>Publiek</strong> (alles), <strong>Gordijn</strong> (alleen een timer terwijl de telefoons geheime content maken) en <strong>Alleen podium</strong> (de avatar van de VR-speler op een leeg podium, voor als de scène zelf verborgen moet blijven).</p>
+    </div>
+    <div>
+      <h3>Eén frame, drie games</h3>
+      <p>Elke game implementeert één <code>GameMode</code>-interface: de fases, het telefoonscherm per fase en de scoring. Lobby, wissel, kalibratie, reacties, scores en podium zijn één keer gebouwd in <code>core/</code>, dus een vierde game toevoegen is één map erbij.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section prose" id="strike-nl">
+  <span class="eyebrow">Game 1</span>
+  <h2>Strike a Pose: de poses van je vrienden worden muren</h2>
+  <p>De telefoonspelers zetten een poppetje in een pose rond een gedeeld thema ("Superhero landing", "Op een LEGO-steentje stappen"). Elke pose wordt een muur met een passend gat die op de VR-speler afvliegt, en die moet er met zijn lichaam doorheen passen.</p>
+
+  <div class="split media-right">
+    <div>
+      <h3>Een pose-editor die geen onmogelijke poses toelaat</h3>
+      <p>Het poppetje heeft precies drie handvatten: <strong>hoofd, linkerhand en rechterhand</strong>. Dat zijn de drie punten die een VR-bril volgt, dus elke pose is meetbaar. Elke arm is een IK-keten van twee botten met vaste lengtes: sleep je een hand te ver, dan strekt de arm zich in plaats van uit te rekken. Sleep het hoofd omlaag en de knieën buigen tot een squat; sleep het opzij en de romp leunt vanuit de heupen.</p>
+      <p>Dezelfde pose-wiskunde draait in GDScript op de host en in TypeScript op de telefoon, gelijk gehouden met gedeelde testfixtures.</p>
+      <h3>Eerlijk voor lange en korte spelers</h3>
+      <p>Poses worden opgeslagen in een genormaliseerd lichaam van 1 hoog. In de lounge staat de VR-speler rechtop en strekt de armen, en elke muur wordt geschaald naar zijn <strong>gekalibreerde lengte en spanwijdte</strong>.</p>
+    </div>
+    <div class="gallery" style="grid-template-columns:1fr;margin-top:0">
+      <button class="tall" style="aspect-ratio:1/2;max-width:300px;width:100%;justify-self:center" data-zoom="media/pth/phone-pose.jpg"><img src="media/pth/phone-pose.jpg" alt="Pose-editor op de telefoon: een blauw poppetje in een superhero landing met ringen op hoofd en handen" loading="lazy"></button>
+    </div>
+  </div>
+
+  <h3>Precisie die je kunt lezen</h3>
+  <p>Drie doelringen in het gat lichten op als het bijbehorende lichaamspunt erin zit, dus de VR-speler krijgt feedback zonder tekst te lezen. Als de muur aankomt, scoort elk punt van 100 tot 0 op afstand (volle score binnen 0,05 lichaamslengte, nul bij 0,24), en de precisie van de muur is het gemiddelde:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Precisie</th><th>Resultaat</th><th>Wat er gebeurt</th></tr></thead>
+      <tbody>
+        <tr><td>90–100%</td><td>Perfect</td><td>Gouden flits, het kartonnen publiek juicht</td></tr>
+        <tr><td>70–89%</td><td>Goed</td><td>De muur gaat er netjes langs</td></tr>
+        <tr><td>50–69%</td><td>Schuren</td><td>Er vliegen stukjes schuim af</td></tr>
+        <tr><td>&lt; 50%</td><td>Fail</td><td>De muur valt uiteen in zachte schuimblokken: "The wall isn't angry. Just disappointed."</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>De naderingstijd begint op 6 seconden en wordt per muur 0,35 s korter (minimaal 3,5 s), zodat de druk tijdens een run oploopt. Voor het comfort vult het fail-effect nooit het beeld en raakt het nooit het gezicht.</p>
+  <div class="gallery">
+    <button data-zoom="media/pth/wall-incoming.jpg"><img src="media/pth/wall-incoming.jpg" alt="Een muur nadert de VR-speler, met de doelpose in de hoek" loading="lazy"></button>
+    <button data-zoom="media/pth/copy-shape.jpg"><img src="media/pth/copy-shape.jpg" alt="Brilbeeld: kopieer de vorm, hoofd en handen in de ringen" loading="lazy"></button>
+    <button data-zoom="media/pth/fail.jpg"><img src="media/pth/fail.jpg" alt="FAIL 0%: de muur valt uiteen in schuimblokken" loading="lazy"></button>
+    <button data-zoom="media/pth/pose-podium.jpg"><img src="media/pth/pose-podium.jpg" alt="Podium met de Pose of the night" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="scare-nl">
+  <span class="eyebrow">Game 2</span>
+  <h2>Scare Architects: je krabbel, maar dan echt</h2>
+  <p>Elke telefoonspeler tekent een monster, geeft het een zin om te zeggen en verstopt het in zijn eigen kamer van een spookhuis. Daarna loopt de VR-speler er kamer voor kamer doorheen, op zoek naar de sleutel.</p>
+  <div class="split media-right">
+    <div>
+      <h3>Een schrikmoment in vier schermen</h3>
+      <p><strong>Teken het</strong>, <strong>geef het een stem</strong> (fluisteraar, oma, robot, opera, schreeuwer), <strong>verstop het</strong> (kledingkast, onder het bed, achter de spiegel, plafond, deur) en <strong>kies hoe het beweegt</strong>: tevoorschijn springen, dichterbij sluipen, kiekeboe (beweegt alleen als je wegkijkt), schijnbeweging of naar beneden vallen. Er is geen aparte trigger-stap: de verstopplek en de beweging bepalen wanneer het afgaat. Minder keuzes, evenveel variatie.</p>
+      <p>Ik koos voor tekenen in plaats van kant-en-klare monsters, omdat de grap is dat je slechte krabbel echt wordt, en omdat het goedkoop te maken is: het hele huis is een papieren theater waar krabbels precies in passen.</p>
+      <h3>Een ontwerpkeuze: wie beoordeelt de angst?</h3>
+      <p>Het GDD ging uit van het meten van het schrikken via hoofd-, hand- en microfoondata, en markeerde dat als het <strong>grootste risico</strong>. In de speelbare versie <strong>beoordelen de telefoonspelers de angst live</strong> met een schuifregelaar, en het gemiddelde stuurt de angstmeter op de tv. Eigenaren van een kamer mogen hun eigen schrikmoment niet beoordelen. Zo heeft ook elke telefoonspeler iets te doen tijdens de rondgang, naast een eenmalige <strong>jolt</strong> (lampen laten flikkeren, kloppen, in het oor ademen, een deur dichtslaan) waarbij de timing de skill is.</p>
+    </div>
+    <div class="gallery" style="grid-template-columns:1fr;margin-top:0">
+      <button class="tall" style="aspect-ratio:1/2;max-width:300px;width:100%;justify-self:center" data-zoom="media/pth/phone-scare.jpg"><img src="media/pth/phone-scare.jpg" alt="Telefoon: teken een monster dat in je koelkast woont" loading="lazy"></button>
+    </div>
+  </div>
+  <div class="gallery">
+    <button data-zoom="media/pth/find-key.jpg"><img src="media/pth/find-key.jpg" alt="Brilbeeld: vind de sleutel, raak dingen aan om te zoeken" loading="lazy"></button>
+    <button data-zoom="media/pth/scare-replay.jpg"><img src="media/pth/scare-replay.jpg" alt="Replaykaart: de krabbel, de zin en de angstpiek" loading="lazy"></button>
+    <button data-zoom="media/pth/scare-podium.jpg"><img src="media/pth/scare-podium.jpg" alt="Podium met de Scariest of the night" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="tour-nl">
+  <span class="eyebrow">Game 3</span>
+  <h2>Blind Tour Guide: alleen zij kunnen het zien</h2>
+  <p>De VR-speler staat midden in een absurde ansichtkaartscène ("een giraffe die overhemden strijkt op een dak terwijl het vissen regent") en beschrijft die hardop, handen mogen meedoen. De telefoonspelers tekenen wat ze horen en stemmen daarna op de meest kloppende tekening.</p>
+  <div class="split media-right">
+    <div>
+      <p>Ik koos voor <strong>scènes waar je in staat</strong> in plaats van losse objecten, omdat die gebruiken waar VR goed in is: details staan om en achter de gids heen, dus die moet zich echt omdraaien en kijken, en dat is leuk om te zien. Sommige scènes veranderen je schaal, zoals op een pizza staan of een reus zijn in een piepkleine supermarkt.</p>
+      <p>De regels betrekken iedereen erbij:</p>
+      <ul>
+        <li><strong>Verboden woorden</strong> zweven in beeld bij de gids, dus die moet creatief zijn.</li>
+        <li><strong>De kamer handhaaft de regels:</strong> als de meeste tekenaars binnen 3 seconden op BUZZ drukken, klinkt er een zoemer in VR en verliest de gids punten.</li>
+        <li><strong>Drie snelle vragen</strong> per tekenaar ("Welke kleur?", "Hoe groot?") verschijnen als bordjes in de kleur van de vrager.</li>
+        <li>De tv staat op <strong>alleen podium</strong>: de kamer ziet de gids uitbeelden, maar de scène pas bij de onthulling.</li>
+      </ul>
+    </div>
+    <div class="gallery" style="grid-template-columns:1fr;margin-top:0">
+      <button class="tall" style="aspect-ratio:1/2;max-width:300px;width:100%;justify-self:center" data-zoom="media/pth/phone-tour.jpg"><img src="media/pth/phone-tour.jpg" alt="Telefoon: teken wat je hoort, met vraagknoppen en een BUZZ-knop" loading="lazy"></button>
+    </div>
+  </div>
+  <div class="gallery">
+    <button data-zoom="media/pth/tour-giraffe.jpg"><img src="media/pth/tour-giraffe.jpg" alt="Brilbeeld: de giraffescène, met de verboden woorden giraffe en iron" loading="lazy"></button>
+    <button data-zoom="media/pth/tour-supermarket.jpg"><img src="media/pth/tour-supermarket.jpg" alt="Brilbeeld: een reus in een piepkleine supermarkt" loading="lazy"></button>
+    <button data-zoom="media/pth/tour-stage.jpg"><img src="media/pth/tour-stage.jpg" alt="Tv op alleen podium: alleen de avatar van de gids is zichtbaar" loading="lazy"></button>
+    <button data-zoom="media/pth/tour-podium.jpg"><img src="media/pth/tour-podium.jpg" alt="Podium met de meest kloppende tekening" loading="lazy"></button>
+  </div>
+</section>
+
+<section class="cs-section prose" id="testing-nl">
+  <span class="eyebrow">Productie</span>
+  <h2>Eerst het risico, dan de goedkoopste game</h2>
+  <p>Het productieplan begint bij de riskantste onderdelen: een verbindingsspike (telefoons, relay en bril in één kamer) en daarna <strong>Strike a Pose als vertical slice</strong>, omdat dat de goedkoopste game is die het hele gedeelde frame bewijst. Blind Tour Guide en Scare Architects volgden en hergebruiken het tekencanvas.</p>
+  <ul>
+    <li><strong>Desktopsimulator:</strong> de hele game draait zonder bril. Spatie werkt als "beide triggers", en toetsen 1–4 laten de gesimuleerde speler perfect, goed, schurend of falend spelen.</li>
+    <li><strong>End-to-end-test met gescripte telefoons:</strong> bots doen mee, maken poses, tekenen en stemmen door een hele sessie, en de test bewaart tv- en brilscreenshots, die ik na visuele wijzigingen nakijk.</li>
+    <li><strong>Unittests</strong> voor de pose-wiskunde (gedeelde fixtures tussen GDScript en TypeScript), de relay en de audio.</li>
+    <li><strong>Op een echte bril:</strong> Strike a Pose draaide op 31 oktober 2026 via SteamVR, en kalibratie, triggers en scoring werkten. Elke run schrijft een sessielog met de kalibratiewaarden en hoe ver elke muur ernaast zat, om de drempels te tunen.</li>
+  </ul>
+  <div class="callout"><p><strong>Volgende stappen:</strong> een playtest met 4+ mensen om de precisiedrempels en snelheid te tunen, de andere twee games op een bril, en spelen op afstand, waarbij het publiek van overal meedoet via een gehoste relay. Dat deel is aan de relaykant al gebouwd en getest.</p></div>
+</section>
+
+<section class="cs-section prose" id="learned-nl">
+  <span class="eyebrow">Reflectie</span>
+  <h2>Wat ik leerde</h2>
+  <ol class="learned">
+    <li><strong>Asymmetrisch ontwerp draait om de mensen buiten VR.</strong> De bril is het makkelijke deel. Het echte ontwerpwerk zat in zorgen dat elke telefoonspeler altijd iets betekenisvols te doen heeft.</li>
+    <li><strong>Beperk input tot wat je kunt meten.</strong> Door de pose-editor te beperken tot de drie gevolgde punten werd elke pose eerlijk, scoorbaar en leesbaar op de muur.</li>
+    <li><strong>Benoem je grootste risico vroeg.</strong> Omdat het schrikmeten al in het GDD als risico stond, was het makkelijk om voor de eerste speelbare versie over te stappen op beoordeling door mensen in plaats van vast te lopen op sensortuning.</li>
+  </ol>
+</section>
+
+<div class="next-project">
+  <div><span class="card-meta">Volgende case study</span><h3 style="margin:4px 0 0">Project Implant: eerlijke stealth met onzichtbare vijanden</h3></div>
+  <a class="btn btn-primary" href="project-implant.html">Lees verder →</a>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span data-year>2026</span> Nathaniël Jans</span>
+    <span><a href="projects.html"><span class="l-en">Work</span><span class="l-nl">Werk</span></a> · <a href="mailto:nbjjans22@gmail.com">E-mail</a> · <a href="https://www.linkedin.com/in/nathani%C3%ABl-jans-game-webdeveloper/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/nbjjans-pixel" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
